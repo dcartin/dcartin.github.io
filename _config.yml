@@ -25,11 +25,11 @@ description: >- # this means to ignore newlines until "baseurl:"
   Jupyter notebook lectures for intermediate physics at the Naval Academy Preparatory School.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://dcartin.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jekyllrb
-github_username:  jekyll
+#twitter_username: jekyllrb
+github_username:  dcartin
 
 # Build settings
-theme: minima
+theme: jekyll-theme-leap-day
 plugins:
   - jekyll-feed
 
