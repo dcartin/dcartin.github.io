@@ -1,0 +1,546 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>28. Faraday’s law &#8212; NAPS Intermediate Physics</title>
+    
+  <link rel="stylesheet" href="../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.c441f2ba0852f4cabcb80105e3a46ae6.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.d3f166471bb80abb5163.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.7d483ff0a819d6edff12ce0b1ead3928.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="29. Glossary" href="Glossary.html" />
+    <link rel="prev" title="27. Biot-Savart law" href="L35_Biot-Savart_law.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../index.html">
+  
+  
+  <h1 class="site-logo" id="site-title">NAPS Intermediate Physics</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../README.html">
+   NAPS Intermediate Physics
+  </a>
+ </li>
+</ul>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="L01_Introduction_to_Python.html">
+   1. Introduction to Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L02_Vectors_and_vPython.html">
+   2. Vectors and vPython
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L03_Velocity_and_Euler_method.html">
+   3. Velocity and the Euler method
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L03A_Units_and_scientific_notation.html">
+   4. Units and scientific notation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L04_Acceleration_and_free_fall.html">
+   5. Acceleration and free fall
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L05_Kinematic_equations.html">
+   6. Kinematic equations
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L06_Vector_magnitude_and_direction.html">
+   7. Vector magnitude and direction
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L07_Projectile_motion.html">
+   8. Projectile motion
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L11_Scalar_product.html">
+   9. Scalar product
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L10_Relative_motion.html">
+   10. Relative motion
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L08_Linear_momentum_and_Newton%27s_laws_of_motion.html">
+   11. Linear momentum and Newton's laws of motion
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L09_Center_of_mass_and_collisions.html">
+   12. Center of mass and collisions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L13_Solving_force_problems.html">
+   13. Solving force problems
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L14_Inclined_planes.html">
+   14. Inclined planes
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L17_Fluids.html">
+   15. Fluids
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L18_Circular_motion.html">
+   16. Circular motion
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L19_Vector_product.html">
+   17. Vector product
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L20_Angular_momentum.html">
+   18. Angular momentum
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L23_Work_and_energy.html">
+   19. Work and kinetic energy
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L24_Conservation_of_energy.html">
+   20. Conservation of energy
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L25_Universal_gravitation.html">
+   21. Universal gravitation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L26_Gravitational_potential_energy.html">
+   22. Gravitational potential energy
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L27_Kepler%27s_laws.html">
+   23. Kepler's laws
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L28_Coulomb%27s_law.html">
+   24. Coulomb's law
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L29_Electric_fields.html">
+   25. Electric fields
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L34_Magnetic_fields_and_forces.html">
+   26. Magnetic fields and forces
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L35_Biot-Savart_law.html">
+   27. Biot-Savart law
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   28. Faraday's law
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Glossary.html">
+   29. Glossary
+  </a>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/notebooks/L36_Faradays_law.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/dcartin/NAPS-Intermediate-Physics"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        
+        <a class="edit-button" href="https://github.com/dcartin/NAPS-Intermediate-Physics/edit/master/notebooks/L36_Faradays_law.ipynb"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+    </div>
+</div>
+
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+            <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                    data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                    title="Fullscreen mode"><i
+                        class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/dcartin/NAPS-Intermediate-Physics/master?urlpath=tree/notebooks/L36_Faradays_law.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i>
+            Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#overview">
+   28.1. Overview
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#magnetic-flux">
+   28.2. Magnetic flux
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#definition-of-magnetic-flux">
+     28.2.1. Definition of magnetic flux
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#change-in-magnetic-flux">
+     28.2.2. Change in magnetic flux
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#direction-along-area-boundaries">
+     28.2.3. Direction along area boundaries
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+   28.3. Faraday’s law
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#summary">
+   28.4. Summary
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="faraday-s-law">
+<h1><span class="section-number">28. </span>Faraday’s law<a class="headerlink" href="#faraday-s-law" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="overview">
+<h2><span class="section-number">28.1. </span>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>Here are the objectives for this lesson:</p>
+</div>
+<div class="section" id="magnetic-flux">
+<h2><span class="section-number">28.2. </span>Magnetic flux<a class="headerlink" href="#magnetic-flux" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="definition-of-magnetic-flux">
+<h3><span class="section-number">28.2.1. </span>Definition of magnetic flux<a class="headerlink" href="#definition-of-magnetic-flux" title="Permalink to this headline">¶</a></h3>
+<p>The intuitive idea behind magnetic flux is essentially the same as that for electric flux: we are now counting the number of <em>magnetic</em> field lines that pass through a surface. Thus, again, we want to know how much of the field is perpendicular to the surface, and therefore the field that is <em>parallel</em> to the surface’s normal vector <span class="math notranslate nohighlight">\({\hat n}\)</span>. This gives a definition of <strong>magnetic flux</strong> <span class="math notranslate nohighlight">\({\Phi_B}\)</span> that looks a lot like that for electric flux.</p>
+<ul class="simple">
+<li><p><strong>Quantity:</strong> magnetic flux</p></li>
+<li><p><strong>Definition:</strong> For a magnetic field <span class="math notranslate nohighlight">\({\vec B}\)</span> passing through a surface with an area vector <span class="math notranslate nohighlight">\({\vec A}\)</span>, the magnetic flux is given by</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+    \Phi_B = {\vec B} \cdot {\vec A}
+\]</div>
+<ul class="simple">
+<li><p><strong>Units:</strong> webers (Wb) = T <span class="math notranslate nohighlight">\(\cdot \)</span>m<span class="math notranslate nohighlight">\(^2\)</span></p></li>
+</ul>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>The magnetic field through the circular area (<span class="math notranslate nohighlight">\(r = 13.0\)</span> cm) shown below points into the page and has an initial value of 150 mT. This field decreases in magnitude at a rate of 17.0 mT/s. The normal vector is chosen to point out of the page. Based on the information given, what is the magnetic flux (in mWb) <em>through</em> the circle? Be sure to include the appropriate sign.</p>
+</div>
+<p><img alt="Magnetic field passing through a circular area" src="../_images/INT_AY20_MP3_L27_Fig01_Mag_flux_through_circle.png" /></p>
+<div class="toggle docutils container">
+<p><em>Answer:</em> <span class="math notranslate nohighlight">\(-7.96\)</span> mWb</p>
+</div>
+<div class="margin sidebar">
+<p class="sidebar-title">Gauss’ law for magnetism</p>
+<p>Remember that when we first saw magnetic field lines, we saw that they never begin or end, but instead form closed loops. This is different than electric field lines, which start and stop on charged objects. Because magnetic field lines never begin or end, then for a <em>closed</em> surface (i.e. a gaussian surface), there are always the same number of magnetic field lines going into the closed surface as there are coming out. This means that Gauss’ law for <em>magnetism</em> says that the magnetic flux through a gaussian surface is zero!</p>
+</div>
+</div>
+<div class="section" id="change-in-magnetic-flux">
+<h3><span class="section-number">28.2.2. </span>Change in magnetic flux<a class="headerlink" href="#change-in-magnetic-flux" title="Permalink to this headline">¶</a></h3>
+<p>What will be important for Faraday’s law is not so much the magnetic flux, but instead the <em>change</em> in magnetic flux with time. Thinking in terms of the vectors associated with <span class="math notranslate nohighlight">\(\Phi_B\)</span>, this can happen for two basic reasons. If the magnetic field vector is changing, then the change in magnetic flux with time is given by</p>
+<div class="math notranslate nohighlight">
+\[
+    \frac{\Delta \Phi_B}{\Delta t} = \frac{\Delta {\vec B}}{\Delta t} \cdot {\vec A}
+\]</div>
+<p>On the other hand, the magnetic flux can vary if the area vector is changing as well; in this case,</p>
+<div class="math notranslate nohighlight">
+\[
+    \frac{\Delta \Phi_B}{\Delta t} = {\vec B} \cdot \frac{\Delta {\vec A}}{\Delta t}
+\]</div>
+<p>Of course, there is also the possibility that <em>both</em> vectors are changing with time! In addition, the angle between the vectors is changing, but this can only happen if one or both vectors vary with time.</p>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>The magnetic field through the circular area (<span class="math notranslate nohighlight">\(r = 13.0\)</span> cm) shown below points into the page and has an initial value of 150 mT. This field decreases in magnitude at a rate of 17.0 mT/s. The normal vector is chosen to point out of the page. Based on the information given, what is the rate of change in the magnetic flux (in <span class="math notranslate nohighlight">\(\mu\)</span>Wb/s) through the circle? Be sure to include the appropriate sign.</p>
+</div>
+<p><img alt="Magnetic field passing through a circular area" src="../_images/INT_AY20_MP3_L27_Fig01_Mag_flux_through_circle.png" /></p>
+<div class="toggle docutils container">
+<p><em>Answer:</em> <span class="math notranslate nohighlight">\(+902 \ \mu\)</span>Wb/s</p>
+</div>
+</div>
+<div class="section" id="direction-along-area-boundaries">
+<h3><span class="section-number">28.2.3. </span>Direction along area boundaries<a class="headerlink" href="#direction-along-area-boundaries" title="Permalink to this headline">¶</a></h3>
+<p>The last mathematical step we need to complete is to set a direction along the <em>boundary</em> of a surface. This will be done in relation to the direction of the area vector. Thus, if you know one, you will be able to find the other. Let’s see how this works.</p>
+<ol class="simple">
+<li><p>Choose a direction for the normal vector <span class="math notranslate nohighlight">\({\hat n}\)</span> perpendicular to the surface.</p></li>
+<li><p>Pointing your right thumb in the direction of <span class="math notranslate nohighlight">\({\hat n}\)</span>, your right-hand fingers will curl around the boundary loop. This gives the <em>positive</em> direction along the boundary.</p></li>
+<li><p>This is the “right-hand rule” for relating the direction of the area vector and the direction around the boundary loop.</p></li>
+</ol>
+<p>The resulting relationship between the area vector <span class="math notranslate nohighlight">\({\vec A}\)</span> and the positive direction along the boundary is shown in the picture below.</p>
+<p><img alt="Relationship between the area vector and the positive direction along the surface boundary" src="../_images/INT_AY20_MP3_L27_Fig02_Area_boundary_direction.png" /></p>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>The magnetic field through the circular area (<span class="math notranslate nohighlight">\(r = 13.0\)</span> cm) shown below points into the page and has an initial value of 150 mT. This field decreases in magnitude at a rate of 17.0 mT/s. The normal vector is chosen to point out of the page. Based on the information given, which way is the positive direction around the boundary of the circle?</p>
+<p><img alt="Magnetic field passing through a circular area" src="../_images/INT_AY20_MP3_L27_Fig01_Mag_flux_through_circle.png" /></p>
+<ol class="simple">
+<li><p>clockwise</p></li>
+<li><p>counterclockwise</p></li>
+<li><p>into the page</p></li>
+<li><p>left</p></li>
+<li><p>out of the page</p></li>
+<li><p>right</p></li>
+</ol>
+</div>
+<div class="toggle docutils container">
+<p><em>Answer:</em> The direction around the circle boundary is counterclockwise.</p>
+</div>
+<p>Let’s work through an example problem, and see how to find the magnetic flux, and its change, in a physical situation. In the picture below, a rectangular loop of wire is traveling at a constant speed of 4.00 m/s to the right, as shown in the figure below. As it moves, it passes from a region with no magnetic field into a region with a constant magnetic field <span class="math notranslate nohighlight">\({\vec B}\)</span> of 7.05 mT pointing into the page. The loop is halfway inside the field at points 2 and 4. We will take the normal vector to point <em>out</em> of the screen, and find both the magnetic flux, and the rate of change of the magnetic flux, at each point.</p>
+<p><img alt="Rectangular loop passing into and out of a constant magnetic field" src="../_images/INT_AY20_MP3_L27_Fig03_Rect_loop_through_field.png" /></p>
+</div>
+</div>
+<div class="section" id="id1">
+<h2><span class="section-number">28.3. </span>Faraday’s law<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="summary">
+<h2><span class="section-number">28.4. </span>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
+<p>After this lesson, you should be able to:</p>
+<ul class="simple">
+<li><p>Do something.</p></li>
+</ul>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./notebooks"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="L35_Biot-Savart_law.html" title="previous page"><span class="section-number">27. </span>Biot-Savart law</a>
+    <a class='right-next' id="next-link" href="Glossary.html" title="next page"><span class="section-number">29. </span>Glossary</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Daniel Cartin<br/>
+        
+            &copy; Copyright 2020-2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../_static/js/index.d3f166471bb80abb5163.js"></script>
+
+
+    
+  </body>
+</html>

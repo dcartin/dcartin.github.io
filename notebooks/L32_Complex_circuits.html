@@ -1,0 +1,688 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Complex circuits &#8212; NAPS Intermediate Physics</title>
+    
+  <link rel="stylesheet" href="../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.c441f2ba0852f4cabcb80105e3a46ae6.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.d3f166471bb80abb5163.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.7d483ff0a819d6edff12ce0b1ead3928.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../index.html">
+  
+  
+  <h1 class="site-logo" id="site-title">NAPS Intermediate Physics</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../README.html">
+   NAPS Intermediate Physics
+  </a>
+ </li>
+</ul>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="L01_Introduction_to_Python.html">
+   1. Introduction to Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L02_Vectors_and_vPython.html">
+   2. Vectors and vPython
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L03_Velocity_and_Euler_method.html">
+   3. Velocity and the Euler method
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L03A_Units_and_scientific_notation.html">
+   4. Units and scientific notation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L04_Acceleration_and_free_fall.html">
+   5. Acceleration and free fall
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L05_Kinematic_equations.html">
+   6. Kinematic equations
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L06_Vector_magnitude_and_direction.html">
+   7. Vector magnitude and direction
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L07_Projectile_motion.html">
+   8. Projectile motion
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L10_Relative_motion.html">
+   9. Relative motion
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L08_Linear_momentum_and_Newton%27s_laws_of_motion.html">
+   10. Linear momentum and Newton's laws of motion
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L09_Center_of_mass_and_collisions.html">
+   11. Center of mass and collisions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L13_Solving_force_problems.html">
+   12. Solving force problems
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L11_Scalar_product.html">
+   13. Scalar product
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L14_Inclined_planes.html">
+   14. Inclined planes
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L17_Fluids.html">
+   15. Fluids
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L18_Circular_motion.html">
+   16. Circular motion
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L19_Vector_product.html">
+   17. Vector product
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L20_Angular_momentum.html">
+   18. Angular momentum
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L23_Work_and_energy.html">
+   19. Work and kinetic energy
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L24_Conservation_of_energy.html">
+   20. Conservation of energy
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L25_Universal_gravitation.html">
+   21. Universal gravitation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L26_Gravitational_potential_energy.html">
+   22. Gravitational potential energy
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L27_Kepler%27s_laws.html">
+   23. Kepler's laws
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L28_Coulomb%27s_law.html">
+   24. Coulomb's law
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L29_Electric_fields.html">
+   25. Electric fields
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L34_Magnetic_fields_and_forces.html">
+   26. Magnetic fields and forces
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L35_Biot-Savart_law.html">
+   27. Biot-Savart law
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L36_EM_radiation.html">
+   28. Electromagnetic radiation
+  </a>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/notebooks/L32_Complex_circuits.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/dcartin/NAPS-Intermediate-Physics"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        
+        <a class="edit-button" href="https://github.com/dcartin/NAPS-Intermediate-Physics/edit/master/notebooks/L32_Complex_circuits.ipynb"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+    </div>
+</div>
+
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+            <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                    data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                    title="Fullscreen mode"><i
+                        class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/dcartin/NAPS-Intermediate-Physics/master?urlpath=tree/notebooks/L32_Complex_circuits.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i>
+            Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#overview">
+   Overview
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#using-the-loop-and-junction-rules">
+   Using the loop and junction rules
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-junction-rule">
+     The junction rule
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-loop-rule">
+     The loop rule
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#an-example-circuit">
+     An example circuit
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#independent-equations">
+   Independent equations
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#example-using-kirchoff-s-laws">
+   Example: Using Kirchoff’s laws
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#summary">
+   Summary
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="complex-circuits">
+<h1>Complex circuits<a class="headerlink" href="#complex-circuits" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>Up to this point, we have used Kirchhoff’s laws only as a conceptual basis for calculations. For example, it was the junction rule that told us the currents through resistors in series were all the same; similarly, it was the loop rule that justified why the voltages across resistors in parallel were identical. From this basis, we could derive the equivalence resistance for groups of resistors in series and parallel.</p>
+<p>There are many circuits where the resistors cannot be grouped in such a way; I will refer to these circuits as <strong>complex circuits</strong>. One example is known as the Wheatstone bridge, whose diagram is shown below. This is a simple circuit that can be used to measure the value of an unknown resistance by “balancing” the bridge, i.e. changing the resistance of one of the other resistors until the current flow through branch <span class="math notranslate nohighlight">\(AB\)</span> is zero. Because of the way the resistors are connected, in general, none of them have the same current or voltage, so none are in series or parallel with each other.</p>
+<p><img alt="The circuit diagram for a Wheatstone bridge" src="../_images/INT_AY21_L32_Fig01_Wheatstone_bridge.png" /></p>
+<p>Another example is the one shown below, with two batteries in the circuit. Notice that, if either battery were replaced with a wire, then two of the resistors would be in parallel, and in series as a group with the third resistor. This example is actually a physically relevant one. Up to this point, we have usually assumed that the batteries we use are “ideal”, that is, they have no internal resistance to current. Although realistic batteries will have little such internal resistance, it is not zero, and so solving situations like the one shown is important. This is the reason for the gray boxes in the circuit diagram – each box represents a realistic battery, and these two batteries are connected  at both ends to a resistor. This might be the situation if you were using jumper cables to recharge the battery of a friend’s car, which is why the batteries “point” in the same direction.</p>
+<p><img alt="Two realistic batteries connected to a resistor" src="../_images/INT_AY21_L32_Fig02_Circuit_w_real_batteries.png" /></p>
+<p>In this lesson, we will study how to use Kirchhoff’s laws to write down equations to solve for the currents and voltages for situations such as these. One part of the process will be to formalize how to write down equations from the loop rule. You may remember in Lesson 30 I talked about the high and low voltage sides of a circuit element; keeping track of this issue will be important. We also need to make a detour into the idea of <em>independent equations</em>, so we write down exactly the number of equations we require. Finally, we will do an example, and show some good tricks to solving the loop and junction rule equations.</p>
+<p>Here are the objectives for this lesson:</p>
+<ul class="simple">
+<li><p>State the number of independent loop and junction equations for a given circuit.</p></li>
+<li><p>Use the junction and loop rules to write down a set of independent equations relating the electrical elements of a circuit.</p></li>
+<li><p>Given a set of equations for a circuit from Kirchhoff’s rules, solve for the unknown currents or voltages.</p></li>
+</ul>
+</div>
+<div class="section" id="using-the-loop-and-junction-rules">
+<h2>Using the loop and junction rules<a class="headerlink" href="#using-the-loop-and-junction-rules" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="the-junction-rule">
+<h3>The junction rule<a class="headerlink" href="#the-junction-rule" title="Permalink to this headline">¶</a></h3>
+<p>For now, let’s assume that we are given a circuit diagram, along with arrows representing the currents through each branch of the circuit. We will come back to choosing these arrows later in the lesson. Writing down an equation from the junction rule is relatively straightfoward: simply add up the currents whose arrows point into the junction, and set this equal to the sum of the currents leaving the junction.</p>
+<blockquote>
+<div><p><strong>Make sure you follow the branch!</strong> Remember that a branch is made of circuit devices and wires that are all in series, so they have the same current. An arrow giving the current in the branch, that is drawn at one point of that branch, shows the direction of the current in the <em>whole</em> branch. I see many students not following the branch to the end, or ignoring the current coming into or out of a junction from a particular branch. Also, remember that the branch changes when you pass through a junction, so elements on different sides of a junction will have different currents.</p>
+</div></blockquote>
+</div>
+<div class="section" id="the-loop-rule">
+<h3>The loop rule<a class="headerlink" href="#the-loop-rule" title="Permalink to this headline">¶</a></h3>
+<p>The loop rule is more complicated conceptually, so I will go through this in a little detail. Remember from Lesson 30 that the “loop” in the loop rule is a path that you choose to move around the circuit, keeping track of the voltage changes as you pass through each circuit element. The loop can be either with the current direction or against it; often, the same loop will be both, for different branches of the circuit. Because this loop is chosen completely independently from the directions of the currents, when we find the voltage change of a circuit device, it is important to know both which way we are going around the path, as well as the properties of the device itself.</p>
+<p>A battery is easier to consider, so I will start with it. Recall that the long line of a battery symbol refers to the high voltage side, while the short line is the low voltage side. So if, when traveling along the loop you choose, you go into the battery on the short line, and out the long line, there is an <em>increase</em> in voltage. Traveling in the opposite direction leads to a <em>decrease</em> in voltage. This is illustrated in the figures below for a battery with voltage <span class="math notranslate nohighlight">\(V\)</span>; notice that the direction of the current through the battery is irrelevant!</p>
+<p><img alt="Voltage changes when traveling through a battery using the loop rule" src="../_images/INT_AY20_MP3_L19_Fig04_Battery_volt_change.png" /></p>
+<p>When moving along the loop through a resistor, both the direction you move through the resistor <em>and</em> the direction of the current matter. A battery comes already with a high and low voltage side, but a resistor does not. Think of it using the hydraulic analogy – a waterfall has a definite direction, but a water pipe does not. Either end of the pipe can be the place where the water comes into the pipe.</p>
+<p>Current will enter into one side of the resistor, and the resistor will take some of the electrical energy of the charges to use for other purposes. The charges then leave the resistor out the other end, with less energy. If you think about what that means, the side of the resistor where the current comes in is the high voltage side, and where it leaves is the low voltage side. This is <em>dependent</em> on the current direction. I can take the same resistor, flip it around, and then the opposite side from before will be the high voltage side.</p>
+<p>With this in mind, we can use Ohm’s law to find the voltage change <span class="math notranslate nohighlight">\(V = IR\)</span> due to a current <span class="math notranslate nohighlight">\(I\)</span> and resistance <span class="math notranslate nohighlight">\(R\)</span>. The sign of the voltage change is given in the diagrams below, again depending on which way the current for that branch points relative to the direction you travel around the loop.</p>
+<p><img alt="Voltage changes when traveling through a resistor using the loop rule" src="../_images/INT_AY20_MP3_L19_Fig05_Resistor_volt_change.png" /></p>
+</div>
+<div class="section" id="an-example-circuit">
+<h3>An example circuit<a class="headerlink" href="#an-example-circuit" title="Permalink to this headline">¶</a></h3>
+<p>Now I will go through part of an example to find the loop and junction rules for a particular circuit. You will find the remaining equations as practice problems. We will start with the circuit below, where the current directions are already given by the blue arrows. There are also labels for the junctions to help explain the process.</p>
+<p><img alt="An example circuit" src="../_images/INT_AY21_L32_Fig04_Example_circuit.png" /></p>
+<p>Hopefully you can see that there are four junctions and six branches for this circuit. Let first write down the junction rules for junction <span class="math notranslate nohighlight">\(A\)</span>. This is the meeting point of three branches: <span class="math notranslate nohighlight">\(AB, AC,\)</span> and <span class="math notranslate nohighlight">\(AD\)</span>. For two of these branches, the current arrows point away from the junction; these are the currents <span class="math notranslate nohighlight">\(I_4\)</span> for <span class="math notranslate nohighlight">\(AC\)</span> and <span class="math notranslate nohighlight">\(I_6\)</span> for <span class="math notranslate nohighlight">\(AD\)</span>. The third points toward it, with current <span class="math notranslate nohighlight">\(I_1\)</span> along <span class="math notranslate nohighlight">\(AB\)</span>. This means that the junction rule for <span class="math notranslate nohighlight">\(A\)</span> is</p>
+<div class="math notranslate nohighlight">
+\[
+    I_1 = I_4 + I_6
+\]</div>
+<p>Now let’s find the junction rule for <span class="math notranslate nohighlight">\(D\)</span>. Again, three branches meet here: <span class="math notranslate nohighlight">\(AD, BD,\)</span> and <span class="math notranslate nohighlight">\(CD\)</span>. For branches <span class="math notranslate nohighlight">\(BD\)</span> and <span class="math notranslate nohighlight">\(CD\)</span>, it is probably obvious what is happening – current <span class="math notranslate nohighlight">\(I_3\)</span> comes into <span class="math notranslate nohighlight">\(D\)</span> along <span class="math notranslate nohighlight">\(BD\)</span>, and current <span class="math notranslate nohighlight">\(I_5\)</span> leaves <span class="math notranslate nohighlight">\(D\)</span> along <span class="math notranslate nohighlight">\(CD\)</span>. However, you have to be careful to include current <span class="math notranslate nohighlight">\(I_6\)</span> as coming into <span class="math notranslate nohighlight">\(D\)</span> along the branch <span class="math notranslate nohighlight">\(AD\)</span>. This branch is drawn as two “sides”, but it only counts as one wire, since no other wire connects with it between <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(D\)</span>. Thus, the junction rule at <span class="math notranslate nohighlight">\(D\)</span> is</p>
+<div class="math notranslate nohighlight">
+\[
+    I_3 + I_6 = I_5
+\]</div>
+<blockquote>
+<div><p><strong>Problem:</strong> Find the junction rule equations for junctions <span class="math notranslate nohighlight">\(B\)</span> and <span class="math notranslate nohighlight">\(C\)</span>. <em>Answers:</em> <span class="math notranslate nohighlight">\(I_1 + I_2 + I_3 = 0, I_2 + I_4 + I_5 = 0\)</span></p>
+</div></blockquote>
+<p>Next we turn to the loop rule equations for the circuit. To help find the voltage differences, I have taken the same circuit diagram from before, but labeled the high voltage sides of each circuit element with a ‘<span class="math notranslate nohighlight">\(+\)</span>’, and the low voltage side with a ‘<span class="math notranslate nohighlight">\(-\)</span>‘. As I talked about above, for a battery, this just depends on how the battery is drawn, but for resistors, it depends on the direction of the current arrow.</p>
+<p><img alt="The example circuit, with high and low voltage sides labeled" src="../_images/INT_AY21_L32_Fig05_Example_circuit_w_labels.png" /></p>
+<p>For the first loop, I will use the path <span class="math notranslate nohighlight">\(ACDA\)</span>, in that clockwise order. This means we pass through resistors <span class="math notranslate nohighlight">\(R_3\)</span> and <span class="math notranslate nohighlight">\(R_4\)</span>, as well as both batteries. Starting at <span class="math notranslate nohighlight">\(A\)</span> and taking each element, one at a time, we first pass through <span class="math notranslate nohighlight">\(R_3\)</span>. This resistor is on the branch with current <span class="math notranslate nohighlight">\(I_4\)</span>, and we are moving in the same direction as the current. Thus, the path enters the high voltage side (the ‘<span class="math notranslate nohighlight">\(+\)</span>’) and leaves the low voltage side (the ‘-‘), and the change in voltage across <span class="math notranslate nohighlight">\(R_3\)</span> will be <span class="math notranslate nohighlight">\(-I_4 R_3\)</span>.</p>
+<p>Next we move through junction <span class="math notranslate nohighlight">\(C\)</span> to reach the battery <span class="math notranslate nohighlight">\(V_1\)</span>. We enter the high voltage side and leave the low voltage side, so the change in voltage is <span class="math notranslate nohighlight">\(-V_1\)</span>. Notice this is true even though we are going against the current!</p>
+<p>Finally, we travel along the branch <span class="math notranslate nohighlight">\(DA\)</span>, with current <span class="math notranslate nohighlight">\(I_6\)</span>. First, we encounter the battery <span class="math notranslate nohighlight">\(V_2\)</span>, going from low voltage to high. This gives a change in voltage of <span class="math notranslate nohighlight">\(+V_2\)</span>. Then we reach the resistor <span class="math notranslate nohighlight">\(R_4\)</span>, but now we are going against the current. This means the change in voltage is <span class="math notranslate nohighlight">\(+I_6 R_4\)</span>.</p>
+<p>We have now gone completely around the loop, and returned to our starting point. This means that the sum of all of these voltage changes must be zero (by conservation of energy), so our loop equation is</p>
+<div class="math notranslate nohighlight">
+\[
+    -I_4 R_3 - V_1 + V_2 + I_6 R_4 = 0
+\]</div>
+<p>If we had traveled through the loop counterclockwise (i.e. gone in the order <span class="math notranslate nohighlight">\(ADCA\)</span>, all the terms in the equation would have the opposite sign, but it would be mathematically equivalent.</p>
+<p>As another example, let’s try the loop <span class="math notranslate nohighlight">\(ADBA\)</span>, or the outside of the circuit. I will travel around this loop counterclockwise, just to see how things change. For the branch <span class="math notranslate nohighlight">\(AD\)</span>, this means I get the same results as the last loop, but with opposite signs. Thus, the change in voltage going from <span class="math notranslate nohighlight">\(A\)</span> to <span class="math notranslate nohighlight">\(D\)</span> along the bottom is <span class="math notranslate nohighlight">\(-I_6 R_4 - V_2\)</span>.</p>
+<p>Going along the branch <span class="math notranslate nohighlight">\(DB\)</span>, there is not a circuit element here, so there is no change in voltage. Notice this means that the junctions <span class="math notranslate nohighlight">\(B\)</span> and <span class="math notranslate nohighlight">\(D\)</span> have the same voltage. A consequence of this is that we could redraw the circuit, if we wished, with the points <span class="math notranslate nohighlight">\(B\)</span> and <span class="math notranslate nohighlight">\(D\)</span> merged! This would have the advantage of eliminating the current <span class="math notranslate nohighlight">\(I_3\)</span>, but I will leave the circuit diagram as it is for this example.</p>
+<p>For the final branch, <span class="math notranslate nohighlight">\(BA\)</span>, we are traveling with the current, so the voltage change across the resistor <span class="math notranslate nohighlight">\(R_1\)</span> is <span class="math notranslate nohighlight">\(-I_1 R_1\)</span>. We have now returned to our starting point, giving us the equation</p>
+<div class="math notranslate nohighlight">
+\[
+    -I_6 R_4 - V_2 - I_1 R_1 = 0
+\]</div>
+<p>Notice that this equation tells us at least one of the currents <span class="math notranslate nohighlight">\(I_1\)</span> and <span class="math notranslate nohighlight">\(I_6\)</span> is in the wrong direction. Specifically, since all of <span class="math notranslate nohighlight">\(R_1, R_4\)</span>, and <span class="math notranslate nohighlight">\(V_2\)</span> are positive, then one or both of <span class="math notranslate nohighlight">\(I_1\)</span> and <span class="math notranslate nohighlight">\(I_6\)</span> are negative. This is a feature, not a bug – it tells us that the physical direction of the current is in the opposite direction to the arrow direction chosen. Much like we can chose either up or down as the <span class="math notranslate nohighlight">\(+y\)</span> direction, the arrows are just a mathematical choice. If the equations give us a negative number, then the current simply flows in the opposite direction to the chosen arrow.</p>
+<p>We have now gone through two of the possible loops for this circuit. It turns out there are seven total loops, so there are five more equations to find.</p>
+<blockquote>
+<div><p><strong>Problem:</strong> Find the remaining loop rule equations. <em>Answers:</em> Up to an overall sign, and the order of the equations, your equations should be the following:
+$<span class="math notranslate nohighlight">\(
+\begin{eqnarray*}
+    I_1 R_1 - I_2 R_2 + I_4 R_3 &amp;=&amp; 0 \\
+    V_1 + I_2 R_2 &amp;=&amp; 0 \\
+    I_1 R_1 + V_1 + I_4 R_3 &amp;=&amp; 0 \\
+    I_1 R_1 - I_2 R_2 - V_1 + V_2 + I_6 R_4 &amp;=&amp; 0 \\
+    -I_3 R_4 + I_2 R_2 + V_2 + I_6 R_4 &amp;=&amp; 0 \\
+\end{eqnarray*}
+\)</span>$</p>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="independent-equations">
+<h2>Independent equations<a class="headerlink" href="#independent-equations" title="Permalink to this headline">¶</a></h2>
+<p>As we just saw, using Kirchhoff’s laws entails writing down equations resulting from the loop and junction rules. One key part is deciding how many of each kind to use; as we will see, there are actually more equations than we actually want! Knowing the correct number of equations gets into the issue of <em>independent equations</em>. To motivate this idea, let’s start with an example from geometry.</p>
+<p>Suppose you have two lines in the <span class="math notranslate nohighlight">\(x-y\)</span> plane. Assuming they are not parallel, they will intersect at exactly one point. The coordinates <span class="math notranslate nohighlight">\((x, y)\)</span> of this unique point will be the solution to the two linear equations describing the lines.</p>
+<p><img alt="The intersection of two lines in the  plane is a unique point" src="../_images/INT_AY21_L32_Fig03_Intersecting_lines.png" /></p>
+<p>The equations for the lines shown in the previous figure are</p>
+<div class="math notranslate nohighlight">
+\[
+    5x + 6y = 7 \qquad
+    -x + 3y = 1
+\]</div>
+<p>We can solve these equations in a couple of ways, but one easy way is to solve the second equation for <span class="math notranslate nohighlight">\(x\)</span>, and substitute this into the first equation. This gives that <span class="math notranslate nohighlight">\((x, y) = (5/7, 12/21)\)</span>.</p>
+<p>Now, what if we tried to solve the new set of equations</p>
+<div class="math notranslate nohighlight">
+\[
+    5x - 15y = -5 \qquad
+    -x + 3y = 1
+\]</div>
+<p>We would find that an <em>infinite</em> number of <span class="math notranslate nohighlight">\((x, y)\)</span> values meet these conditions! In particular, if we use the method we outlined above, then solving for <span class="math notranslate nohighlight">\(x\)</span> in the second equation and substituting into the first simply gives <span class="math notranslate nohighlight">\(0 = 0\)</span>. Obviously, the problem is that both equations in the second set describe the same line – the first equation is now -5 times the second. The two equations give exactly the same information about the points <span class="math notranslate nohighlight">\((x, y)\)</span>. When we have equations like these, we call them dependent equations. When we have a situation like the first set of equations, these equations are known as <strong>independent equations</strong>. Each equation gives new information about the solution we are looking for (the intersection point). Said differently, in a set of independent equations, we cannot write any particular equation in terms of the others. Here, for the second set, one equation is simply the multiple of the other, but the relationships can be more complicated than that.</p>
+<p>Now let’s return to Kirchhoff’s laws and analyzing a circuit diagram. If a circuit has <span class="math notranslate nohighlight">\(J\)</span> junctions, then there are only <span class="math notranslate nohighlight">\(J - 1\)</span> independent junction equations. This means that one of the equations can be written in terms of the others. Notice this does not mean a <em>specific</em> equation, just that <em>any one</em> of them can be discarded, and the rest are sufficient.</p>
+<p>By the way, it is fairly easy to prove that <span class="math notranslate nohighlight">\(J - 1\)</span> is the number of independent junction equations. To do this, take a circuit and pick a junction at random. This junction will have, say <span class="math notranslate nohighlight">\(N_{in}\)</span> currents going into it and <span class="math notranslate nohighlight">\(N_{out}\)</span> currents going out of it. Now think about the rest of the circuit. Taken as a whole, all of the other junctions will have the same currents, but now it will be the <span class="math notranslate nohighlight">\(N_{in}\)</span> that are going <em>out of</em> the rest of the circuit, and the <span class="math notranslate nohighlight">\(N_{out}\)</span> going <em>into</em> it. The sum of the junction equations for the rest of the current will then be the same as the equation for the junction we picked.</p>
+<p>For loop rules, if a circuit has <span class="math notranslate nohighlight">\(J\)</span> junctions and <span class="math notranslate nohighlight">\(B\)</span> branches, then the number of independent loop equations is <span class="math notranslate nohighlight">\(B - J + 1\)</span>. It is a bit harder to prove this is true, but not too difficult. Notice that this gives the total number of independent equations, both loop and junction, to simply be the number of branches of the circuit.</p>
+<blockquote>
+<div><p><strong>Number of independent equations:</strong> For a circuit with <span class="math notranslate nohighlight">\(J\)</span> junctions and <span class="math notranslate nohighlight">\(B\)</span> branches, there are <span class="math notranslate nohighlight">\(J - 1\)</span> independent junction equations, <span class="math notranslate nohighlight">\(B - J + 1\)</span> independent loop equations, and <span class="math notranslate nohighlight">\(B\)</span> independent equations for the circuit.</p>
+</div></blockquote>
+<p>Let’s go through a couple of examples and see how this works in detail. Below is the diagram for a circuit with two junctions, <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span>, along with a choice of current directions for its three branches.</p>
+<p><img alt="An example circuit with two junctions" src="../_images/INT_AY20_MP3_L19_Fig01_Indep_eqns_example.png" /></p>
+<p>Based on these directions, we have the two junction equations</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{eqnarray*}
+    A:&amp;\ &amp; I_1 + I_2 = I_3 \\
+    B:&amp;\ &amp; I_3 = I_1 + I_2
+\end{eqnarray*}
+\end{split}\]</div>
+<p>These two equations are exactly the same – we only need one of them! Again, notice that current <span class="math notranslate nohighlight">\(I_3\)</span> goes into <span class="math notranslate nohighlight">\(A\)</span> and out of <span class="math notranslate nohighlight">\(B\)</span>; the situation is reversed for current <span class="math notranslate nohighlight">\(I_1\)</span> and <span class="math notranslate nohighlight">\(I_2\)</span>. This is why the two equations are the same.</p>
+<p>Here is a more complicated version, a circuit now with three junctions and five branches, with the current directions along the branches already chosen.</p>
+<p><img alt="An example circuit with three junctions" src="../_images/INT_AY20_MP3_L19_Fig02_Indep_eqns_example.png" /></p>
+<p>With these current directions, the junction equations are now</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{eqnarray*}
+    D:&amp;\ &amp; I_1 + I_2 = I_3 \\
+    E:&amp;\ &amp; I_3 = I_4 + I_5 \\
+    F:&amp;\ &amp; I_1 + I_2 = I_4 + I_5
+\end{eqnarray*}
+\end{split}\]</div>
+<p>For three junctions, only two junction equations will be independent. Why is this? One way to think of it is the argument we had before, based on the currents into and out of the rest of the circuit. Pick the junction you like least in the circuit; say this is the junction <span class="math notranslate nohighlight">\(F\)</span>. The currents <span class="math notranslate nohighlight">\(I_1\)</span> and <span class="math notranslate nohighlight">\(I_2\)</span> going <em>out of</em> <span class="math notranslate nohighlight">\(F\)</span> will go <em>into</em> junctions <span class="math notranslate nohighlight">\(D\)</span> and <span class="math notranslate nohighlight">\(E\)</span> as a <em>group</em> (in this case, just junction <span class="math notranslate nohighlight">\(D\)</span>). Similarly, the currents <span class="math notranslate nohighlight">\(I_4\)</span> and <span class="math notranslate nohighlight">\(I_5\)</span> going <em>into</em> junction <span class="math notranslate nohighlight">\(F\)</span> come <em>out of</em> <span class="math notranslate nohighlight">\(D\)</span> and <span class="math notranslate nohighlight">\(E\)</span> as a group (here, just <span class="math notranslate nohighlight">\(E\)</span>). The current <span class="math notranslate nohighlight">\(I_3\)</span> does not touch junction <span class="math notranslate nohighlight">\(F\)</span> at all, since it stays within the group <span class="math notranslate nohighlight">\(D\)</span> and <span class="math notranslate nohighlight">\(E\)</span>.</p>
+<p>Another way to see this is more mathematical. Take the first two junction equations above and add them together. Recall this means that we add the left-hand side of the <span class="math notranslate nohighlight">\(D\)</span> to the left-hand side of the <span class="math notranslate nohighlight">\(E\)</span> equation, and the same for the right-hand sides. This gives</p>
+<div class="math notranslate nohighlight">
+\[
+    I_1 + I_2 + I_3 = I_3 + I_4 + I_5 \Rightarrow I_1 + I_2 = I_4 + I_5
+\]</div>
+<p>This gives the equation for junction <span class="math notranslate nohighlight">\(F\)</span>. In other words, the junction equations <span class="math notranslate nohighlight">\((D), (E),\)</span> and <span class="math notranslate nohighlight">\((F)\)</span> satisfy <span class="math notranslate nohighlight">\((D) + (E) = (F)\)</span> as an <em>equation of equations</em>. In particular, notice that it was current <span class="math notranslate nohighlight">\(I_3\)</span> that cancelled out – this was the only current that did not leave the group of junctions <span class="math notranslate nohighlight">\(D\)</span> and <span class="math notranslate nohighlight">\(E\)</span>.</p>
+<blockquote>
+<div><p><strong>Problem:</strong> For the circuit below, state the number of independent junction equations, and then write down a possible set of such equations. <em>Answer:</em> There need to be four independent equations. One possible choice is
+$<span class="math notranslate nohighlight">\(
+\begin{eqnarray*}
+    A:&amp;\ &amp; 0 = I_1 + I_2 + I_3 \\
+    B:&amp;\ &amp; I_1 + I_2 + I_5 = I_4 \\
+    C:&amp;\ &amp; I_3 = I_6 + I_8 \\
+    D:&amp;\ &amp; I_6 = I_5 + I_7 \\
+\end{eqnarray*}
+\)</span>$</p>
+<p><img alt="Find a set of independent junction equations for this circuit" src="../_images/INT_AY20_MP3_L19_Fig03_Indep_eqns_practice.png" /></p>
+</div></blockquote>
+</div>
+<div class="section" id="example-using-kirchoff-s-laws">
+<h2>Example: Using Kirchoff’s laws<a class="headerlink" href="#example-using-kirchoff-s-laws" title="Permalink to this headline">¶</a></h2>
+<p>We have talked about how to find the loop and junction equations, as well as how many of each we need to use for a set of independent equations. Now, let’s put all of this together, and see how to use the equations to solve for unknown electrical properties. To start, I will use the circuit shown below. The voltages and resistances are <span class="math notranslate nohighlight">\(V_1 = 12.0\)</span> V, <span class="math notranslate nohighlight">\(V_2 = 2.00\)</span> V, <span class="math notranslate nohighlight">\(R_1 = 2.00 \ \Omega\)</span>, <span class="math notranslate nohighlight">\(R_2 = 4.00 \ \Omega\)</span>, and <span class="math notranslate nohighlight">\(R_3 = 6.00 \ \Omega\)</span>. I will use Kirchhoff’s laws to solve for the unknown currents, both their magnitudes and directions.</p>
+<p><img alt="Find the unknown currents in this circuit" src="../_images/INT_AY20_MP3_L20_Fig01_Kirchhoff_example.png" /></p>
+<p>This circuit has two junctions and three branches. The first thing I want to do is choose a name and direction for the current in each branch. As discussed earlier, the choice does not have to match the actual physical direction of the currents. Once we solve for the numerical values, we will see if any choices are opposite to the actual current direction. To emphasize this point, I will intentionally pick directions I <em>know</em> cannot be right, by having all of them point upward! I have also labeled the two junctions <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span>.</p>
+<p><img alt="The example circuit, with current directions chosen" src="../_images/INT_AY21_L32_Fig06_Example_circuit_w_arrows.png" /></p>
+<p>Once we have this choice of current directions, we can label the high and low voltage sides of the batteries and resistors. Remember this depends on the current arrows for the resistors, but not the batteries.</p>
+<p><img alt="The example circuit, with voltage sides labeled" src="../_images/INT_AY21_L32_Fig07_Example_circuit_w_signs.png" /></p>
+<p>There are two junctions, so there is only one independent junction rule. Using either junction, we get</p>
+<div class="math notranslate nohighlight">
+\[
+    I_1 + I_2 + I_3 = 0
+\]</div>
+<p>There are three possible loop rule equations, but only two of them are independent. It is a good policy to write all three of them down, even though we will only use two of them. First, some of the equations may be easier to use than others. In addition, if we do not use one of the loop rule equations to solve the problem, we can always use it later to double check our answer!</p>
+<p>For the loop equations, going through each of the loops in a counterclockwise direction and starting at junction <span class="math notranslate nohighlight">\(B\)</span>, we get</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{eqnarray*}
+    -I_1 R_1 + V_1 + V_2 + I_2 R_2 &amp;=&amp; 0 \quad (\textrm{left}) \\
+    -I_2 R_2 - V_2 + I_3 R_3 &amp;=&amp; 0 \quad (\textrm{right}) \\
+    -I_1 R_1 + V_1 + I_3 R_3 &amp;=&amp; 0 \quad (\textrm{outside}) \\
+\end{eqnarray*}
+\end{split}\]</div>
+<p>I will use the left and right loop equations to solve the problem, then use the outside loop to check the answer. Here’s a key point to help make the solution easier: the left and right loops both travel over the middle branch. This means that the current <span class="math notranslate nohighlight">\(I_2\)</span> appears in both of these equations. So I will solve the left loop equation for the current <span class="math notranslate nohighlight">\(I_1\)</span> in terms of <span class="math notranslate nohighlight">\(I_2\)</span>, and the right loop equation for <span class="math notranslate nohighlight">\(I_3\)</span> in terms of <span class="math notranslate nohighlight">\(I_2\)</span>. Then, substituting both of these relations into the junction equation, I will have one equation for the unknown <span class="math notranslate nohighlight">\(I_2\)</span>. After I find this number, I can substitute it back into the other equations.</p>
+<p>Starting with the left loop, if I solve for <span class="math notranslate nohighlight">\(I_1\)</span>, I get</p>
+<div class="math notranslate nohighlight">
+\[
+    I_1 = \frac{V_1 + V_2 + I_2 R_2}{R_1}
+\]</div>
+<p>Similarly, with the right loop, I get</p>
+<div class="math notranslate nohighlight">
+\[
+    I_3 = \frac{I_2 R_2 + V_2}{R_3}
+\]</div>
+<p>If I now substitute these appropriately into the junction equation, I have</p>
+<div class="math notranslate nohighlight">
+\[
+    \biggl( \frac{V_1 + V_2 + I_2 R_2}{R_1} \biggr) + I_2 + \biggl( \frac{I_2 R_2 + V_2}{R_3}\biggr) = 0
+\]</div>
+<p>The common denominator is <span class="math notranslate nohighlight">\(R_1 R_3\)</span>, so multiplying the equation by this gives</p>
+<div class="math notranslate nohighlight">
+\[
+    V_1 R_3 + V_2 R_3 + I_2 R_2 R_3 + I_2 R_1 R_3 + I_2 R_1 R_2 + V_2 R_1 = 0
+\]</div>
+<p>Collect all of the terms that contain <span class="math notranslate nohighlight">\(I_2\)</span> on one side of the equation, and the remaining terms on the other. Factor out the common <span class="math notranslate nohighlight">\(I_2\)</span> to get</p>
+<div class="math notranslate nohighlight">
+\[
+    I_2 (R_2 R_3 + R_1 R_3 + R_1 R_2) = -(V_1 R_3 + V_2 R_3 + V_2 R_1)
+\]</div>
+<p>or</p>
+<div class="math notranslate nohighlight">
+\[
+    I_2 = -\biggl( \frac{V_1 R_3 + V_2 R_3 + V_2 R_1}{R_2 R_3 + R_1 R_3 + R_1 R_2} \biggr)
+\]</div>
+<p>Notice this is a negative number! I am going to go ahead and substitute the values here, because I have an important point to make. Plugging in the givens from above, we find <span class="math notranslate nohighlight">\(I_2 = -2.00\)</span> A. This means the current flows in the direction opposite to the chosen direction. Therefore, through the middle branch, a current of 2.00 A flows from junction <span class="math notranslate nohighlight">\(A\)</span> to junction <span class="math notranslate nohighlight">\(B\)</span>.</p>
+<blockquote>
+<div><p><strong>Commit to your choice of current directions!</strong> Based on our choice of current directions, <span class="math notranslate nohighlight">\(I_2\)</span> is negative. This means that everywhere you see the quantity <span class="math notranslate nohighlight">\(I_2\)</span>, you must substitute in this negative number. If you change it to a positive because you “know” it is wrong, you will get incorrect answers. The equations depend on your original choice, so you have to go with it.</p>
+</div></blockquote>
+<p>Now that we have <span class="math notranslate nohighlight">\(I_2\)</span>, we can plug it into the equations above for <span class="math notranslate nohighlight">\(I_1\)</span> and <span class="math notranslate nohighlight">\(I_3\)</span> to get</p>
+<div class="math notranslate nohighlight">
+\[
+    I_1 = \frac{(12.0 \ V) + (2.00 \ V) + (-2.00 \ A)(4.00 \ \Omega)}{(2.00 \ \Omega)} = 3.00 \ A
+\]</div>
+<p>and</p>
+<div class="math notranslate nohighlight">
+\[
+    I_3 = \frac{(-2.00 \ A)(4.00 \ \ \Omega) + (2.00 \ V)}{(6.00 \ \Omega)} = -1.00 \ A
+\]</div>
+<p>Lastly, we can double check our answers. We have already used the left and right loop rules, as well as the junction rules, to get these numbers. If we use them again, then we are not really checking our work! We have to use an equation that we did not use before; the only remaining one is the outside loop equation. If we got the correct numbers, then we should get identically zero:</p>
+<div class="math notranslate nohighlight">
+\[
+    -I_1 R_1 + V_1 + I_3 R_3 = -(3.00 \ A)(2.00 \ \Omega) + (12.0 \ V) + (-1.00 \ A)(6.00 \ \Omega) = 0
+\]</div>
+<p>So everything checks out!</p>
+<blockquote>
+<div><p><strong>Problem:</strong> For the circuit diagram below, find the magnitude (in mA) and direction of the currents through each of the three resistors. Assume that <span class="math notranslate nohighlight">\(V_1 = 6.00\)</span> V, <span class="math notranslate nohighlight">\(V_2 = 4.00\)</span> V, <span class="math notranslate nohighlight">\(R_1 = 10.0 \ \Omega, R_2 = 9.00 \ \Omega,\)</span> and <span class="math notranslate nohighlight">\(R_3 = 7.00 \ \Omega\)</span>. <em>Answers:</em> <span class="math notranslate nohighlight">\(I_1 = 305\)</span> mA towards junction <span class="math notranslate nohighlight">\(B\)</span>; <span class="math notranslate nohighlight">\(I_2 = 117\)</span> mA towards junction <span class="math notranslate nohighlight">\(B\)</span>; <span class="math notranslate nohighlight">\(I_3 = 422\)</span> mA towards junction <span class="math notranslate nohighlight">\(C\)</span>.</p>
+<p><img alt="Find the unknown currents for this practice circuit" src="../_images/INT_AY21_L32_Fig08_Practice_circuit.png" /></p>
+</div></blockquote>
+</div>
+<div class="section" id="summary">
+<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
+<p>Kirchhoff’s laws provide the equations you can use to analysis any resistor circuit. They do not require any special conditions on the connections between resistors, or the number of batteries in the circuit. Although solving them by hand can be onerous, it should give you a good intuition about how such a process works. In a workplace application, such as designing circuits for a living, there are matrix methods to solve these using a computer. Do this yourself, though, develops your sixth sense about when the computer is spitting out garbage solutions!</p>
+<p>The next lesson will introduce another type of circuit element, the capacitor. Although it shares some superficial similarities with a battery, it has key differences as well. The interaction of resistors and capacitors in a circuit can be interesting as well, leading to currents that change in time.</p>
+<p>After this lesson, you should be able to:</p>
+<ul class="simple">
+<li><p>For any circuit, write down an independent set of loop and junction equations for the circuit.</p></li>
+<li><p>Solve for the unknown electrical properties of a circuit, using the loop and junction equations for that circuit.</p></li>
+</ul>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./notebooks"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Daniel Cartin<br/>
+        
+            &copy; Copyright 2020-2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../_static/js/index.d3f166471bb80abb5163.js"></script>
+
+
+    
+  </body>
+</html>

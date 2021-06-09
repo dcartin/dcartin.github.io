@@ -1,0 +1,1199 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resistor circuits &#8212; NAPS Intermediate Physics</title>
+    
+  <link rel="stylesheet" href="../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.c441f2ba0852f4cabcb80105e3a46ae6.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.d3f166471bb80abb5163.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.7d483ff0a819d6edff12ce0b1ead3928.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../index.html">
+  
+  
+  <h1 class="site-logo" id="site-title">NAPS Intermediate Physics</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../README.html">
+   NAPS Intermediate Physics
+  </a>
+ </li>
+</ul>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="L01_Introduction_to_Python.html">
+   1. Introduction to Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L02_Vectors_and_vPython.html">
+   2. Vectors and vPython
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L03_Velocity_and_Euler_method.html">
+   3. Velocity and the Euler method
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L03A_Units_and_scientific_notation.html">
+   4. Units and scientific notation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L04_Acceleration_and_free_fall.html">
+   5. Acceleration and free fall
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L05_Kinematic_equations.html">
+   6. Kinematic equations
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L06_Vector_magnitude_and_direction.html">
+   7. Vector magnitude and direction
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L07_Projectile_motion.html">
+   8. Projectile motion
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L10_Relative_motion.html">
+   9. Relative motion
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L08_Linear_momentum_and_Newton%27s_laws_of_motion.html">
+   10. Linear momentum and Newton's laws of motion
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L09_Center_of_mass_and_collisions.html">
+   11. Center of mass and collisions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L13_Solving_force_problems.html">
+   12. Solving force problems
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L11_Scalar_product.html">
+   13. Scalar product
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L14_Inclined_planes.html">
+   14. Inclined planes
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L17_Fluids.html">
+   15. Fluids
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L18_Circular_motion.html">
+   16. Circular motion
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L19_Vector_product.html">
+   17. Vector product
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L20_Angular_momentum.html">
+   18. Angular momentum
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L23_Work_and_energy.html">
+   19. Work and kinetic energy
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L24_Conservation_of_energy.html">
+   20. Conservation of energy
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L25_Universal_gravitation.html">
+   21. Universal gravitation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L26_Gravitational_potential_energy.html">
+   22. Gravitational potential energy
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L27_Kepler%27s_laws.html">
+   23. Kepler's laws
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L28_Coulomb%27s_law.html">
+   24. Coulomb's law
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L29_Electric_fields.html">
+   25. Electric fields
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L34_Magnetic_fields_and_forces.html">
+   26. Magnetic fields and forces
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L35_Biot-Savart_law.html">
+   27. Biot-Savart law
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L36_EM_radiation.html">
+   28. Electromagnetic radiation
+  </a>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/notebooks/L31_Resistor_circuits.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/dcartin/NAPS-Intermediate-Physics"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        
+        <a class="edit-button" href="https://github.com/dcartin/NAPS-Intermediate-Physics/edit/master/notebooks/L31_Resistor_circuits.ipynb"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+    </div>
+</div>
+
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+            <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                    data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                    title="Fullscreen mode"><i
+                        class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/dcartin/NAPS-Intermediate-Physics/master?urlpath=tree/notebooks/L31_Resistor_circuits.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i>
+            Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#overview">
+   Overview
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#series-circuits">
+   Series circuits
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#parallel-circuits">
+   Parallel circuits
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#hybrid-circuits">
+   Hybrid circuits
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#summary">
+   Summary
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="resistor-circuits">
+<h1>Resistor circuits<a class="headerlink" href="#resistor-circuits" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>We will now begin to analysis circuits, computing various physical quantities for the elements in the circuit. So far, you have only been introduced to batteries and resistors, so our circuits will be constructed only from those devices in this lesson. Later, in Lesson 33 (capacitor circuits), we will add in another element type, the capacitor.</p>
+<p>There are a few ways to go about circuit analysis. One method, which we will talk more about in Lesson 32 (complex circuits), is to use Kirchhoff’s laws to write down a set of equations mathematically describing the relationships between the currents and voltages in the circuit. That is a powerful technique, but sometimes it is more than is necessary.</p>
+<p>In this lesson, we will use the method of simplification. We take a group of resistors, and find a single equivalent resistor that has the exact same electrical properties as the original group; then, we can “replace” the group with the equivalent resistor, leading to a simpler circuit. If we do this over and over, eventually a circuit with a single resistor – equivalent to all the resistors in the original circuit – and the battery. At this point, we can use Ohm’s law, since that relation only works for a single resistor. Undoing the process, we can calculate the properties of the original, physical resistors. This will be the scheme we use in this lesson.</p>
+<p>One helpful way to understand many of the concepts in resistor circuits is to build your own circuits! You can do this easily using the Circuit Construction Kit PhET linked in the cell below. I would highly recommend giving it a try! The “Intro” allows you to build your own circuits; the “Lab” allows you to make more realistic circuits, since it includes the possibility of internal resistance for batteries and wires.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">IFrame</span>
+
+<span class="n">IFrame</span><span class="p">(</span><span class="n">src</span><span class="o">=</span><span class="s2">&quot;https://phet.colorado.edu/sims/html/circuit-construction-kit-dc/latest/circuit-construction-kit-dc_en.html&quot;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="s2">&quot;600&quot;</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="s2">&quot;400&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Here are the objectives for this lesson:</p>
+<ul class="simple">
+<li><p>State the equivalent resistance of resistors in series, or resistors in parallel.</p></li>
+<li><p>Given a resistor circuit where the resistors are either all in series, or all in parallel, calculate the voltage across, the current through, and the power emitted, by each resistor.</p></li>
+<li><p>Given a hybrid resistor circuit, calculate the voltage across, the current through, and the power emitted, by each resistor.</p></li>
+</ul>
+</div>
+<div class="section" id="series-circuits">
+<h2>Series circuits<a class="headerlink" href="#series-circuits" title="Permalink to this headline">¶</a></h2>
+<p>To illustrate the simplification method above, let’s start with a circuit with a group of resistors all in series, i.e.  the circuit only has a single branch, with no junctions. We want to find a single resistor that has the same electric properties as the group, so how can we do this?</p>
+<p><img alt="Replacing a group of series resistors with a single equivalent resistor" src="../_images/INT_AY21_L31_Fig01_Series_resistors.png" /></p>
+<p>By the junction rule, all of the resistors will have the same circuit, since they all lie on the same branch. Thus, <span class="math notranslate nohighlight">\(I_1 = I_2 = \cdots = I\)</span>. Also, the total voltage of the group is simply the sum of the individual voltages, so <span class="math notranslate nohighlight">\(V_{tot} = V_1 + V_2 + \cdots\)</span>. We call the resistance of the equivalence resistor <span class="math notranslate nohighlight">\(R_{eq}\)</span>, and use Ohm’s law to set it equal to <span class="math notranslate nohighlight">\(R_{eq} = V_{tot} / I\)</span>. Remember that each of the physical resistors will have, for example, <span class="math notranslate nohighlight">\(R_1 = V_1 / I_1\)</span>. Let’s now start with Ohm’s law for the equivalent resistor and see if we can write it in terms of the individual resistors.</p>
+<div class="math notranslate nohighlight">
+\[
+    R_{eq} = \frac{V_{tot}}{I} = \frac{V_1 + V_2 + \cdots}{I} = \frac{V_1}{I_1} + \frac{V_2}{I_2} + \cdots = R_1 + R_2 + \cdots
+\]</div>
+<p>Here, we used the fact that the currents are the same. This shows us that we can replace the group of series resistors with a single equivalent resistor, whose resistance is merely the sum of the individual resistors. This gives the equivalent resistance for a group of series resistors.</p>
+<blockquote>
+<div><p><strong>Series equivalent resistance:</strong> $<span class="math notranslate nohighlight">\(R_{eq} = R_1 + R_2 + \cdots\)</span>$</p>
+</div></blockquote>
+<p>Now, let’s see how this works in practice with an example circuit, given below. We will find the current through, the voltage across, and the power emitted, by all of the resistors in the circuit.</p>
+<p><img alt="An example series circuit" src="../_images/INT_AY20_MP3_L12_Fig01_Series_circuit.png" /></p>
+<p>In order to compute the properties of the circuit, we use what I call a <strong>VIRP table</strong>. The name comes from the fact that we use it to find the voltage, current, and power of the resistor group. I will show the various steps to fill in the table. At this point, we can only write down the given resistances, and the total voltage (which is that of the battery). Notice that, in the upper left corner, we have put the type of grouping, to remind us of what rules to use when calculating the rest of the table!</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Series</p></th>
+<th class="head"><p>V (V)</p></th>
+<th class="head"><p>I (A)</p></th>
+<th class="head"><p>R (<span class="math notranslate nohighlight">\(\Omega\)</span>)</p></th>
+<th class="head"><p>P(W)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(R_1\)</span></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p>10.00</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(R_2\)</span></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p>15.00</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(R_3\)</span></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p>20.00</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(R_{123}\)</span></p></td>
+<td><p>90.00</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+<p>A couple of things to note:</p>
+<ol class="simple">
+<li><p>We do not need to write the units in the table entries, because we have put them by the appropriate quantity at the top of each column.</p></li>
+<li><p><strong>More importantly</strong>, we have used <em>four</em> sig figs for each number. Get into this habit! It will not be relevant here, but when we get into more complicated circuits, using four sig figs will maintain the accuracy of your calculations.</p></li>
+</ol>
+<p>We can group the three resistors together into a single equivalent resistor, so we redraw the circuit again, but now with the three physical resistors replaced by the equivalent resistor. This equivalent resistance is labeled as <span class="math notranslate nohighlight">\(R_{123}\)</span>, to remind us it is a combination of the resistances <span class="math notranslate nohighlight">\(R_1, R_2,\)</span> and <span class="math notranslate nohighlight">\(R_3\)</span>. Since the group is in series,</p>
+<div class="math notranslate nohighlight">
+\[
+    R_{123} = R_1 + R_2 + R_3
+\]</div>
+<p><img alt="Simplifying the series circuit" src="../_images/INT_AY20_MP3_L12_Fig02_Series_simplify.png" /></p>
+<p>We can fill in this equivalent resistance into our VIRP table.</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Series</p></th>
+<th class="head"><p>V (V)</p></th>
+<th class="head"><p>I (A)</p></th>
+<th class="head"><p>R (<span class="math notranslate nohighlight">\(\Omega\)</span>)</p></th>
+<th class="head"><p>P(W)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(R_1\)</span></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p>10.00</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(R_2\)</span></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p>15.00</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(R_3\)</span></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p>20.00</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(R_{123}\)</span></p></td>
+<td><p>90.00</p></td>
+<td><p></p></td>
+<td><p>45.00</p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+<p>For the bottom row, we now have enough information to find the current (using Ohm’s law <span class="math notranslate nohighlight">\(R = V/I\)</span>) and the power (with <span class="math notranslate nohighlight">\(P = IV\)</span>).</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Series</p></th>
+<th class="head"><p>V (V)</p></th>
+<th class="head"><p>I (A)</p></th>
+<th class="head"><p>R (<span class="math notranslate nohighlight">\(\Omega\)</span>)</p></th>
+<th class="head"><p>P(W)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(R_1\)</span></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p>10.00</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(R_2\)</span></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p>15.00</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(R_3\)</span></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p>20.00</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(R_{123}\)</span></p></td>
+<td><p>90.00</p></td>
+<td><p>2.000</p></td>
+<td><p>45.00</p></td>
+<td><p>180.0</p></td>
+</tr>
+</tbody>
+</table>
+<p>Since the physical resistors are in series, the currents are the same. We can copy the total current into the individual currents for each resistor in the table.</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Series</p></th>
+<th class="head"><p>V (V)</p></th>
+<th class="head"><p>I (A)</p></th>
+<th class="head"><p>R (<span class="math notranslate nohighlight">\(\Omega\)</span>)</p></th>
+<th class="head"><p>P(W)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(R_1\)</span></p></td>
+<td><p></p></td>
+<td><p>2.000</p></td>
+<td><p>10.00</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(R_2\)</span></p></td>
+<td><p></p></td>
+<td><p>2.000</p></td>
+<td><p>15.00</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(R_3\)</span></p></td>
+<td><p></p></td>
+<td><p>2.000</p></td>
+<td><p>20.00</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(R_{123}\)</span></p></td>
+<td><p>90.00</p></td>
+<td><p>2.000</p></td>
+<td><p>45.00</p></td>
+<td><p>180.0</p></td>
+</tr>
+</tbody>
+</table>
+<p>Now we can finish the table, since we have enough for each resistor to use Ohm’s law and the power equation.</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Series</p></th>
+<th class="head"><p>V (V)</p></th>
+<th class="head"><p>I (A)</p></th>
+<th class="head"><p>R (<span class="math notranslate nohighlight">\(\Omega\)</span>)</p></th>
+<th class="head"><p>P(W)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(R_1\)</span></p></td>
+<td><p>20.00</p></td>
+<td><p>2.000</p></td>
+<td><p>10.00</p></td>
+<td><p>40.00</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(R_2\)</span></p></td>
+<td><p>30.00</p></td>
+<td><p>2.000</p></td>
+<td><p>15.00</p></td>
+<td><p>60.00</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(R_3\)</span></p></td>
+<td><p>40.00</p></td>
+<td><p>2.000</p></td>
+<td><p>20.00</p></td>
+<td><p>80.00</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(R_{123}\)</span></p></td>
+<td><p>90.00</p></td>
+<td><p>2.000</p></td>
+<td><p>45.00</p></td>
+<td><p>180.0</p></td>
+</tr>
+</tbody>
+</table>
+<p>Although this was a relatively simple table, let’s go through a couple of checks to make sure we did everything right.</p>
+<ol class="simple">
+<li><p>Since the group is in series, there is an extra fact that we have not used yet: the individual voltages must add up to the total voltage.</p></li>
+<li><p>In addition, for <em>every</em> group of resistors, the individual powers must add up to the total power. This is just good old fashioned conservation of energy!</p></li>
+</ol>
+<p>This shows you your first example of circuit simplification for series circuits. We will use this again for parallel circuits, but first, try your hand at the following practice problems.</p>
+<blockquote>
+<div><p><strong>Problem:</strong> Construct the appropriate VIRP table for the circuit shown below, with <span class="math notranslate nohighlight">\(R_1 = 250. \ \Omega, R_2 = 150. \ \Omega, R_3 = 350. \ \Omega\)</span>, and <span class="math notranslate nohighlight">\(V = 24.0\)</span> V.</p>
+<p><img alt="Practice series circuit" src="../_images/INT_AY20_MP3_L12_Fig01_Series_circuit.png" /></p>
+</div></blockquote>
+<blockquote>
+<div><p><strong>Problem:</strong> You are given the following incomplete VIRP table for three resistors <span class="math notranslate nohighlight">\(R_A, R_B,\)</span> and <span class="math notranslate nohighlight">\(R_C\)</span> in series. Fill in the rest of the table.</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Series</p></th>
+<th class="head"><p>V (V)</p></th>
+<th class="head"><p>I (A)</p></th>
+<th class="head"><p>R (<span class="math notranslate nohighlight">\(\Omega\)</span>)</p></th>
+<th class="head"><p>P(W)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(R_A\)</span></p></td>
+<td><p>8.000</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(R_B\)</span></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p>15.00</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(R_C\)</span></p></td>
+<td><p></p></td>
+<td><p>3.000</p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(R_{ABC}\)</span></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p>45.00</p></td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div>
+<div class="section" id="parallel-circuits">
+<h2>Parallel circuits<a class="headerlink" href="#parallel-circuits" title="Permalink to this headline">¶</a></h2>
+<p>Now that we have worked through series resistor circuits, we need to do the same for parallel circuits. First, we will find the equivalent resistance of a group of parallel resistors, then work through an example of a VIRP table for such a group.</p>
+<p><img alt="Replacing a group of parallel resistors with an equivalent resistor" src="../_images/INT_AY21_L31_Fig02_Parallel_resistors.png" /></p>
+<p>As shown in the figure above, we want to replace the group of parallel resistors on the left with a single resistor, as seen on the right. What value of <span class="math notranslate nohighlight">\(R_{eq}\)</span> will allow us to do this? Remember that for parallel resistors, it is now the voltage that is the same – we can see this using the loop rule, taking a loop passing through any pair of resistors in the group. Thus, <span class="math notranslate nohighlight">\(V_1 = V_2 = \cdots = V\)</span>. On the flip side, the individual currents all add up to the total, so <span class="math notranslate nohighlight">\(I = I_1 + I_2 + \cdots\)</span>. We will start with this second fact, and then use Ohm’s law for each individual resistor. In particular, we want the total current <span class="math notranslate nohighlight">\(I\)</span> to be related to the total voltage <span class="math notranslate nohighlight">\(V\)</span> and the equivalent resistance <span class="math notranslate nohighlight">\(R_{eq}\)</span> by <span class="math notranslate nohighlight">\(I = V/R_{eq}\)</span>. This means</p>
+<div class="math notranslate nohighlight">
+\[
+    \frac{V}{R_{eq}} = I = I_1 + I_2 + \cdots = \frac{V_1}{R_1} + \frac{V_2}{R_2} + \cdots
+\]</div>
+<p>since Ohm’s law holds for each individual resistor as well. Since <span class="math notranslate nohighlight">\(V = V_1 = V_2 = \cdots\)</span>, then</p>
+<div class="math notranslate nohighlight">
+\[
+    \frac{V}{R_{eq}} = V \biggl( \frac{1}{R_1} + \frac{1}{R_2} + \cdots \biggr)
+\]</div>
+<p>Dividing out the common factor of voltage <span class="math notranslate nohighlight">\(V\)</span> gives us the equivalent resistance for a group of parallel resistors.</p>
+<blockquote>
+<div><p><strong>Parallel equivalent resistance:</strong> $<span class="math notranslate nohighlight">\( \frac{1}{R_{eq}} = \frac{1}{R_1} + \frac{1}{R_2} + \cdots\)</span>$</p>
+</div></blockquote>
+<p>I will warn you now – a mistake students sometimes make is to forget to take the reciprocal of <span class="math notranslate nohighlight">\(R_{eq}\)</span> at the end of this calculation! You must first add up the sums of the reciprocals of the individual resistance, then take the reciprocal of this sum to find the equivalent resistance. Hopefully it is obvious that the <em>series</em> equivalent resistance is always bigger than any of the individual resistances; you can show that the <em>parallel</em> equivalent resistance is always <em>smaller</em> than any of the individual resistances as well.</p>
+<p>Let’s take the same resistors and battery we used for the series example above, and place them into a parallel resistor circuit. As we work through this example, notice how the values we compute are different than those we found earlier.</p>
+<p><img alt="An example parallel circuit" src="../_images/INT_AY20_MP3_L12_Fig04_Parallel_example.png" /></p>
+<p>Because the values are the same as before, our VIRP table looks similar, just changing the group type to “parallel”.</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Parallel</p></th>
+<th class="head"><p>V (V)</p></th>
+<th class="head"><p>I (A)</p></th>
+<th class="head"><p>R (<span class="math notranslate nohighlight">\(\Omega\)</span>)</p></th>
+<th class="head"><p>P(W)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(R_1\)</span></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p>10.00</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(R_2\)</span></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p>15.00</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(R_3\)</span></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p>20.00</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(R_{123}\)</span></p></td>
+<td><p>90.00</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+<p>We now simplify the circuit into a single equivalent resistor <span class="math notranslate nohighlight">\(R_{123}\)</span>.</p>
+<p><img alt="Simplifying the parallel circuit" src="../_images/INT_AY20_MP3_L12_Fig05_Parallel_simplify.png" /></p>
+<p>Solving for the equivalent resistance <span class="math notranslate nohighlight">\(R_{123}\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[
+    \frac{1}{R_{123}} = \frac{1}{R_1} + \frac{1}{R_2} + \frac{1}{R_3}
+\]</div>
+<p>we can fill this into the table, then solve the bottom row using Ohm’s law and the power equation. Notice that the equivalent resistance is not a round number, so keeping four sig figs is becoming important!</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Parallel</p></th>
+<th class="head"><p>V (V)</p></th>
+<th class="head"><p>I (A)</p></th>
+<th class="head"><p>R (<span class="math notranslate nohighlight">\(\Omega\)</span>)</p></th>
+<th class="head"><p>P(W)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(R_1\)</span></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p>10.00</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(R_2\)</span></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p>15.00</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(R_3\)</span></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p>20.00</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(R_{123}\)</span></p></td>
+<td><p>90.00</p></td>
+<td><p>19.50</p></td>
+<td><p>4.615</p></td>
+<td><p>1755</p></td>
+</tr>
+</tbody>
+</table>
+<p>This is a parallel group, so now the <em>voltage</em> for the individual resistors is the same as the total voltage. Copy these up the voltage column, then again use Ohm’s law and the power equation to complete the table. You should get the following results.</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Parallel</p></th>
+<th class="head"><p>V (V)</p></th>
+<th class="head"><p>I (A)</p></th>
+<th class="head"><p>R (<span class="math notranslate nohighlight">\(\Omega\)</span>)</p></th>
+<th class="head"><p>P(W)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(R_1\)</span></p></td>
+<td><p>90.00</p></td>
+<td><p>9.000</p></td>
+<td><p>10.00</p></td>
+<td><p>810.0</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(R_2\)</span></p></td>
+<td><p>90.00</p></td>
+<td><p>6.000</p></td>
+<td><p>15.00</p></td>
+<td><p>540.0</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(R_3\)</span></p></td>
+<td><p>90.00</p></td>
+<td><p>4.500</p></td>
+<td><p>20.00</p></td>
+<td><p>405.0</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(R_{123}\)</span></p></td>
+<td><p>90.00</p></td>
+<td><p>19.50</p></td>
+<td><p>4.615</p></td>
+<td><p>1755</p></td>
+</tr>
+</tbody>
+</table>
+<p>To check the accuracy of the table, we make sure (1) the individual currents add up to the total, and (2) the individual powers add up to the total. Since both of these work, the table is correct.</p>
+<p>Even though we used the same resistors and battery, the results we get are very different! In particular, the circuit has a much larger power emission – the energy storage of the battery is being drained a lot quicker. This is because the current is almost ten times larger. The much lower resistance of the parallel circuit, compared to the series circuit, has a profound effect on the electrical properties of the system.</p>
+<blockquote>
+<div><p><strong>Problem:</strong> Construct the appropriate VIRP table for the circuit shown below, with <span class="math notranslate nohighlight">\(R_1 = 250. \ \Omega, R_2 = 150. \ \Omega, R_3 = 350. \ \Omega\)</span>, and <span class="math notranslate nohighlight">\(V = 24.0\)</span> V.</p>
+<p><img alt="Practice parallel circuit" src="../_images/INT_AY20_MP3_L12_Fig06_Parallel_practice.png" /></p>
+</div></blockquote>
+<blockquote>
+<div><p><strong>Problem:</strong> You are given the following incomplete VIRP table for three resistors <span class="math notranslate nohighlight">\(R_D, R_E,\)</span> and <span class="math notranslate nohighlight">\(R_F\)</span> in parallel. Fill in the rest of the table.</p>
+</div></blockquote>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Parallel</p></th>
+<th class="head"><p>V (V)</p></th>
+<th class="head"><p>I (A)</p></th>
+<th class="head"><p>R (<span class="math notranslate nohighlight">\(\Omega\)</span>)</p></th>
+<th class="head"><p>P(W)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(R_D\)</span></p></td>
+<td><p>8.000</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(R_E\)</span></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p>15.00</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(R_F\)</span></p></td>
+<td><p></p></td>
+<td><p>3.000</p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(R_{DEF}\)</span></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p>45.00</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="hybrid-circuits">
+<h2>Hybrid circuits<a class="headerlink" href="#hybrid-circuits" title="Permalink to this headline">¶</a></h2>
+<p>So far, we have taken a single group of resistors, either in series or parallel, and replaced them with a single eqiuivalent resistor. However, there is no reason we cannot keep doing this process over and over. This will allow us to treat more involved circuits. It <em>does</em> depend on the ability to group resistors together in series or parallel. If we cannot do this, we will need to use a more sophisticated method, which we will see in Lesson 32 when we use Kirchhoff’s laws. I will refer to circuits were you <em>can</em> group all the resistors repeatedly into series or parallel groups as a <strong>hybrid circuit</strong>.</p>
+<p>As an example, let’s consider the circuit diagram shown below.</p>
+<p><img alt="An example hybrid circuit" src="../_images/INT_AY20_MP3_L13_Fig01_Hybrid_example.png" /></p>
+<p>The first step we need to take is to describe the circuit – what resistors can we group together as either series or parallel? Going back to the definition of branches and junctions from Lesson 30 may be helpful here. For example, the four resistors are <em>not</em> all in series, because they are not all on the same branch. There are, in fact, three branches and two junctions. The junctions are where the wires meet, above and below the battery, so the branches are the left-hand wire, the middle wire, and the right-hand wire. This means that the resistors on the same branch are in series. Thus, <span class="math notranslate nohighlight">\(R_1\)</span> and <span class="math notranslate nohighlight">\(R_2\)</span> are in series, and <span class="math notranslate nohighlight">\(R_3\)</span> is in series with <span class="math notranslate nohighlight">\(R_4\)</span>.</p>
+<p>So now what? Well, these two branches both connect at the top and bottom junctions, so the branches form a complete loop. This means that the <em>group</em> <span class="math notranslate nohighlight">\(R_1\)</span> and <span class="math notranslate nohighlight">\(R_2\)</span> is in parallel with the <em>group</em> <span class="math notranslate nohighlight">\(R_3\)</span> and <span class="math notranslate nohighlight">\(R_4\)</span>. This spells out the following roadmap for the circuit:</p>
+<ol class="simple">
+<li><p><span class="math notranslate nohighlight">\(R_1\)</span> and <span class="math notranslate nohighlight">\(R_2\)</span> are in series</p></li>
+<li><p><span class="math notranslate nohighlight">\(R_3\)</span> and <span class="math notranslate nohighlight">\(R_4\)</span> are in series</p></li>
+<li><p><span class="math notranslate nohighlight">\(R_{12}\)</span> and <span class="math notranslate nohighlight">\(R_{34}\)</span> are in parallel</p></li>
+</ol>
+<p>For the last line, I have written the groupings in terms of their equivalence resistance, as a hint that we cannot do anything there until we first complete the series groupings <span class="math notranslate nohighlight">\(R_1\)</span> and <span class="math notranslate nohighlight">\(R_2\)</span>, and <span class="math notranslate nohighlight">\(R_3\)</span> and <span class="math notranslate nohighlight">\(R_4\)</span>. In other words, we have to start with the first two simplifications before we go further. Writing out a roadmap like this can help decide which simplifications to start with.</p>
+<p>Now we go through the process of circuit simplification, which I spell out here. Notice that the steps listed below are basically the ones we did in the previous examples, but there are some extra things thrown in.</p>
+<ol class="simple">
+<li><p>Draw the circuit diagram for the original circuit. You can rearrange the drawing, if necessary, to help you understand the circuit.</p></li>
+<li><p>Make a roadmap of which resistors are in series or parallel with each other (including equivalent resistances as appropriate).</p></li>
+<li><p>For every simplification, redraw the circuit with the new equivalent resistor, and set up the VIRP table matching the simplification. Find the equivalent resistance of the group in question, and fill it into the table.</p></li>
+<li><p>Continue this process until you have a circuit with one battery and one resistor equivalent to all the physical resistors.</p></li>
+<li><p>Work back in the reverse direction, filling in the remaining parts of the VIRP tables. <em>Completely</em> fill in each table, and check your work, before moving on to the next table! This means verifying that the powers add up to the total, for example.</p></li>
+</ol>
+<p>Let’s go through this process with the example circuit given in the figure above. I randomly picked five values for the resistances and the battery voltage. Why? The beauty of this process is that you can always write down new problems yourself, and make sure you have the right answer, by using the checks I mentioned before (Do the powers add up? Do the currents add up in parallel, or the voltages in series?). I highly recommend that you do this yourself – make up a hybrid circuit, and values for the circuit elements, then analyze the circuit – as a practice method.</p>
+<p>Anyway, back to the example. I have redrawn the circuit below in a different way, to emphasize which resistors are in series or parallel.</p>
+<p><img alt="The redrawn hybrid example circuit" src="../_images/INT_AY20_MP3_L13_Fig02_Hybrid_redraw.png" /></p>
+<p>For my random values, I have chosen <span class="math notranslate nohighlight">\(R_1 = 3.14 \ \Omega, R_2 = 1.59 \ \Omega, R_3 = 2.65 \ \Omega, R_4 = 3.58 \ \Omega\)</span>, and <span class="math notranslate nohighlight">\(V = 9.79\)</span> V. We now start at the beginning of our roadmap from before, and group <span class="math notranslate nohighlight">\(R_1\)</span> and <span class="math notranslate nohighlight">\(R_2\)</span> together in series. At this point, we can only find the equivalent resistance <span class="math notranslate nohighlight">\(R_{12}\)</span>.</p>
+<p><img alt="Grouping  and  together in series" src="../_images/INT_AY20_MP3_L13_Fig03_First_redraw.png" /></p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Series</p></th>
+<th class="head"><p>V (V)</p></th>
+<th class="head"><p>I (A)</p></th>
+<th class="head"><p>R (<span class="math notranslate nohighlight">\(\Omega\)</span>)</p></th>
+<th class="head"><p>P(W)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(R_1\)</span></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p>3.140</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(R_2\)</span></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p>1.590</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(R_{12}\)</span></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p>4.730</p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<div><p><strong>What we can fill in:</strong> Notice that we do <em>not</em> know the voltage yet! Unlike the series and parallel examples before, the equivalent resistor <span class="math notranslate nohighlight">\(R_{12}\)</span> is only part of the circuit. So the voltage across is it <em>not</em> the same as the battery voltage! I often see students make this mistake, and get wildly wrong answers – if they had checked their power column, they would know some is drastically wrong. We will not fill in the battery voltage until we have simplified the circuit completely, so we have a few more steps first.</p>
+</div></blockquote>
+<p>Next, we do the same thing for the <span class="math notranslate nohighlight">\(R_3\)</span> and <span class="math notranslate nohighlight">\(R_4\)</span> resistors. This is independent of our previous table, so we could have done them in the opposite order, if we wanted.</p>
+<p><img alt="Grouping  and  together in series" src="../_images/INT_AY20_MP3_L13_Fig04_Second_redraw.png" /></p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Series</p></th>
+<th class="head"><p>V (V)</p></th>
+<th class="head"><p>I (A)</p></th>
+<th class="head"><p>R (<span class="math notranslate nohighlight">\(\Omega\)</span>)</p></th>
+<th class="head"><p>P(W)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(R_3\)</span></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p>2.650</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(R_4\)</span></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p>3.580</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(R_{34}\)</span></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p>6.230</p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+<p>Our last simplification takes the two equivalent resistors from the previous steps, and combines them in parallel. Notice that in the VIRP table, we fill in the equivalence resistances we obtained from the last two tables. We could not have done this step before we did the last two.</p>
+<p><img alt="Grouping  and  together in series" src="../_images/INT_AY20_MP3_L13_Fig05_Final_redraw.png" /></p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Parallel</p></th>
+<th class="head"><p>V (V)</p></th>
+<th class="head"><p>I (A)</p></th>
+<th class="head"><p>R (<span class="math notranslate nohighlight">\(\Omega\)</span>)</p></th>
+<th class="head"><p>P(W)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(R_{12}\)</span></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p>4.730</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(R_{34}\)</span></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p>6.230</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(R_{1234}\)</span></p></td>
+<td><p>9.790</p></td>
+<td><p></p></td>
+<td><p>2.689</p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+<p>At this point, we <em>can</em> fill in the battery voltage, since we have reduced the circuit down to one battery and one (equivalent) resistor. This is the only point we can use the total battery voltage. It is <em>also</em> the only point we can start using Ohm’s law as well, since that equation only applies for a resistor with a known voltage or current.</p>
+<p>As we did before, we can now fill in all the entries of this third VIRP table by (1) solving the bottom line with Ohm’s law and the power equation, (2) use the fact that this is a parallel grouping to fill in the voltages, (3) solve the remaining rows as we did the last. This gives</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Parallel</p></th>
+<th class="head"><p>V (V)</p></th>
+<th class="head"><p>I (A)</p></th>
+<th class="head"><p>R (<span class="math notranslate nohighlight">\(\Omega\)</span>)</p></th>
+<th class="head"><p>P(W)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(R_{12}\)</span></p></td>
+<td><p>9.790</p></td>
+<td><p>2.070</p></td>
+<td><p>4.730</p></td>
+<td><p>20.27</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(R_{34}\)</span></p></td>
+<td><p>9.790</p></td>
+<td><p>1.571</p></td>
+<td><p>6.230</p></td>
+<td><p>15.38</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(R_{1234}\)</span></p></td>
+<td><p>9.790</p></td>
+<td><p>3.641</p></td>
+<td><p>2.689</p></td>
+<td><p>35.65</p></td>
+</tr>
+</tbody>
+</table>
+<p>Verify that the currents and the powers add up to the total, to check the table is correct. Once this is done, we can copy the information for <span class="math notranslate nohighlight">\(R_{34}\)</span> into the second table, and go through the same process. The final table for this group is</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Series</p></th>
+<th class="head"><p>V (V)</p></th>
+<th class="head"><p>I (A)</p></th>
+<th class="head"><p>R (<span class="math notranslate nohighlight">\(\Omega\)</span>)</p></th>
+<th class="head"><p>P(W)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(R_3\)</span></p></td>
+<td><p>4.166</p></td>
+<td><p>1.572</p></td>
+<td><p>2.650</p></td>
+<td><p>6.549</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(R_4\)</span></p></td>
+<td><p>5.628</p></td>
+<td><p>1.572</p></td>
+<td><p>3.580</p></td>
+<td><p>8.847</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(R_{34}\)</span></p></td>
+<td><p>9.790</p></td>
+<td><p>1.572</p></td>
+<td><p>6.230</p></td>
+<td><p>15.38</p></td>
+</tr>
+</tbody>
+</table>
+<p>It is this table where we start seeing the reason for using four sig figs in all of our calculations. Notice that, when we add up the voltages <span class="math notranslate nohighlight">\(V_3\)</span> and <span class="math notranslate nohighlight">\(V_4\)</span>, we get 9.794 V instead of 9.790 V. Similarly, adding up the powers <span class="math notranslate nohighlight">\(P_3\)</span> and <span class="math notranslate nohighlight">\(P_4\)</span>, we get 15.40 W instead of 15.38 W. However, to <em>three</em> sig figs (which is what the original values were in), the currents and the powers both agree. <em>Going to the extra sig fig helps us maintain our accuracy in the tables</em>. The more steps we do, the greater the chance of rounding the numbers increasing the error.</p>
+<p>For our final table, we copy the values for <span class="math notranslate nohighlight">\(R_{12}\)</span> from the parallel VIRP table into the first series table. This gives</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Series</p></th>
+<th class="head"><p>V (V)</p></th>
+<th class="head"><p>I (A)</p></th>
+<th class="head"><p>R (<span class="math notranslate nohighlight">\(\Omega\)</span>)</p></th>
+<th class="head"><p>P(W)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(R_1\)</span></p></td>
+<td><p>6.500</p></td>
+<td><p>2.070</p></td>
+<td><p>3.140</p></td>
+<td><p>13.46</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(R_2\)</span></p></td>
+<td><p>3.291</p></td>
+<td><p>2.070</p></td>
+<td><p>1.590</p></td>
+<td><p>6.812</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(R_{12}\)</span></p></td>
+<td><p>9.790</p></td>
+<td><p>2.070</p></td>
+<td><p>4.730</p></td>
+<td><p>20.27</p></td>
+</tr>
+</tbody>
+</table>
+<p>Again, to <em>three</em> sig figs, the voltages and the powers add up to the totals.</p>
+<blockquote>
+<div><p><strong>Problem:</strong> Construct the appropriate VIRP table for the circuit shown below, with <span class="math notranslate nohighlight">\(R_1 = 250. \ \Omega, R_2 = 150. \ \Omega, R_3 = 350. \ \Omega\)</span>, and <span class="math notranslate nohighlight">\(V = 24.0\)</span> V.</p>
+<p><img alt="Practice hybrid circuit" src="../_images/INT_AY21_L31_Fig03_Hybrid_practice.png" /></p>
+</div></blockquote>
+<blockquote>
+<div><p><strong>Problem:</strong> You are given the following incomplete VIRP tables for three resistors <span class="math notranslate nohighlight">\(R_G, R_H,\)</span> and <span class="math notranslate nohighlight">\(R_J\)</span>, for the circuit shown in the figure below. Fill in the rest of the tables, to four sig figs.</p>
+<p><img alt="Hybrid circuit" src="../_images/INT_AY21_L31_Fig04_Hybrid_practice.png" /></p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>?</p></th>
+<th class="head"><p>V (V)</p></th>
+<th class="head"><p>I (A)</p></th>
+<th class="head"><p>R (<span class="math notranslate nohighlight">\(\Omega\)</span>)</p></th>
+<th class="head"><p>P(W)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(R_G\)</span></p></td>
+<td><p>8.000</p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(R_J\)</span></p></td>
+<td><p></p></td>
+<td><p>3.000</p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(R_{GJ}\)</span></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<blockquote>
+<div><table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>?</p></th>
+<th class="head"><p>V (V)</p></th>
+<th class="head"><p>I (A)</p></th>
+<th class="head"><p>R (<span class="math notranslate nohighlight">\(\Omega\)</span>)</p></th>
+<th class="head"><p>P(W)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(R_{GJ}\)</span></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(R_H\)</span></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p>15.00</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(R_{GHJ}\)</span></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p>45.00</p></td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div>
+<div class="section" id="summary">
+<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
+<p>In this lesson, we developed the idea of replacing a group of resistors with a single equivalent resistor with the same properties. This simplified the circuit, and repeating this process allows us to eventually get to a circuit we can completely solve using Ohm’s law and the power equation. Reversing the simplifications then gives the properties of the physical resistors.</p>
+<p>This process of simplification can be applied in many other contexts. If you take an electrical engineering course, you will see that a large number of such methods have been developed for other situations, such as the <span class="math notranslate nohighlight">\(Y-\Delta\)</span> transform, and the more general star-mesh transform, for resistors. There are other such techniques when other types of circuit element are involved. All of them depend on the basic concept of replacing one group with another, simpler group with the same electrical properties.</p>
+<p>The circuit simplification method used in this lesson only works if we can merge all resistors together using series or parallel groupings. Often this is not possible, and another path is necessary. This will be explored in the next lesson, when we return to Kirchhoff’s laws. This will give a method of writing down equations relating the properties of the resistors, which can be solved for their values. Although it can be more mathematically involved, this technique is far more powerful.</p>
+<p>After this lesson, you should be able to:</p>
+<ul class="simple">
+<li><p>Describe a resistor circuit in terms of series and parallel resistor groups.</p></li>
+<li><p>Construct the appropriate VIRP table(s)  to solve a resistor circuit.</p></li>
+</ul>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./notebooks"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Daniel Cartin<br/>
+        
+            &copy; Copyright 2020-2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../_static/js/index.d3f166471bb80abb5163.js"></script>
+
+
+    
+  </body>
+</html>
