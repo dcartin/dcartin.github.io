@@ -284,21 +284,6 @@
 
             <!-- Source interaction buttons -->
 
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
-    <div class="dropdown-buttons sourcebuttons">
-        <a class="repository-button"
-            href="https://github.com/dcartin/NAPS-Intermediate-Physics"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Source repository"><i
-                    class="fab fa-github"></i>repository</button></a>
-        
-        <a class="edit-button" href="https://github.com/dcartin/NAPS-Intermediate-Physics/edit/master/notebooks/L16_Circular_motion.ipynb"><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
-    </div>
-</div>
-
 
             <!-- Full screen (wrap in <a> to have style consistency -->
             <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
@@ -399,6 +384,11 @@
 <span id="ucm"></span><h1><span class="section-number">16. </span>Circular motion<a class="headerlink" href="#circular-motion" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="overview">
 <h2><span class="section-number">16.1. </span>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>Links to programs in this lesson:</p>
+<ol class="simple">
+<li><p><a class="reference internal" href="#centr-accel"><span class="std std-ref">Correct acceleration for circular motion</span></a></p></li>
+<li><p><a class="reference internal" href="#centr-force"><span class="std std-ref">Constant central force</span></a></p></li>
+</ol>
 <p>Up to this point, we have only talked about situations with a constant acceleration. This gives rise to either motion along a line (such as a book sliding along a table) or at most, the parabolic motion we saw for projectiles. However, this does not exhaust all of the possibilities! We can consider cases where the direction of the acceleration changes, even if the magnitude does not. The prime example of this, and what we will look at in this lesson, is the case of <em>uniform circular motion</em>. This is motion that is “uniform” – the <em>speed</em> is constant (although the <em>velocity</em> will not be!) – and “circular” – the object in question moves in a circular path around a fixed point.</p>
 <p>I am sure that you can think of many examples of uniform circular motion: a car driving around a circular track, a tetherball on its string as it circles the central pole, the Moon orbiting the Earth. In fact, the last case is an interesting historical story, since Newton used the Moon’s orbit to figure out that gravitation was a universal force acting on all objects. The distance to the Moon, and the time it takes to make one orbit, had been known since the time of the ancient Greeks. Newton used these numbers to calculate the magnitude of the Moon’s acceleration, and showed that it could be the result of a gravitational force between the Earth and the Moon if gravity acted in a particular way. We will explore this more when we get to gravitation in <a class="reference internal" href="L21_Universal_gravitation.html#grav"><span class="std std-ref">Lesson 21</span></a>.</p>
 <p>Here are the objectives for this lesson:</p>
@@ -525,6 +515,7 @@
 <p>The physics in the vPython program below is at the very beginning and towards the end. In the definitions at the top, I define the radius <code class="docutils literal notranslate"><span class="pre">RING_RADIUS</span></code> of the desired circular motion of the ball. This is also the radius of the ring as well, so if the ball leaves the ring, there is a problem! I also give the initial velocity of the ball, which we will use later. Towards the end, I create a sphere <code class="docutils literal notranslate"><span class="pre">ball</span></code> and an arrow <code class="docutils literal notranslate"><span class="pre">velArr</span></code> representing its velocity vector.</p>
 <p>Notice that I did not specify how to update the ball’s position; that will be your job. The next few steps you will complete are to justify why the centripetal acceleration is chosen the way it is. You will go through a couple of incorrect choices, and see that they do not give motion at a constant speed in a circle.</p>
 <p>First, let’s assume that the ball moves at a constant <em>velocity</em>. Remember that this means there is no acceleration. Change the code so that <code class="docutils literal notranslate"><span class="pre">ball.pos</span></code> is updated in the usual way using <code class="docutils literal notranslate"><span class="pre">ball.velocity</span></code> and the time interval <code class="docutils literal notranslate"><span class="pre">DT</span></code>. After you do this, make a guess about what the ball’s motion will look like. Then run the code.</p>
+<p id="centr-accel"><a class="reference internal" href="#ucm"><span class="std std-ref">Back to program list</span></a></p>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
 <div class="output text_html">
@@ -543,7 +534,7 @@
 \[
     a_{cp} = \frac{v^2}{r}
 \]</div>
-<p>derived above. Since it always feels like this is a push outwards when you travel in a circle, let’s assume that this acceleration is always pointing away from the center of the circular path (which is hopefully the ring!). To give this direction, we use the unit vector <span class="math notranslate nohighlight">\({\hat r}\)</span>, where the vector <span class="math notranslate nohighlight">\({\vec r}\)</span> is the position of the ball. Remember from <a class="reference internal" href="L07_Vector_magnitude_and_direction.html#unit-vec-mag-unit-vec"><span class="std std-ref">Lesson 07 (vector magnitude and direction)</span></a> that <span class="math notranslate nohighlight">\({\hat r}\)</span> always points in the direction of the vector <span class="math notranslate nohighlight">\({\vec r}\)</span>, so this will be an <em>outward</em> pointing vector. Thus, our guess will be that the acceleration vector is given by</p>
+<p>derived above. Since it always feels like this is a push outwards when you travel in a circle, let’s assume that this acceleration is always pointing away from the center of the circular path (which is hopefully the ring!). To give this direction, we use the unit vector <span class="math notranslate nohighlight">\({\hat r}\)</span>, where the vector <span class="math notranslate nohighlight">\({\vec r}\)</span> is the position of the ball. Remember from <a class="reference internal" href="L07_Vector_magnitude_and_direction.html#vec-mag-dir-unit-vec"><span class="std std-ref">Lesson 07 (vector magnitude and direction)</span></a> that <span class="math notranslate nohighlight">\({\hat r}\)</span> always points in the direction of the vector <span class="math notranslate nohighlight">\({\vec r}\)</span>, so this will be an <em>outward</em> pointing vector. Thus, our guess will be that the acceleration vector is given by</p>
 <div class="math notranslate nohighlight">
 \[
     {\vec a}_{cp} = \biggl( \frac{v^2}{r} \biggr) {\hat r}
@@ -743,6 +734,7 @@
 <p><em>Answer:</em> The ball will start accelerating towards the central point, due to the constant attractive force.</p>
 </div>
 <p>The program belows simulates the motion of an object in a constant central force. If you run the program, you will see that the orbit does not immediately close, since the object does not return back to its starting point with the same velocity. Instead, the orbit is a complicated shape around the origin. This motion is explained in depth below the program.</p>
+<p id="centr-force"><a class="reference internal" href="#ucm"><span class="std std-ref">Back to program list</span></a></p>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
 <div class="output text_html">
@@ -854,6 +846,16 @@
   <script src="../_static/js/index.d3f166471bb80abb5163.js"></script>
 
 
+    
+    <!-- Google Analytics -->
+    <script>
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', 'G-SS32LXLKZD', 'auto');
+      ga('set', 'anonymizeIp', true);
+      ga('send', 'pageview');
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+    <!-- End Google Analytics -->
     
   </body>
 </html>

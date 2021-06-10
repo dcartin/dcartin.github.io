@@ -284,21 +284,6 @@
 
             <!-- Source interaction buttons -->
 
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
-    <div class="dropdown-buttons sourcebuttons">
-        <a class="repository-button"
-            href="https://github.com/dcartin/NAPS-Intermediate-Physics"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Source repository"><i
-                    class="fab fa-github"></i>repository</button></a>
-        
-        <a class="edit-button" href="https://github.com/dcartin/NAPS-Intermediate-Physics/edit/master/notebooks/L18_Angular_momentum.ipynb"><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
-    </div>
-</div>
-
 
             <!-- Full screen (wrap in <a> to have style consistency -->
             <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
@@ -416,6 +401,12 @@
 <span id="ang-mom"></span><h1><span class="section-number">18. </span>Angular momentum<a class="headerlink" href="#angular-momentum" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="overview">
 <h2><span class="section-number">18.1. </span>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>Links to programs in this lesson:</p>
+<ol class="simple">
+<li><p><a class="reference internal" href="#ang-mom-lin-mot"><span class="std std-ref">Angular momentum and linear motion</span></a></p></li>
+<li><p><a class="reference internal" href="#centr-force-ang-mom"><span class="std std-ref">Angular momentum and central forces</span></a></p></li>
+<li><p><a class="reference internal" href="#centr-force-vel-comps"><span class="std std-ref">Central forces and velocity components</span></a></p></li>
+</ol>
 <p>In <a class="reference internal" href="L10_Linear_momentum_and_Newton%27s_laws_of_motion.html#lin-mom-newton"><span class="std std-ref">Lesson 11</span></a>, the idea of linear momentum was introduced. Remember that this quantity is a good one to use when thinking about the inertia of an object. Linear momentum stays the same unless acted on by a net force (Newton’s 1st law); the size of the change in linear momentum is related to the size of this net force (Newton’s 2nd law). Thus, we could talk about the conservation of linear momentum when a system was isolated, i.e. no <em>external</em> forces acted on the system. Collisions were a good example of using this conservation principle to understand the motion of objects.</p>
 <p>We will now go through an “angular” or “rotational” version of momentum. However, we will see that many of the same ideas hold here as they do with linear momentum – angular momentum changes due to the action of a net torque (or “rotational force”), while angular momentum is conserved in isolated systems. Perhaps surprisingly, this conservation of angular momentum works even if the object moves in a straight line! As long as we have a reference point (the <span class="math notranslate nohighlight">\({\vec r} = 0\)</span> location), we can calculate the angular momentum of an object around that point, regardless of what kind of motion the object has.</p>
 <p>Angular momentum is very important in dealing with my favorite force: the gravitational force. Specifically, we can use conservation of angular momentum to talk about the orbit of one object around another (e.g. the Moon and the Earth). Indeed, it can be used for any central force, such as the spring force or the electrostatic force. Later on, we will also have discuss the principle of mechanical energy conservation, and between these two conservation principles, we can calculate quite a bit about an orbiting body. We will see a hint of that by the end of this lesson.</p>
@@ -644,6 +635,7 @@
 <div class="section" id="angular-momentum-in-vpython">
 <h3><span class="section-number">18.3.3. </span>Angular momentum in vPython<a class="headerlink" href="#angular-momentum-in-vpython" title="Permalink to this headline">¶</a></h3>
 <p>We will now delve further into the notion of angular momentum using vPython. The program below creates a ball moving with a constant velocity. Thus, the ball will move along the line <span class="math notranslate nohighlight">\(r_y = +2\)</span> at constant speed <span class="math notranslate nohighlight">\(v = 1\)</span>. The ball is also given a mass <code class="docutils literal notranslate"><span class="pre">M</span></code>, defined at the beginning of the program. In addition, there are two arrows in the simulation: a yellow arrow showing the constant velocity <span class="math notranslate nohighlight">\({\vec v}\)</span> of the ball, and a cyan arrow showing the changing ball position <span class="math notranslate nohighlight">\({\vec r}\)</span>. Run the program, and note how <span class="math notranslate nohighlight">\({\vec r}\)</span> and <span class="math notranslate nohighlight">\({\vec v}\)</span> change with time.</p>
+<p id="ang-mom-lin-mot"><a class="reference internal" href="#ang-mom"><span class="std std-ref">Back to program list</span></a></p>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
 <div class="output text_html">
@@ -847,6 +839,7 @@
 <div class="toggle docutils container">
 <p><em>Answer:</em> <span class="math notranslate nohighlight">\((60.0 \textrm{ kg m}^2 \textrm{/s}^2) {\hat z}\)</span></p>
 </div>
+<p id="centr-force-ang-mom"><a class="reference internal" href="#ang-mom"><span class="std std-ref">Back to program list</span></a></p>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
 <div class="output text_html">
@@ -886,6 +879,7 @@
     v_\perp = |{\vec v} - v_r {\hat r}|
 \]</div>
 <p>This explains why I used the particular vPython commands in the program below. Run the program, and watch how <span class="math notranslate nohighlight">\(v_r\)</span> (the red curve) and <span class="math notranslate nohighlight">\(v_\perp\)</span> (green curve) vary with the radius <span class="math notranslate nohighlight">\(r\)</span> (the blue curve).</p>
+<p id="centr-force-vel-comps"><a class="reference internal" href="#ang-mom"><span class="std std-ref">Back to program list</span></a></p>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
 <div class="output text_html">
@@ -998,6 +992,16 @@
   <script src="../_static/js/index.d3f166471bb80abb5163.js"></script>
 
 
+    
+    <!-- Google Analytics -->
+    <script>
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', 'G-SS32LXLKZD', 'auto');
+      ga('set', 'anonymizeIp', true);
+      ga('send', 'pageview');
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+    <!-- End Google Analytics -->
     
   </body>
 </html>

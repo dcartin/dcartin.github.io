@@ -284,21 +284,6 @@
 
             <!-- Source interaction buttons -->
 
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
-    <div class="dropdown-buttons sourcebuttons">
-        <a class="repository-button"
-            href="https://github.com/dcartin/NAPS-Intermediate-Physics"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Source repository"><i
-                    class="fab fa-github"></i>repository</button></a>
-        
-        <a class="edit-button" href="https://github.com/dcartin/NAPS-Intermediate-Physics/edit/master/notebooks/L27_Biot-Savart_law.ipynb"><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
-    </div>
-</div>
-
 
             <!-- Full screen (wrap in <a> to have style consistency -->
             <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
@@ -380,6 +365,11 @@
                 
   <div class="section" id="biot-savart-law">
 <span id="biot-savart"></span><h1><span class="section-number">27. </span>Biot-Savart law<a class="headerlink" href="#biot-savart-law" title="Permalink to this headline">¶</a></h1>
+<p>Links to programs in this lesson:</p>
+<ol class="simple">
+<li><p><a class="reference internal" href="#mag-field-wire"><span class="std std-ref">Magnetic field of a long, straight wire</span></a></p></li>
+<li><p><a class="reference internal" href="#biot-savart-vec"><span class="std std-ref">The vectors of the Biot-Savart law</span></a></p></li>
+</ol>
 <p>What we now call “electricity” and “magnetism” have been familiar to many for over two thousand years. However, for much of that time, they were interesting effects, and not much else; there was no theory behind the existence of electric and magnetic properties. In fact, although some had suspected a relationship between them, nothing definite was known. This began to change in the 18th and 19th centuries, as technology advanced to the point where they could be studied. In particular, with the development of the electric battery by Volta in 1800, a continuous electric current was possible.</p>
 <p>A bridge between electricity and magnetism was first built by the efforts of the Danish physicist and chemist Hans Christian Oersted, who did the necessary experiments around 1820. In these, he showed that a constant electric current through a wire produced a magnetic field. Again, it is useful to take a moment and think how important this result was. Although electric and magnetic fields have some similarities (as discussed in <a class="reference internal" href="L26_Magnetic_fields_and_forces.html#mag-field"><span class="std std-ref">Lesson 34</span></a>), this does not necessarily mean they are one and the same phenomenon. However, it was the results of Oersted, and many others in the next few years, who conclusively showed that we should not think of “electricity” and “magnetism” separately, but instead to put it into “electromagnetism”.</p>
 <p>Although we will not get into this further in this course, the unification of electricity and magnetism was an important event in the history of physics. Over the next 175 years or so, the main course of theoretical physics was a similar path of unification, using many mathematical ideas first developed for electromagnetism. The fruits of this are in what is known as the Standard Model of particle physics, joining electromagnetism together with the strong nuclear force (keeping nuclei together) and the weak nuclear force (responsible for radioactive decay). The Standard Model uses the idea of fields as a basic component, and represents our best current knowledge of how fundamental physics works.</p>
@@ -409,6 +399,7 @@
 </div></div>
 </div>
 <p>In order to see the magnetic field more clearly, you can run the vPython program below. This shows the magnetic field vectors at various points around a long, straight wire. These vectors form circles, with the wire at its center.</p>
+<p id="mag-field-wire"><a class="reference internal" href="#biot-savart"><span class="std std-ref">Back to program list</span></a></p>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
 <div class="output text_html">
@@ -481,6 +472,7 @@
 <h2><span class="section-number">27.3. </span>The Biot-Savart law<a class="headerlink" href="#the-biot-savart-law" title="Permalink to this headline">¶</a></h2>
 <p>As we saw, Oersted found that the magnetic field lines around a long, straight wire are circles centered on the wire. So how can we extend this to more complicated wires? We will follow a similar path to what we have done with previous fields: build up the complicated cases as a sum of a lot of simple cases. In particular, imagine that we have a small bit of wire; this is represented by the vector <span class="math notranslate nohighlight">\(\Delta {\vec \ell}\)</span>, where <span class="math notranslate nohighlight">\(\Delta \ell\)</span> is a small length. Flowing through this wire is a current <span class="math notranslate nohighlight">\(I\)</span>. The direction of the vector <span class="math notranslate nohighlight">\(\Delta {\vec \ell}\)</span> gives the direction of this (conventional) current.</p>
 <p>Now, imagine that we want to find the magnetic field vector at a point <span class="math notranslate nohighlight">\(P\)</span>. To do this, we need the position vector of <span class="math notranslate nohighlight">\(P\)</span> relative to the wire. This is given by <span class="math notranslate nohighlight">\({\vec r}\)</span> – this vector <em>starts</em> at the center of the wire <span class="math notranslate nohighlight">\(\Delta {\vec \ell}\)</span>, and points <em>towards</em> the point <span class="math notranslate nohighlight">\(P\)</span>. To see this set-up, run the program below. The green cylinder is the wire, with the current shown by the white arrow inside of it. The position vector <span class="math notranslate nohighlight">\({\vec r}\)</span> is the yellow arrow from the wire to the point <span class="math notranslate nohighlight">\(P\)</span> to the left of the screen.</p>
+<p id="biot-savart-vec"><a class="reference internal" href="#biot-savart"><span class="std std-ref">Back to program list</span></a></p>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
 <div class="output text_html">
@@ -733,6 +725,16 @@
   <script src="../_static/js/index.d3f166471bb80abb5163.js"></script>
 
 
+    
+    <!-- Google Analytics -->
+    <script>
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', 'G-SS32LXLKZD', 'auto');
+      ga('set', 'anonymizeIp', true);
+      ga('send', 'pageview');
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+    <!-- End Google Analytics -->
     
   </body>
 </html>

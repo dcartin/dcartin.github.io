@@ -284,21 +284,6 @@
 
             <!-- Source interaction buttons -->
 
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
-    <div class="dropdown-buttons sourcebuttons">
-        <a class="repository-button"
-            href="https://github.com/dcartin/NAPS-Intermediate-Physics"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Source repository"><i
-                    class="fab fa-github"></i>repository</button></a>
-        
-        <a class="edit-button" href="https://github.com/dcartin/NAPS-Intermediate-Physics/edit/master/notebooks/L17_Vector_product.ipynb"><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
-    </div>
-</div>
-
 
             <!-- Full screen (wrap in <a> to have style consistency -->
             <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
@@ -394,6 +379,12 @@
 <span id="vec-prod"></span><h1><span class="section-number">17. </span>Vector product<a class="headerlink" href="#vector-product" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="overview">
 <h2><span class="section-number">17.1. </span>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>Links to programs in this lesson:</p>
+<ol class="simple">
+<li><p><a class="reference internal" href="#cross"><span class="std std-ref">The vector product in vPython</span></a></p></li>
+<li><p><a class="reference internal" href="#arr-vec-prod"><span class="std std-ref">Vector product of two vectors</span></a></p></li>
+<li><p><a class="reference internal" href="#mag-dir-vec-prod"><span class="std std-ref">Vector product with magnitudes and directions</span></a></p></li>
+</ol>
 <p>Suppose you have two vectors, and you want a mathematical operation that combines them to get a new quantity. By this, I mean that it doesn’t matter how you choose your coordinate system – the answer for these operations is independent of your choice. It turns out that, in <em>any</em> dimension, there are only two ways to do this, so that everyone agrees on the answer! The first of these is something we have already seen, the scalar product <span class="math notranslate nohighlight">\({\vec A} \cdot {\vec B}\)</span> of two vectors <span class="math notranslate nohighlight">\({\vec A}\)</span> and <span class="math notranslate nohighlight">\({\vec B}\)</span>, defined in <a class="reference internal" href="L13_Scalar_product.html#scal-prod"><span class="std std-ref">Lesson 09</span></a>. If I use the unit vectors <span class="math notranslate nohighlight">\({\hat x}\)</span> and <span class="math notranslate nohighlight">\({\hat y}\)</span> (horizontal and vertical), while you are working with a ramp, so you use the unit vectors <span class="math notranslate nohighlight">\({\hat e}_{||}\)</span> and <span class="math notranslate nohighlight">\({\hat e}_\perp\)</span> (parallel and perpendicular) matching the ramp. It turns out that if you calculate the scalar product of two vectors using either possibility for the unit vector notation, you get exactly the same answer. Hopefully this makes sense, because the scalar product only depends on (1) the size of each vector, and (2) the angle between them. These values do not depend on how we orient our coordinate system. The scalar product was helpful in <a class="reference internal" href="L14_Inclined_planes.html#ramp"><span class="std std-ref">Lesson 14 (inclined planes)</span></a> in finding a new set of unit vectors parallel and perpendicular to an inclined plane; it will also appear in <a class="reference internal" href="L19_Work_and_energy.html#work-ke"><span class="std std-ref">Lesson 19</span></a> for the definition of the work done by a (constant) force.</p>
 <p>In this lesson, we look at the only other way to define a quantity that is again the same, regardless of the coordinates used. This new mathematical operation is known as the <em>vector product</em> (or “cross product”). Like the name suggests, this will take two vectors and spit out a third vector. However, it will also have a geometric interpretation as well. It is this viewpoint that assures us that the vector product is independent of the coordinate choice.</p>
 <p>Here are the objectives for this lesson:</p>
@@ -443,6 +434,7 @@
 <div class="section" id="the-vector-product-in-vpython">
 <h3><span class="section-number">17.3.1. </span>The vector product in vPython<a class="headerlink" href="#the-vector-product-in-vpython" title="Permalink to this headline">¶</a></h3>
 <p>The vector product operation is inherently three-dimensional, so it may be difficult sometimes to see what is going on. Because of this, we are going to see what the vector product of two vectors looks like <em>before</em> we get into the mathematical definition. Hopefully doing it this way will increase your intuition of why the vector product is defined the way it is. As with the scalar product, there is a module in vPython that calculates the vector product for you. This module is known as <code class="docutils literal notranslate"><span class="pre">cross</span></code>, and its use is shown in the program below. Here, the same two vectors <span class="math notranslate nohighlight">\({\vec A}\)</span> and <span class="math notranslate nohighlight">\({\vec B}\)</span> saw when introducing the scalar product in <a class="reference internal" href="L13_Scalar_product.html#scal-prod"><span class="std std-ref">Lesson 09</span></a> are defined, then their vector product <span class="math notranslate nohighlight">\({\vec A} \times {\vec B}\)</span> is calculated.</p>
+<p id="cross"><a class="reference internal" href="#vec-prod"><span class="std std-ref">Back to program list</span></a></p>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
 <div class="output text_html">
@@ -457,6 +449,7 @@
 </div>
 <p>Remember that, for the <em>same</em> vectors, you found in Lesson 11 that the scalar product <span class="math notranslate nohighlight">\({\vec A} \cdot {\vec B} = 1\)</span>. Obviously, for the vector product, the answer here is a vector, not a scalar. This vector points in the <span class="math notranslate nohighlight">\(+z\)</span> direction, since that is the only non-zero component. Also, the magnitude of the vector is <span class="math notranslate nohighlight">\(|{\vec A} \times {\vec B}| = 7\)</span>, which is not the same as the value of the scalar product. So the vector product gives you different information about the relationship between the vectors than the scalar product did!</p>
 <p>Now, let’s see what these vectors look like. The program below creates arrows for the two vectors <span class="math notranslate nohighlight">\({\vec A}\)</span> and <span class="math notranslate nohighlight">\({\vec B}\)</span>, along with the vector <span class="math notranslate nohighlight">\({\vec C} = {\vec A} \times {\vec B}\)</span>. In addition, it creates a <code class="docutils literal notranslate"><span class="pre">box</span></code> object called <code class="docutils literal notranslate"><span class="pre">plane</span></code> – this represents the flat surface in which the two original vectors <span class="math notranslate nohighlight">\({\vec A}\)</span> and <span class="math notranslate nohighlight">\({\vec B}\)</span> sit. Run the program, and see what you notice about the arrangements of the three vectors and the plane.</p>
+<p id="arr-vec-prod"><a class="reference internal" href="#vec-prod"><span class="std std-ref">Back to program list</span></a></p>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
 <div class="output text_html">
@@ -493,6 +486,7 @@
 </pre></div>
 </div>
 </div>
+<p id="mag-dir-vec-prod"><a class="reference internal" href="#vec-prod"><span class="std std-ref">Back to program list</span></a></p>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
 <div class="output text_html">
@@ -792,6 +786,16 @@ B_x      &amp; B_y      &amp; B_z      &amp; B_x      &amp; B_y
   <script src="../_static/js/index.d3f166471bb80abb5163.js"></script>
 
 
+    
+    <!-- Google Analytics -->
+    <script>
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', 'G-SS32LXLKZD', 'auto');
+      ga('set', 'anonymizeIp', true);
+      ga('send', 'pageview');
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+    <!-- End Google Analytics -->
     
   </body>
 </html>

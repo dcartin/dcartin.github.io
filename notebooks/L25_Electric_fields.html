@@ -284,21 +284,6 @@
 
             <!-- Source interaction buttons -->
 
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
-    <div class="dropdown-buttons sourcebuttons">
-        <a class="repository-button"
-            href="https://github.com/dcartin/NAPS-Intermediate-Physics"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Source repository"><i
-                    class="fab fa-github"></i>repository</button></a>
-        
-        <a class="edit-button" href="https://github.com/dcartin/NAPS-Intermediate-Physics/edit/master/notebooks/L25_Electric_fields.ipynb"><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
-    </div>
-</div>
-
 
             <!-- Full screen (wrap in <a> to have style consistency -->
             <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
@@ -394,6 +379,11 @@
 <span id="elec-field"></span><h1><span class="section-number">25. </span>Electric fields<a class="headerlink" href="#electric-fields" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="overview">
 <h2><span class="section-number">25.1. </span>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>Links to programs in this lesson:</p>
+<ol class="simple">
+<li><p><a class="reference internal" href="#net-elec-field"><span class="std std-ref">Find the net electric field</span></a></p></li>
+<li><p><a class="reference internal" href="#const-grav-field"><span class="std std-ref">Motion in a constant gravitational field</span></a></p></li>
+</ol>
 <p>The physicist of today is well versed in the use of Newton’s second law and forces acting on an object. However, these methods are restricted to physical objects (balls rolling down ramps), and do not map over to other situations. In fact, it is much easier to deal with electricity and magnetism when using a more general idea, known as a <em>field</em>. It was this conceptual leap in the mid-19th century that eventually set the stage for the quantum mechanical revolution of the early 20th century. Thus, the fundamental theories of physics are written as quantum field theories (and not “force theories”!).</p>
 <p>The concept of a field was developed by two great scientists – the experimentalist Michael Faraday, and the theoretical physicist James Clerk Maxwell. Faraday, a self-taught physicist, was the first to lay out a vision of electric and magnetic phenomena arising from ‘’lines of force’’ – physical tubes forming space and affecting the motion of charged particles moving through space. This was more of a philosophical viewpoint on experimental results, rather than a systematic picture. Then, Maxwell developed a more mathematical framework, writing down what are now known as Maxwell’s equations for the electric and magnetic fields. These equations were the inspiration for much of modern physics, including Einstein’s theory of special relativity, and the quantum field theories used to explain interactions at the subatomic scale.</p>
 <p>We have already seen the gravitational field, as a different way of describing the influence of gravity on the motion of an object. In this lesson, we do the same thing for charged objects, developing the electric field from the electrostatic force.</p>
@@ -574,6 +564,7 @@
 \]</div>
 <p>Because of the form of Coulomb’s law, the charge at the point in question will always factor out like this, and the remainder of the equation will be exactly the electric field due to the other point charge.</p>
 <p>As we did in the last lesson, we can write a vPython function that finds the electric field at a point, due to a list of other charges. Because we “divide out” by the test charge, then we only need the location to find the field, and the charges creating the field. This is done by the function <code class="docutils literal notranslate"><span class="pre">netElecField()</span></code> in the Trinket app below.</p>
+<p id="net-elec-field"><a class="reference internal" href="#elec-field"><span class="std std-ref">Back to program list</span></a></p>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
 <div class="output text_html">
@@ -658,6 +649,7 @@
 <p>It is important to note that the field lines shown above do <em>not</em> represent the motion of a mass in the gravitational field. Instead, they give the direction of the gravitational field, which in turn tells you about the acceleration of the object. You can see that by running the program below. The cyan arrows represent the constant gravitational field lines near the ground. On the ball itself, the magenta arrow shows the ball’s velocity, and the white arrow its acceleration. The white arrow will always match the field at that location, but the trajectory of the ball is not straight down because of its non-zero <span class="math notranslate nohighlight">\(v_x\)</span> component.</p>
 </div>
 <p>The Trinket app below shows the relation between the gravitational field lines, and the motion of a projectile. We have seen this case in <a class="reference internal" href="L05_Acceleration_and_free_fall.html#accel-vpy-freefall"><span class="std std-ref">Lesson 04</span></a>, when we considered projectile motion. Near the surface of the Earth, the gravitational field is constant, which tells us the <em>acceleration</em> of a ball, but not the <em>velocity</em>. Thus, if you run the simulation below, you will see that the ball does not move directly along the gravitational field vectors, but instead those vectors give the direction of the ball’s acceleration.</p>
+<p id="const-grav-field"><a class="reference internal" href="#elec-field"><span class="std std-ref">Back to program list</span></a></p>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
 <div class="output text_html">
@@ -785,6 +777,16 @@
   <script src="../_static/js/index.d3f166471bb80abb5163.js"></script>
 
 
+    
+    <!-- Google Analytics -->
+    <script>
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', 'G-SS32LXLKZD', 'auto');
+      ga('set', 'anonymizeIp', true);
+      ga('send', 'pageview');
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+    <!-- End Google Analytics -->
     
   </body>
 </html>

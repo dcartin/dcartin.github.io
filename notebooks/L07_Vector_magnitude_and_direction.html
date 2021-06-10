@@ -284,21 +284,6 @@
 
             <!-- Source interaction buttons -->
 
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
-    <div class="dropdown-buttons sourcebuttons">
-        <a class="repository-button"
-            href="https://github.com/dcartin/NAPS-Intermediate-Physics"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Source repository"><i
-                    class="fab fa-github"></i>repository</button></a>
-        
-        <a class="edit-button" href="https://github.com/dcartin/NAPS-Intermediate-Physics/edit/master/notebooks/L07_Vector_magnitude_and_direction.ipynb"><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
-    </div>
-</div>
-
 
             <!-- Full screen (wrap in <a> to have style consistency -->
             <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
@@ -392,6 +377,11 @@
 <span id="vec-mag-dir"></span><h1><span class="section-number">7. </span>Vector magnitude and direction<a class="headerlink" href="#vector-magnitude-and-direction" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="overview">
 <h2><span class="section-number">7.1. </span>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>Links to programs in this lesson:</p>
+<ol class="simple">
+<li><p><a class="reference internal" href="#d-comps"><span class="std std-ref">3D vector components</span></a></p></li>
+<li><p><a class="reference internal" href="#mag-dir-arr"><span class="std std-ref">Vector magnitude and direction</span></a></p></li>
+</ol>
 <p>Over the past few lessons, you have seen how vectors are important when studying the motion of an object. The fundamental properties of motion – position, velocity, and acceleration – are all vectors. Thus, both their definitions, and the mathematical relationships between them, are vector equations. Even with the scalar kinematic equations, the vectors components of these quantities are used.</p>
 <p>However, up to this point, we have only worked with components of vectors. For eample, in the last lesson, free fall only dealt with motion along the <span class="math notranslate nohighlight">\(y\)</span> axis. Suppose instead you are given the size and direction of a vector? An example would be saying the speed of a ship is 15.0 knots, and it is moving 30.0<span class="math notranslate nohighlight">\(^\circ\)</span> north of west. How can we write this in terms of components? Or, if we go the other way around, if I know the components of an acceleration, how can I find the magnitude and direction of this vector?</p>
 <p>This is the purpose of this lesson – to learn how to go back and forth between writing a vector in terms of components, and using magnitude and direction to describe the vector. This will use the mathematics of trigonometry heavily, so it is important you get a good grasp on how this process works. After this lesson, you should have all the basic relations needed to go from one description of a vector to another. Along the way, you will learn more about unit vectors. In particular, you will see how to find a unit vector pointing in the same direction as any given vector. Once we have this down, we can move on to projectile motion in <a class="reference internal" href="L08_Projectile_motion.html#proj-mot"><span class="std std-ref">Lesson 08</span></a>.</p>
@@ -425,6 +415,7 @@
 <p class="admonition-title">Coordinate axes in vPython</p>
 <p>The coordinate axes are different in vPython – the <span class="math notranslate nohighlight">\(+z\)</span> direction points out of the screen by default, while the <span class="math notranslate nohighlight">\(+y\)</span> direction points upwards – so the picture and the vPython view are not exactly the same! However, it does give you an idea of what the two-dimensional illustration above is trying to convey.</p>
 </div>
+<p id="d-comps"><a class="reference internal" href="#vec-mag-dir"><span class="std std-ref">Back to program list</span></a></p>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
 <div class="output text_html">
@@ -468,7 +459,7 @@
 </div>
 </div>
 <div class="section" id="unit-vectors">
-<span id="unit-vec-mag-unit-vec"></span><h2><span class="section-number">7.3. </span>Unit vectors<a class="headerlink" href="#unit-vectors" title="Permalink to this headline">¶</a></h2>
+<span id="vec-mag-dir-unit-vec"></span><h2><span class="section-number">7.3. </span>Unit vectors<a class="headerlink" href="#unit-vectors" title="Permalink to this headline">¶</a></h2>
 <p>When we introduced vectors and vector components, we saw how any vector can be divided up into three pieces – the vectors describing how much of the vector is along each of the three coordinate axes <span class="math notranslate nohighlight">\(x, y\)</span>, and <span class="math notranslate nohighlight">\(z\)</span>. For example, any vector <span class="math notranslate nohighlight">\({\vec A}\)</span> can be written as</p>
 <div class="math notranslate nohighlight">
 \[
@@ -782,6 +773,7 @@
 <p class="admonition-title">Problem</p>
 <p>Based on the choice of <code class="docutils literal notranslate"><span class="pre">B</span></code> and <code class="docutils literal notranslate"><span class="pre">Q</span></code> in the code below, what do you expect the arrow to look like? Which quadrant is it in? Run the program, and see if your guess is correct.</p>
 </div>
+<p id="mag-dir-arr"><a class="reference internal" href="#vec-mag-dir"><span class="std std-ref">Back to program list</span></a></p>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
 <div class="output text_html">
@@ -889,6 +881,16 @@
   <script src="../_static/js/index.d3f166471bb80abb5163.js"></script>
 
 
+    
+    <!-- Google Analytics -->
+    <script>
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', 'G-SS32LXLKZD', 'auto');
+      ga('set', 'anonymizeIp', true);
+      ga('send', 'pageview');
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+    <!-- End Google Analytics -->
     
   </body>
 </html>

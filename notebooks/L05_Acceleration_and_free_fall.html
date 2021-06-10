@@ -284,21 +284,6 @@
 
             <!-- Source interaction buttons -->
 
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
-    <div class="dropdown-buttons sourcebuttons">
-        <a class="repository-button"
-            href="https://github.com/dcartin/NAPS-Intermediate-Physics"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Source repository"><i
-                    class="fab fa-github"></i>repository</button></a>
-        
-        <a class="edit-button" href="https://github.com/dcartin/NAPS-Intermediate-Physics/edit/master/notebooks/L05_Acceleration_and_free_fall.ipynb"><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
-    </div>
-</div>
-
 
             <!-- Full screen (wrap in <a> to have style consistency -->
             <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
@@ -418,6 +403,12 @@
 <span id="accel"></span><h1><span class="section-number">5. </span>Acceleration and free fall<a class="headerlink" href="#acceleration-and-free-fall" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="overview">
 <h2><span class="section-number">5.1. </span>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>Links to programs in this lesson:</p>
+<ol class="simple">
+<li><p><a class="reference internal" href="#ball-no-accel"><span class="std std-ref">Ball with no acceleration</span></a></p></li>
+<li><p><a class="reference internal" href="#ball-accel"><span class="std std-ref">Ball with acceleration</span></a></p></li>
+<li><p><a class="reference internal" href="#vel-accel-graphs"><span class="std std-ref">Velocity and acceleration graphs</span></a></p></li>
+</ol>
 <p>Now that you have velocity under the belt, it is time to move on to acceleration. On the one hand, acceleration is more abstract than velocity. This is because acceleration is defined in terms of the change in velocity with time, while velocity is the change in position over time. So acceleration is the change in the change in the position over a time interval. As you will see when you program an accelerating object into vPython, if you are not careful with all those changes, you will get incorrect motion! Related to this is some confusion about the relation between velocity and acceleration. Sometimes there is a notion that “greater speed = greater acceleration”, which is not true. We will examine the relationship between velocity and acceleration in this lesson.</p>
 <p>On the other hand, you are very familiar with the perfect example of acceleration we see everyday: the acceleration of a falling object. Our brains are wired to understand what happens when we drop a tennis ball, for example, for a small time vs. a large one. We know that if we want to catch a ball that has fallen for twice the time, we don’t put our hand twice as low as we would for the short time, but roughly three times lower. The ball does not display the motion of something in constant velocity, but of an object with velocity changing at a constant rate.</p>
 <p>The idea of acceleration will tie all of this together. The plan is to define acceleration, and explore some of its aspects, then try to use this concept to model the motion of a ball moving vertically under the influence <em>only</em> of the gravitational force. This type of motion is known as <em>free fall</em>.</p>
@@ -574,6 +565,7 @@
 <span id="accel-grav-field"></span><h3><span class="section-number">5.2.3. </span>The gravitational field<a class="headerlink" href="#the-gravitational-field" title="Permalink to this headline">¶</a></h3>
 <p>As an example of acceleration, we will look at a ball falling towards the ground. Much like what we did earlier, this will have a constant <em>acceleration</em> (rather than velocity), so we will see how that affects the motion. We have a few steps before we get to that point. The program below creates a spherical object <code class="docutils literal notranslate"><span class="pre">ball</span></code>, much like we did before. Notice that we have added in <code class="docutils literal notranslate"><span class="pre">ball.velocity</span></code> inside the definition of <code class="docutils literal notranslate"><span class="pre">ball</span></code>, and started the ball at rest. It also creates an object <code class="docutils literal notranslate"><span class="pre">ground</span></code>. The <code class="docutils literal notranslate"><span class="pre">ground</span></code> object, using a new vPython module <code class="docutils literal notranslate"><span class="pre">box</span></code>, has its center at <code class="docutils literal notranslate"><span class="pre">ground.pos</span></code>, and its size describes its extent in the <span class="math notranslate nohighlight">\(x, y\)</span> and <span class="math notranslate nohighlight">\(z\)</span> direction. Thus, it has a width of 12 in both the <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(z\)</span> directions, and a vertical thickness of 0.2 in the <span class="math notranslate nohighlight">\(y\)</span> direction.</p>
 <p>Run the program, and see what the situation looks like.</p>
+<p id="ball-no-accel"><a class="reference internal" href="#accel"><span class="std std-ref">Back to program list</span></a></p>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
 <div class="output text_html">
@@ -760,6 +752,7 @@
 <div class="section" id="creating-a-falling-ball">
 <h3><span class="section-number">5.4.1. </span>Creating a falling ball<a class="headerlink" href="#creating-a-falling-ball" title="Permalink to this headline">¶</a></h3>
 <p>Now that we have all of these ideas under our belt, let’s see this in practice. The program below is a copy of the code from above, where the ball remained motionless because there was no gravitational field. However, there are some spots marked out for you to add in additional code. The instructions for this are given below the program.</p>
+<p id="ball-accel"><a class="reference internal" href="#accel"><span class="std std-ref">Back to program list</span></a></p>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
 <div class="output text_html">
@@ -793,6 +786,7 @@
 <div class="section" id="visualizing-velocity-and-acceleration">
 <h3><span class="section-number">5.4.2. </span>Visualizing velocity and acceleration<a class="headerlink" href="#visualizing-velocity-and-acceleration" title="Permalink to this headline">¶</a></h3>
 <p>Let’s continue to play around with this simulation, and get a better feeling for the relation between velocity and acceleration. The program below should be where you previously left the last program. There are now places to add code creating a graph, which you will do next. The instructions for doing this are after the program.</p>
+<p id="vel-accel-graphs"><a class="reference internal" href="#accel"><span class="std std-ref">Back to program list</span></a></p>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
 <div class="output text_html">
@@ -893,6 +887,16 @@
   <script src="../_static/js/index.d3f166471bb80abb5163.js"></script>
 
 
+    
+    <!-- Google Analytics -->
+    <script>
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', 'G-SS32LXLKZD', 'auto');
+      ga('set', 'anonymizeIp', true);
+      ga('send', 'pageview');
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+    <!-- End Google Analytics -->
     
   </body>
 </html>

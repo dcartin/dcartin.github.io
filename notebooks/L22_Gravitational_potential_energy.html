@@ -284,21 +284,6 @@
 
             <!-- Source interaction buttons -->
 
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
-    <div class="dropdown-buttons sourcebuttons">
-        <a class="repository-button"
-            href="https://github.com/dcartin/NAPS-Intermediate-Physics"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Source repository"><i
-                    class="fab fa-github"></i>repository</button></a>
-        
-        <a class="edit-button" href="https://github.com/dcartin/NAPS-Intermediate-Physics/edit/master/notebooks/L22_Gravitational_potential_energy.ipynb"><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
-    </div>
-</div>
-
 
             <!-- Full screen (wrap in <a> to have style consistency -->
             <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
@@ -374,9 +359,13 @@
               <div>
                 
   <div class="section" id="gravitational-potential-energy">
-<h1><span class="section-number">22. </span>Gravitational potential energy<a class="headerlink" href="#gravitational-potential-energy" title="Permalink to this headline">¶</a></h1>
+<span id="gpe"></span><h1><span class="section-number">22. </span>Gravitational potential energy<a class="headerlink" href="#gravitational-potential-energy" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="overview">
 <h2><span class="section-number">22.1. </span>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>Link to the program in this lesson:</p>
+<ol class="simple">
+<li><p><a class="reference internal" href="#surf-gpe"><span class="std std-ref">Gravitational potential energy near the Earth’s surface</span></a></p></li>
+</ol>
 <p>In <a class="reference internal" href="L20_Conservation_of_energy.html#energy"><span class="std std-ref">Lesson 20 (conservation of energy)</span></a>, we used the form <span class="math notranslate nohighlight">\(U_g = mgr_y\)</span> for the gravitational potential energy of an object. However, this was based on a constant gravitational field, which works well when we are close to the surface of the Earth. Yet when we make more significant changes to our distance from the Earth, this is no longer a good approximation. It certainly will not be true when we start looking at orbiting objects! So, let’s see if we can find a more general form. This will allow us to use the techniques of conservation of energy for scenarios where there are significant changes in the gravitational field – for example, when a rocket is launched from the surface of the Earth. By the end of this lesson, we will find the <em>escape speed</em> necessary for such a rocket to avoid crashing back down to the Earth.</p>
 <p>Here are the objectives for this lesson:</p>
 <ul class="simple">
@@ -404,6 +393,7 @@
 \]</div>
 <p>since <span class="math notranslate nohighlight">\({\hat r} \cdot {\hat r} = 1\)</span>, by definition. This gives the change <span class="math notranslate nohighlight">\(\Delta U_g\)</span> in gravitational potential energy for the Earth-object <em>system</em> as the distance between their centers goes from <span class="math notranslate nohighlight">\(r\)</span> to <span class="math notranslate nohighlight">\(r + \Delta r\)</span>.</p>
 <p>To get a handle on how this is different than the <span class="math notranslate nohighlight">\(mgr_y\)</span> function we used before, the program below creates a graph for the two versions. The scenario is the following: a 1.00 kg mass is lifted from the surface of the Earth up to a height of 250. km above the surface. The red curve on the graph just shows <span class="math notranslate nohighlight">\(mg(R_E + h)\)</span>, where <span class="math notranslate nohighlight">\(R_E\)</span> is the Earth’s radius, and <span class="math notranslate nohighlight">\(h\)</span> the altitude of the object above the surface. This is what the gravitational potential energy would be if we could assume a constant gravitational field <span class="math notranslate nohighlight">\({\vec g}\)</span> for all heights <span class="math notranslate nohighlight">\(h\)</span>. On the other hand, the blue line adds up all of the <span class="math notranslate nohighlight">\(\Delta U_g\)</span> as the object moves, and shows the total up to that height <span class="math notranslate nohighlight">\(h\)</span>. These <span class="math notranslate nohighlight">\(\Delta U_g\)</span> are computed over height intervals <span class="math notranslate nohighlight">\(\Delta r\)</span> of 10.0 m; you can see the specific code by clicking on the pencil icon of the app. Note that in both cases, since we are graphing <span class="math notranslate nohighlight">\(\Delta U_g\)</span> from the surface, then we have chosen our <span class="math notranslate nohighlight">\(U_g\)</span> such that <span class="math notranslate nohighlight">\(U_g = 0\)</span> at the surface; I will come back to this point later. Run the program, and see how the two functions compare. Notice that the values of <span class="math notranslate nohighlight">\(U_g\)</span> are given in megajoules (MJ), and height <span class="math notranslate nohighlight">\(h\)</span> in km.</p>
+<p id="surf-gpe"><a class="reference internal" href="#gpe"><span class="std std-ref">Back to program list</span></a></p>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
 <div class="output text_html">
@@ -621,6 +611,16 @@
   <script src="../_static/js/index.d3f166471bb80abb5163.js"></script>
 
 
+    
+    <!-- Google Analytics -->
+    <script>
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', 'G-SS32LXLKZD', 'auto');
+      ga('set', 'anonymizeIp', true);
+      ga('send', 'pageview');
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+    <!-- End Google Analytics -->
     
   </body>
 </html>

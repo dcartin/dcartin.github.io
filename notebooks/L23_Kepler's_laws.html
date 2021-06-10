@@ -284,21 +284,6 @@
 
             <!-- Source interaction buttons -->
 
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
-    <div class="dropdown-buttons sourcebuttons">
-        <a class="repository-button"
-            href="https://github.com/dcartin/NAPS-Intermediate-Physics"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Source repository"><i
-                    class="fab fa-github"></i>repository</button></a>
-        
-        <a class="edit-button" href="https://github.com/dcartin/NAPS-Intermediate-Physics/edit/master/notebooks/L23_Kepler's_laws.ipynb"><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
-    </div>
-</div>
-
 
             <!-- Full screen (wrap in <a> to have style consistency -->
             <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
@@ -399,6 +384,10 @@
 <span id="orbits"></span><h1><span class="section-number">23. </span>Kepler’s laws of planetary motion<a class="headerlink" href="#kepler-s-laws-of-planetary-motion" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="overview">
 <h2><span class="section-number">23.1. </span>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>Link to the program in this lesson:</p>
+<ol class="simple">
+<li><p><a class="reference internal" href="#grav-ueff"><span class="std std-ref">Effective potential energy for gravitation</span></a></p></li>
+</ol>
 <p>The field of astronomy has the longest history of the observational and mathematical sciences. Even before written records began, there is evidence that humans were looking upward, as seen in cave paintings and the positioning of physical objects (such as Stonehenge). All the major ancient civilizations – Mesopotamia, Egypt, India, and China – have records of astronomical observations. Depending on the time and place, these were used for timekeeping, such as knowing when to plant crops, as well for divination, with the idea that events in the sky predict those on the Earth. These civilizations, to varying degrees, also started to uses mathematics to predict the motions of stars and planets.</p>
 <p>One of the most developed mathematical models was by Hipparchus of Nicea in the 2nd century BC, based on Babylonian astronomical data and the previous work of Apollonius of Perga about a century before. Hipparchus had to develop what we now know as trigonometry in order to calculate the motion of the Sun and the Moon, as seen from the Earth. His observations were later used by Claudius Ptolemy in the 2nd century AD for his famous astronomical textbook, now known as the <em>Almagest</em> from its Arabic translation of the original Greek title.</p>
 <p>The Ptolemaic system and observations were used for centuries, but eventually two problems developed with them. The first is that it was assumed that the stars are fixed on a “celestial sphere”, and do not move relative to each other. This is not actually true, and over two thousand years, these slight changes become noticeable. The second is that astronomical observations became more accurate, with the development of better instruments. In particular, inspired by earlier observatories in Baghdad and Istanbul, the Danish nobleman Tycho Brahe built in 1576 a large observatory on the island of Hven (now part of Sweden). His measurements of planetary and stellar positions were the best up to that time, and they showed problems with the mathematical models of the time.</p>
@@ -741,7 +730,7 @@
 </div>
 </div>
 <div class="section" id="effective-potential-energy-for-gravitation">
-<h3><span class="section-number">23.4.3. </span>Effective potential energy for gravitation<a class="headerlink" href="#effective-potential-energy-for-gravitation" title="Permalink to this headline">¶</a></h3>
+<span id="orbits-graphs"></span><h3><span class="section-number">23.4.3. </span>Effective potential energy for gravitation<a class="headerlink" href="#effective-potential-energy-for-gravitation" title="Permalink to this headline">¶</a></h3>
 <p>Much like all the previous central forces we have talked about in <a class="reference internal" href="L20_Conservation_of_energy.html#energy-eff-pe"><span class="std std-ref">Lesson 20</span></a>, the gravitational force has an effective potential energy that is helpful in studying the motion of orbiting objects. In this case, <span class="math notranslate nohighlight">\(U_{eff}\)</span> is given by</p>
 <div class="math notranslate nohighlight">
 \[
@@ -749,6 +738,7 @@
 \]</div>
 <p>with the usual notation: <span class="math notranslate nohighlight">\(M\)</span> is the mass of the primary object being orbited, <span class="math notranslate nohighlight">\(m\)</span> the secondary object in orbit, <span class="math notranslate nohighlight">\(L\)</span> the magnitude of the secondary’s angular momentum, and <span class="math notranslate nohighlight">\(r\)</span> is the center-to-center distance between the two objects. We can use this to find the speed of an object at any point along its orbit.</p>
 <p>To start with, below is a program that sets up the orbit of a small object around a big one. This is essentially the same simulation we did previously with central forces in <a class="reference internal" href="L16_Circular_motion.html#ucm-cent-force"><span class="std std-ref">Lesson 16 (circular motion)</span></a>, except I have adapted it to the gravitational force. The large object has a mass 100 times larger than the small one; to make things easily visible, I have made the objects’ radii very small, even though this is not physically realistic! In addition, there is a graph of the effective potential energy <span class="math notranslate nohighlight">\(U_{eff}\)</span> for the gravitational force (as the blue curve), along with the mechanical energy <span class="math notranslate nohighlight">\(E\)</span> of the system (the green line). Run the program, and notice how the motion shown matches the <span class="math notranslate nohighlight">\(U_{eff}\)</span> vs. <span class="math notranslate nohighlight">\(r\)</span> graph. Remember that the gap between the mechanical energy and the effective potential energy is the radial kinetic energy, i.e. the part of the kinetic energy dependent on <span class="math notranslate nohighlight">\(v_r\)</span>. This shows how fast the small object is moving towards or away from the larger one.</p>
+<p id="grav-ueff"><a class="reference internal" href="#orbits"><span class="std std-ref">Back to program list</span></a></p>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
 <div class="output text_html">
@@ -918,6 +908,16 @@
   <script src="../_static/js/index.d3f166471bb80abb5163.js"></script>
 
 
+    
+    <!-- Google Analytics -->
+    <script>
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', 'G-SS32LXLKZD', 'auto');
+      ga('set', 'anonymizeIp', true);
+      ga('send', 'pageview');
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+    <!-- End Google Analytics -->
     
   </body>
 </html>

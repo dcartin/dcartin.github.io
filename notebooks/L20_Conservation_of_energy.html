@@ -284,21 +284,6 @@
 
             <!-- Source interaction buttons -->
 
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
-    <div class="dropdown-buttons sourcebuttons">
-        <a class="repository-button"
-            href="https://github.com/dcartin/NAPS-Intermediate-Physics"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Source repository"><i
-                    class="fab fa-github"></i>repository</button></a>
-        
-        <a class="edit-button" href="https://github.com/dcartin/NAPS-Intermediate-Physics/edit/master/notebooks/L20_Conservation_of_energy.ipynb"><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
-    </div>
-</div>
-
 
             <!-- Full screen (wrap in <a> to have style consistency -->
             <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
@@ -414,6 +399,11 @@
 <span id="energy"></span><h1><span class="section-number">20. </span>Conservation of energy<a class="headerlink" href="#conservation-of-energy" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="overview">
 <h2><span class="section-number">20.1. </span>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>Links to programs in this lesson:</p>
+<ol class="simple">
+<li><p><a class="reference internal" href="#centr-force-ueff"><span class="std std-ref">Effective potential energy for a constant central force</span></a></p></li>
+<li><p><a class="reference internal" href="#spring-force-ueff"><span class="std std-ref">Effective potential energy for the spring force</span></a></p></li>
+</ol>
 <p>In the last lesson, we found the work done by any generic force, as the system it acts on undergoes a displacement. This force could be constant (such as the force of gravity near the surface of the Earth) or changing (like the spring force). However, this is not the best way to divide forces, at least when talking about work. Instead, we will see that it is best to focus on those forces where the work done by the force leads to a scalar uniquely defined at every state of the system. This scalar will be known as a <em>potential energy</em> of the force, and the force will be known as a <em>conservative force</em>. The reason to do this is that if we can associate a specific scalar – the <em>mechanical energy</em> of the system – based on both kinetic and potential energies, then a constant mechanical energy allows us to predict the evolution of the system.</p>
 <p>So our gameplan for this lesson is the following. First, we discuss which forces we can define potential energies for. There are a limited number of such forces, but they will be very helpful to use. This means we need to specify the difference between a conservative force and a non-conservative force; a potential energy can only be defined for a conservative force. Then we can add up the kinetic energy and all the potential energies of the system to get the system’s mechanical energy. If only conservative forces act on the system, then the mechanical energy is conserved, according to the work-energy theorem of the last lesson. However, if we have non-conservative forces as well, we need to take these into account. That will be the final portion of this lesson.</p>
 <p>Here are the objectives for this lesson:</p>
@@ -866,7 +856,7 @@
 <span id="energy-eff-pe"></span><h2><span class="section-number">20.8. </span>The effective potential energy<a class="headerlink" href="#the-effective-potential-energy" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="constant-central-force">
 <h3><span class="section-number">20.8.1. </span>Constant central force<a class="headerlink" href="#constant-central-force" title="Permalink to this headline">¶</a></h3>
-<p>The discussion above was only for motion along a single dimension, such as the <span class="math notranslate nohighlight">\(y\)</span> axis for the vertical spring. However, we are heading towards considering planets orbiting around a star when we get to Kepler’s laws in <span class="xref myst">Lesson 24</span>. You might think adding a spatial dimension would make the graphs more complicated (since they would now be three dimensional!). In general, this is the case, but it turns out things remain relatively simple if we consider only central forces, which we talked about in <a class="reference internal" href="L16_Circular_motion.html#ucm-cent-force"><span class="std std-ref">Lesson 16</span></a> and <a class="reference internal" href="L18_Angular_momentum.html#ang-mom-cent-force"><span class="std std-ref">Lesson 18</span></a>. Remember that a central force is a force vector only pointing along the radial vector <span class="math notranslate nohighlight">\({\vec r}\)</span>, i.e. a force which generates zero torque around the <span class="math notranslate nohighlight">\({\vec r} = {\vec 0}\)</span> point.</p>
+<p>The discussion above was only for motion along a single dimension, such as the <span class="math notranslate nohighlight">\(y\)</span> axis for the vertical spring. However, we are heading towards considering planets orbiting around a star when we get to Kepler’s laws in <a class="reference internal" href="L23_Kepler%27s_laws.html#orbits"><span class="std std-ref">Lesson 23</span></a>. You might think adding a spatial dimension would make the graphs more complicated (since they would now be three dimensional!). In general, this is the case, but it turns out things remain relatively simple if we consider only central forces, which we talked about in <a class="reference internal" href="L16_Circular_motion.html#ucm-cent-force"><span class="std std-ref">Lesson 16</span></a> and <a class="reference internal" href="L18_Angular_momentum.html#ang-mom-cent-force"><span class="std std-ref">Lesson 18</span></a>. Remember that a central force is a force vector only pointing along the radial vector <span class="math notranslate nohighlight">\({\vec r}\)</span>, i.e. a force which generates zero torque around the <span class="math notranslate nohighlight">\({\vec r} = {\vec 0}\)</span> point.</p>
 <p>To start with, let’s return to the central force <span class="math notranslate nohighlight">\({\vec F}_c\)</span> with constant magnitude we used as an example in those earlier lessons. Since the magnitude is constant, then we can easily find its potential energy function <span class="math notranslate nohighlight">\(U_F\)</span>. In fact, this will be very similar to what we did with the gravitational potential energy <span class="math notranslate nohighlight">\(U_g\)</span> previously in this lesson, from a constant gravitational field <span class="math notranslate nohighlight">\({\vec g}\)</span>. The only difference is that the central force points in the radial direction <span class="math notranslate nohighlight">\({\hat r}\)</span>, so its potential energy is</p>
 <div class="math notranslate nohighlight">
 \[
@@ -900,6 +890,7 @@
 \]</div>
 <p>This is a step forward, since the magnitude <span class="math notranslate nohighlight">\(L\)</span> is constant for central forces; therefore, this term is now only a function of the radial distance <span class="math notranslate nohighlight">\(r\)</span>. This means that now the effective potential <span class="math notranslate nohighlight">\(U_{eff}\)</span> is also just a function of <span class="math notranslate nohighlight">\(r\)</span>. So we can analyze the system by looking only at how the object changes its radius over the course of its motion, ignoring the perpendicular piece entirely.</p>
 <p>I show this by using the central force simulation we saw previously in Lesson 18 for the constant central force. In this version, I have put in an energy graph with two curves: the effective potential <span class="math notranslate nohighlight">\(U_{eff}\)</span> in blue, and the mechanical energy <span class="math notranslate nohighlight">\(E\)</span> in green. Since mechanical energy is conserved, the green line is flat; the difference between the green and blue curves is the <em>radial</em> piece of the kinetic energy, i.e. the part that depends on <span class="math notranslate nohighlight">\(v_r\)</span>.</p>
+<p id="centr-force-ueff"><a class="reference internal" href="#energy"><span class="std std-ref">Back to program list</span></a></p>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
 <div class="output text_html">
@@ -943,6 +934,10 @@
     10 r^3 - 68 r^2 + 450 = (r - 5)(ar^2 + br + c)
 \]</div>
 <p>for some unknown coefficients <span class="math notranslate nohighlight">\(a, b, c\)</span>. Thus, when <span class="math notranslate nohighlight">\(r \ne 5\)</span>, it is the second factor that must be zero; this can be easily solved for the last two roots of the polynomial. The two positive solutions of the overall equation will be the outer and inner radii of the object’s motion.</p>
+<div class="hint admonition">
+<p class="admonition-title">Problem</p>
+<p>Solve for the unknown coefficients <span class="math notranslate nohighlight">\(a, b, c\)</span> in the second factor, then use the quadratic formula to get the radius of the other turning point.</p>
+</div>
 <div class="toggle docutils container">
 <p><em>Answers:</em> <span class="math notranslate nohighlight">\(a = 10, b = -18, c = -90\)</span>; the other positive solution is <span class="math notranslate nohighlight">\(r = 4.03\)</span> m.</p>
 </div>
@@ -957,6 +952,7 @@
 <div class="section" id="the-spring-force">
 <h3><span class="section-number">20.8.2. </span>The spring force<a class="headerlink" href="#the-spring-force" title="Permalink to this headline">¶</a></h3>
 <p>Everything I said above for the constant central force also applies to any other central force. Thus, given a central force, an object moving solely due to this force will have an effective potential energy. We can then explore the properties of the motion with other central forces using the same techniques. To see this, below is a modified version of the mass on a spring program we saw in <a class="reference internal" href="L19_Work_and_energy.html#work-ke-spring"><span class="std std-ref">Lesson 19</span></a>. I have added an effective potential energy graph, much like what I did earlier, and the mass is given an initial velocity <span class="math notranslate nohighlight">\({\vec v}\)</span> that is perpendicular to its position vector <span class="math notranslate nohighlight">\({\vec r}\)</span>. Run the program, and notice how the motion matches the effective potential energy graph.</p>
+<p id="spring-force-ueff"><a class="reference internal" href="#energy"><span class="std std-ref">Back to program list</span></a></p>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
 <div class="output text_html">
@@ -1116,6 +1112,16 @@
   <script src="../_static/js/index.d3f166471bb80abb5163.js"></script>
 
 
+    
+    <!-- Google Analytics -->
+    <script>
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', 'G-SS32LXLKZD', 'auto');
+      ga('set', 'anonymizeIp', true);
+      ga('send', 'pageview');
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+    <!-- End Google Analytics -->
     
   </body>
 </html>

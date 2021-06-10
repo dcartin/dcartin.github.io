@@ -284,21 +284,6 @@
 
             <!-- Source interaction buttons -->
 
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
-    <div class="dropdown-buttons sourcebuttons">
-        <a class="repository-button"
-            href="https://github.com/dcartin/NAPS-Intermediate-Physics"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Source repository"><i
-                    class="fab fa-github"></i>repository</button></a>
-        
-        <a class="edit-button" href="https://github.com/dcartin/NAPS-Intermediate-Physics/edit/master/notebooks/L24_Coulomb's_law.ipynb"><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
-    </div>
-</div>
-
 
             <!-- Full screen (wrap in <a> to have style consistency -->
             <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
@@ -532,7 +517,7 @@
 <p>Write a vPython function <code class="docutils literal notranslate"><span class="pre">netElectroForce()</span></code> that finds the net electrostatic force on a charge, due to a collection of other charges. The arguments of this function should be the charge <code class="docutils literal notranslate"><span class="pre">obj</span></code>, and the list <code class="docutils literal notranslate"><span class="pre">objList</span></code>, a list of sphere objects with <code class="docutils literal notranslate"><span class="pre">pos</span></code> and <code class="docutils literal notranslate"><span class="pre">charge</span></code> attributes. Notice this is just the electrostatic version of the example program in <a class="reference internal" href="L21_Universal_gravitation.html#grav-ex"><span class="std std-ref">Lesson 21</span></a>, so you can use that program for guidance. Check the accuracy of your program by verifying the net forces on <span class="math notranslate nohighlight">\(q_1\)</span> and <span class="math notranslate nohighlight">\(q_3\)</span>, as shown above.</p>
 </div>
 <div class="toggle docutils container">
-<p><em>Answer:</em> Here is a sample program to solve the problem.</p>
+<p><em>Answer:</em> Here is a sample program to solve the problem. The additional code at the end is what is needed to define the charges, and then find the net electrostatic force on <span class="math notranslate nohighlight">\(q_1\)</span>.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">netElectroForce</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="n">objList</span><span class="p">):</span>
 
     <span class="c1"># Definitions</span>
@@ -562,10 +547,8 @@
     <span class="c1"># Return final net force vector</span>
 
     <span class="k">return</span> <span class="n">netForce</span>
-</pre></div>
-</div>
-<p>To find the net electrostatic force on <span class="math notranslate nohighlight">\(q_1\)</span>, here is the additional code you would need to define the charges, and find the net force:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Definitions</span>
+    
+<span class="c1"># Definitions</span>
 
 <span class="n">d</span> <span class="o">=</span> <span class="mf">7.00</span>                 <span class="c1"># Triangle sides (m)</span>
 <span class="n">Q</span> <span class="o">=</span> <span class="n">radians</span><span class="p">(</span><span class="mi">60</span><span class="p">)</span>          <span class="c1"># Triangle angles (rad)</span>
@@ -689,6 +672,16 @@
   <script src="../_static/js/index.d3f166471bb80abb5163.js"></script>
 
 
+    
+    <!-- Google Analytics -->
+    <script>
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', 'G-SS32LXLKZD', 'auto');
+      ga('set', 'anonymizeIp', true);
+      ga('send', 'pageview');
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+    <!-- End Google Analytics -->
     
   </body>
 </html>

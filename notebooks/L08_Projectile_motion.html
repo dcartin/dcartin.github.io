@@ -284,21 +284,6 @@
 
             <!-- Source interaction buttons -->
 
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
-    <div class="dropdown-buttons sourcebuttons">
-        <a class="repository-button"
-            href="https://github.com/dcartin/NAPS-Intermediate-Physics"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Source repository"><i
-                    class="fab fa-github"></i>repository</button></a>
-        
-        <a class="edit-button" href="https://github.com/dcartin/NAPS-Intermediate-Physics/edit/master/notebooks/L08_Projectile_motion.ipynb"><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
-    </div>
-</div>
-
 
             <!-- Full screen (wrap in <a> to have style consistency -->
             <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
@@ -382,6 +367,11 @@
 <span id="proj-mot"></span><h1><span class="section-number">8. </span>Projectile motion<a class="headerlink" href="#projectile-motion" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="overview">
 <h2><span class="section-number">8.1. </span>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>Links to programs in this lesson:</p>
+<ol class="simple">
+<li><p><a class="reference internal" href="#x-y-comps"><span class="std std-ref">x and y motion components</span></a></p></li>
+<li><p><a class="reference internal" href="#proj-mot-graphs"><span class="std std-ref">Projectile motion graphs</span></a></p></li>
+</ol>
 <p>This lesson combines together essentially everything you have seen so far in the course. Much like <a class="reference internal" href="L05_Acceleration_and_free_fall.html#accel"><span class="std std-ref">Lesson 05 (acceleration and free-fall)</span></a>, a projectile is an object in a gravitational field, which determines the acceleration of the object. In that lesson, we used a vPython simulation to visualize the projectile’s motion; you will do the same thing here, only now in two dimensions. Not only can the projectile go up and down, but now it can go sideways!</p>
 <p>The object’s constant acceleration can be used in conjunction with the kinematic equations from <a class="reference internal" href="L06_Kinematic_equations.html#kin-eqns"><span class="std std-ref">Lesson 06</span></a> to describe the motion at any time between its start and end. Specifically, this means solving for the position or velocity vectors. To actually calculate for these quantities, we need their vector components; however, in <a class="reference internal" href="L07_Vector_magnitude_and_direction.html#vec-mag-dir"><span class="std std-ref">Lesson 07 (vector magnitude and direction)</span></a>, you saw how to switch between a description of a vector in terms of components, and one given by magnitude and direction. Also, we can now graph both the position and velocity components in both the horizontal and vertical directions, and see how the constant downward gravitational field results in characteristic shapes for these graphs.</p>
 <div class="figure align-default" id="id1">
@@ -416,6 +406,7 @@
 <p>What do you expect the spacing of the spheres marking the <span class="math notranslate nohighlight">\(x\)</span> position component to look like? The <span class="math notranslate nohighlight">\(y\)</span> component position? Make a prediction before going further.</p>
 </div>
 <p>Run the program below, and see if your answers were correct.</p>
+<p id="x-y-comps"><a class="reference internal" href="#proj-mot"><span class="std std-ref">Back to program list</span></a></p>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
 <div class="output text_html">
@@ -521,6 +512,7 @@
 <div class="section" id="graphing-projectile-motion">
 <h2><span class="section-number">8.3. </span>Graphing projectile motion<a class="headerlink" href="#graphing-projectile-motion" title="Permalink to this headline">¶</a></h2>
 <p>As another way to study projectile motion, we now construct graphs of the velocity components as a function of time. The code below will produce two graphs, one for the position components of the ball, and the other for the velocity components. Each graph will have two lines – the red line for the respective <span class="math notranslate nohighlight">\(x\)</span> component, and the blue line for the <span class="math notranslate nohighlight">\(y\)</span> component. In this case, the initial velocity is horizontal, so there is a zero launch angle.</p>
+<p id="proj-mot-graphs"><a class="reference internal" href="#proj-mot"><span class="std std-ref">Back to program list</span></a></p>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
 <div class="output text_html">
@@ -984,6 +976,16 @@
   <script src="../_static/js/index.d3f166471bb80abb5163.js"></script>
 
 
+    
+    <!-- Google Analytics -->
+    <script>
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', 'G-SS32LXLKZD', 'auto');
+      ga('set', 'anonymizeIp', true);
+      ga('send', 'pageview');
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+    <!-- End Google Analytics -->
     
   </body>
 </html>

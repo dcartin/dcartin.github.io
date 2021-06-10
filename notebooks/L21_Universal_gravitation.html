@@ -284,21 +284,6 @@
 
             <!-- Source interaction buttons -->
 
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
-    <div class="dropdown-buttons sourcebuttons">
-        <a class="repository-button"
-            href="https://github.com/dcartin/NAPS-Intermediate-Physics"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Source repository"><i
-                    class="fab fa-github"></i>repository</button></a>
-        
-        <a class="edit-button" href="https://github.com/dcartin/NAPS-Intermediate-Physics/edit/master/notebooks/L21_Universal_gravitation.ipynb"><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
-    </div>
-</div>
-
 
             <!-- Full screen (wrap in <a> to have style consistency -->
             <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
@@ -389,6 +374,10 @@
 <span id="grav"></span><h1><span class="section-number">21. </span>Universal gravitation<a class="headerlink" href="#universal-gravitation" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="overview">
 <h2><span class="section-number">21.1. </span>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>Link to the program in this lesson:</p>
+<ol class="simple">
+<li><p><a class="reference internal" href="#net-grav-force"><span class="std std-ref">Net gravitational force on an object</span></a></p></li>
+</ol>
 <p>The gravitational force played an important role in the history of physics. It was in Newton’s seminal book, known today as the <em>Principia</em>, where he worked out the implications of his laws of motion, and one of the pivotal cases was that of the Moon’s orbit around the Earth. This provided the first evidence that motion near the Earth’s surface, and motion of objects in the sky, obeyed the same physical laws. This was a game changer in the world of ideas, and led to the mathematical framework for an understanding of the Universe we now call “physics”.</p>
 <p>Before, Newton, in the Western scientific tradition one of the earliest influential theories of why objects fall towards the Earth was developed by Aristotle (in the 4th century BC), who thought that all substances have a natural place in the Universe (with the Earth at its center), and objects will move to this place based on their composition. There is no gravitational force yet! The Indian astronomer and mathematician Brahmagupta in the 7th century wrote about an actual force of attraction between the Earth and other objects, pulling them towards the Earth’s surface. He saw the Earth as a sphere, and that the attraction would be the same for all points on the surface.</p>
 <p>As we will talk more about in <a class="reference internal" href="L23_Kepler%27s_laws.html#orbits"><span class="std std-ref">Lesson 23</span></a>, in the early 17th century Johannes Kepler used new astronomical observations to deduce the motions of the planets based on the idea of having the Sun at the center of the Solar System. In that lesson, we will show how Newton’s law of universal gravitation – developed in this lesson – leads to a description of planetary motion in the Solar System.</p>
@@ -417,7 +406,7 @@
 	{\vec r}_{21} = {\vec r}_2 - {\vec r}_1 
 \]</div>
 <p>This means that the vector <span class="math notranslate nohighlight">\({\vec r}_{ij}\)</span> is the vector with its tip at object <span class="math notranslate nohighlight">\(i\)</span>, and its tail at object <span class="math notranslate nohighlight">\(j\)</span>. You may want to look back at <a class="reference internal" href="L02_Vectors_and_vPython.html#vec-vpy-vec-add"><span class="std std-ref">Lesson 02</span></a> to remind yourself of graphical vector addition, in order to see where the directions of the vectors come from. Because of these definitions, <span class="math notranslate nohighlight">\({\vec r}_{12} = -{\vec r}_{21}\)</span>.</p>
-<p>However, all we care about now is the direction, not the magnitude of the distance between these objects. So we take these vectors <span class="math notranslate nohighlight">\({\vec r}_{ij}\)</span>, and find the unit vector pointing in the same direction. Remember from <a class="reference internal" href="L07_Vector_magnitude_and_direction.html#unit-vec-mag-unit-vec"><span class="std std-ref">Lesson 07</span></a> that this would be defined as</p>
+<p>However, all we care about now is the direction, not the magnitude of the distance between these objects. So we take these vectors <span class="math notranslate nohighlight">\({\vec r}_{ij}\)</span>, and find the unit vector pointing in the same direction. Remember from <a class="reference internal" href="L07_Vector_magnitude_and_direction.html#vec-mag-dir-unit-vec"><span class="std std-ref">Lesson 07</span></a> that this would be defined as</p>
 <div class="math notranslate nohighlight">
 \[
     {\hat r}_{ij} = \frac{{\vec r}_{ij}}{r_{ij}}
@@ -576,6 +565,7 @@
 <p><em>Answer:</em> <span class="math notranslate nohighlight">\(2.16 \times 10^{-11}\)</span> N at 161<span class="math notranslate nohighlight">\(^\circ\)</span> CCW from <span class="math notranslate nohighlight">\(+x\)</span> axis</p>
 </div>
 <p>Let’s now go through and check our work, by writing a vPython program to find the net gravitational force on <span class="math notranslate nohighlight">\(m_1\)</span>. I will do this by writing a function <code class="docutils literal notranslate"><span class="pre">netGravForce()</span></code>, where the first argument <code class="docutils literal notranslate"><span class="pre">obj</span></code> will be an object representing the mass to find the force <em>on</em>, and the second argument <code class="docutils literal notranslate"><span class="pre">massList</span></code> will be a list of the other masses in the problem. Thus, for the problem above, <code class="docutils literal notranslate"><span class="pre">obj</span></code> will be the mass <span class="math notranslate nohighlight">\(m_1\)</span>, while <code class="docutils literal notranslate"><span class="pre">massList</span></code> will be a list of the masses <span class="math notranslate nohighlight">\(m_2, m_3\)</span>. I will use sphere objects to represent all of the masses, which have both <code class="docutils literal notranslate"><span class="pre">pos</span></code> and <code class="docutils literal notranslate"><span class="pre">mass</span></code> attributes. This is done in the Trinket app below. Remember you can view the code by clicking on the pencil icon.</p>
+<p id="net-grav-force"><a class="reference internal" href="#grav"><span class="std std-ref">Back to program list</span></a></p>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
 <div class="output text_html">
@@ -866,6 +856,16 @@
   <script src="../_static/js/index.d3f166471bb80abb5163.js"></script>
 
 
+    
+    <!-- Google Analytics -->
+    <script>
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', 'G-SS32LXLKZD', 'auto');
+      ga('set', 'anonymizeIp', true);
+      ga('send', 'pageview');
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+    <!-- End Google Analytics -->
     
   </body>
 </html>

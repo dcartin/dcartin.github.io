@@ -284,21 +284,6 @@
 
             <!-- Source interaction buttons -->
 
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
-    <div class="dropdown-buttons sourcebuttons">
-        <a class="repository-button"
-            href="https://github.com/dcartin/NAPS-Intermediate-Physics"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Source repository"><i
-                    class="fab fa-github"></i>repository</button></a>
-        
-        <a class="edit-button" href="https://github.com/dcartin/NAPS-Intermediate-Physics/edit/master/notebooks/L13_Scalar_product.ipynb"><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
-    </div>
-</div>
-
 
             <!-- Full screen (wrap in <a> to have style consistency -->
             <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
@@ -397,6 +382,11 @@
 <span id="scal-prod"></span><h1><span class="section-number">13. </span>Scalar product<a class="headerlink" href="#scalar-product" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="overview">
 <h2><span class="section-number">13.1. </span>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>Links to programs in this lesson:</p>
+<ol class="simple">
+<li><p><a class="reference internal" href="#vec-scal-prod"><span class="std std-ref">Scalar product of two vectors</span></a></p></li>
+<li><p><a class="reference internal" href="#scal-prod-mag"><span class="std std-ref">Scalar product with magnitudes</span></a></p></li>
+</ol>
 <p>There are many times where a mathematical object allows us to greatly simplify a calculation, where it would be tedious otherwise. Hopefully, you have seen that this is true with vectors – they nicely codify many physical properties in three dimensions, and summarize this information in one equation (rather than three!). So, as we have recently seen, all the possible situations in relation motion are condensed into two vector equations.</p>
 <p>A similar idea motivates the definition of the “scalar product”. A major use of the scalar product for us will be identifying the angle between two vectors, and specifically when they are parallel or perpendicular. The scalar product will be used several times in the rest of the course. In <a class="reference internal" href="L14_Inclined_planes.html#ramp"><span class="std std-ref">Lesson 14</span></a>, it helps define unit vectors for describing motion along a ramp, or perpendicular to it. In <a class="reference internal" href="L19_Work_and_energy.html#work-ke"><span class="std std-ref">Lesson 19</span></a>, the notion of “work” – defined as a scalar product between force and displacement – will be our gateway into the powerful methods of energy conservation.</p>
 <div class="figure align-default" id="id1">
@@ -488,6 +478,7 @@
 <div class="section" id="the-scalar-product-in-vpython">
 <span id="scal-prod-vpy"></span><h2><span class="section-number">13.4. </span>The scalar product in vPython<a class="headerlink" href="#the-scalar-product-in-vpython" title="Permalink to this headline">¶</a></h2>
 <p>You can easily calculate the scalar product of two vectors in vPython – you can simply write <code class="docutils literal notranslate"><span class="pre">dot(Avec,</span> <span class="pre">Bvec)</span></code> for previously defined vectors <code class="docutils literal notranslate"><span class="pre">Avec</span></code> and <code class="docutils literal notranslate"><span class="pre">Bvec</span></code>. An example is shown below.</p>
+<p id="vec-scal-prod"><a class="reference internal" href="#scal-prod"><span class="std std-ref">Back to program list</span></a></p>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
 <div class="output text_html">
@@ -531,6 +522,7 @@
 </div>
 <p>Then, the scalar product <span class="math notranslate nohighlight">\({\vec R} \cdot {\vec S} = 5.43537\)</span>.</p>
 </div>
+<p id="scal-prod-mag"><a class="reference internal" href="#scal-prod"><span class="std std-ref">Back to program list</span></a></p>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
 <div class="output text_html">
@@ -885,6 +877,16 @@
   <script src="../_static/js/index.d3f166471bb80abb5163.js"></script>
 
 
+    
+    <!-- Google Analytics -->
+    <script>
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', 'G-SS32LXLKZD', 'auto');
+      ga('set', 'anonymizeIp', true);
+      ga('send', 'pageview');
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+    <!-- End Google Analytics -->
     
   </body>
 </html>

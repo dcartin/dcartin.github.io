@@ -284,21 +284,6 @@
 
             <!-- Source interaction buttons -->
 
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
-    <div class="dropdown-buttons sourcebuttons">
-        <a class="repository-button"
-            href="https://github.com/dcartin/NAPS-Intermediate-Physics"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Source repository"><i
-                    class="fab fa-github"></i>repository</button></a>
-        
-        <a class="edit-button" href="https://github.com/dcartin/NAPS-Intermediate-Physics/edit/master/notebooks/L19_Work_and_energy.ipynb"><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
-    </div>
-</div>
-
 
             <!-- Full screen (wrap in <a> to have style consistency -->
             <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
@@ -416,7 +401,13 @@
 <span id="work-ke"></span><h1><span class="section-number">19. </span>Work and energy<a class="headerlink" href="#work-and-energy" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="overview">
 <h2><span class="section-number">19.1. </span>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
-<p>In physics, one of the most powerful methods used to understand a situation is the use of conservation methods. Remember that these are cases where we can say some physical quantity for a system stays the same, regardless of any kind of interactions between components of the system. Knowing that something remains constant, even when you do not know all the details of what is happening to the system, allows you to find out a lot about the system’s evolution. We have seen two conservation laws already – the conservation of linear momentum (when there is no net external force), and the conservation of angular momentum (no external torque). This lesson and the next are now working towards the third: the conservation of mechanical energy. In particular, here I set the stage for energy by defining <em>work</em> and <em>kinetic energy</em>; <span class="xref myst">Lesson 20</span> will define <em>potential energy</em> and <em>mechanical energy</em>.</p>
+<p>Links to programs in this lesson:</p>
+<ol class="simple">
+<li><p><a class="reference internal" href="#grav-work-graph"><span class="std std-ref">Graphing gravitational work</span></a></p></li>
+<li><p><a class="reference internal" href="#mass-spring"><span class="std std-ref">Mass on a spring</span></a></p></li>
+<li><p><a class="reference internal" href="#spring-work-graph"><span class="std std-ref">Graphing work of spring force</span></a></p></li>
+</ol>
+<p>In physics, one of the most powerful methods used to understand a situation is the use of conservation methods. Remember that these are cases where we can say some physical quantity for a system stays the same, regardless of any kind of interactions between components of the system. Knowing that something remains constant, even when you do not know all the details of what is happening to the system, allows you to find out a lot about the system’s evolution. We have seen two conservation laws already – the conservation of linear momentum (when there is no net external force), and the conservation of angular momentum (no external torque). This lesson and the next are now working towards the third: the conservation of mechanical energy. In particular, here I set the stage for energy by defining <em>work</em> and <em>kinetic energy</em>; <a class="reference internal" href="L20_Conservation_of_energy.html#energy"><span class="std std-ref">Lesson 20</span></a> will define <em>potential energy</em> and <em>mechanical energy</em>.</p>
 <p>This is a good time to take stock of what we have covered to this point in the class as a whole, and what is coming up next. At this point, we have discussed <em>forces</em> and <em>momentum</em> (both linear and angular). The idea of a force is inituitively obvious – you probably have a sense of it as a “push” or a “pull”. Newton’s second law then built a bridge between forces and momentum, with net forces acting on an object changing the momentum of that object. We wrote down a mathematical definition of momentum, but the tie-in with Newton’s laws gives us an notion of momentum as a measure of the object’s <em>inertia</em>, its tendency to remain at a constant velocity unless acted on by outside forces. Using forces allows us to find the acceleration of an object, and the kinematic equations then give the complete motion of the object over a given time period.</p>
 <p>Unlike forces and momentum, the idea of energy is not as intuitive. I can feel the force of the wall as I lean against it; I do not “see” the force of gravity, but I <em>can</em> see its effect on anything I let go of; friction and air resistance are so familiar that we automatically expect objects to slow down to a stop, and we may quietly think that inertia doesn’t quite make sense! However, I can’t see how the energy of a dropped object changes as it falls, or that of a car braking to a stop. So what is energy?</p>
 <p>The picture I have in my head when I think of energy is that of accounting and money. If there is something I want, there are three ways that I can get it.</p>
@@ -624,6 +615,7 @@
 <p>Using vPython, we will now make a graph of the total work done by the gravitational force on an object near the Earth’s surface. Much of this we have already done before, the new part is finding the work done on the object. The program below includes code for an object <code class="docutils literal notranslate"><span class="pre">ball</span></code> dropped from rest from a height <code class="docutils literal notranslate"><span class="pre">INIT_HEIGHT</span></code> above the object <code class="docutils literal notranslate"><span class="pre">ground</span></code>. The code shows the animation of the ball, and also creates a graph of the total work done on <code class="docutils literal notranslate"><span class="pre">ball</span></code> as a function of its vertical position <span class="math notranslate nohighlight">\(r_y\)</span>. The simulation stops when the ball hits the ground, since the <code class="docutils literal notranslate"><span class="pre">while</span></code> loop only runs when <code class="docutils literal notranslate"><span class="pre">ball.pos.y</span> <span class="pre">&gt;</span> <span class="pre">0</span></code>.</p>
 <p>In the code, you will have to do two things before the code is able to run. First, define the two vectors <code class="docutils literal notranslate"><span class="pre">GRAV_FIELD</span></code> and <code class="docutils literal notranslate"><span class="pre">NET_FORCE</span></code> for an object moving near the surface of the Earth, with only the gravitational force acting on it. Then, inside the <code class="docutils literal notranslate"><span class="pre">while</span></code> loop, update the variable <code class="docutils literal notranslate"><span class="pre">work</span></code> to find the total work done on the ball due to the net force. Use the definition of work given above to find this. Remember that you can use <code class="docutils literal notranslate"><span class="pre">dot()</span></code> in vPython to find the scalar product of two vectors; you can see this in action in <a class="reference internal" href="L13_Scalar_product.html#scal-prod-vpy"><span class="std std-ref">Lesson 09</span></a>. In addition, the displacement <span class="math notranslate nohighlight">\(\Delta {\vec r}\)</span> is due to the velocity of the ball, so find this displacement over each time step <code class="docutils literal notranslate"><span class="pre">DT</span></code> using <code class="docutils literal notranslate"><span class="pre">ball.momentum</span></code>. How can you find the displacement of the ball over each time interval <code class="docutils literal notranslate"><span class="pre">DT</span></code>?</p>
 <p>When you have completed these steps, run the code and see what kind of graph you obtain.</p>
+<p id="grav-work-graph"><a class="reference internal" href="#work-ke"><span class="std std-ref">Back to program list</span></a></p>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
 <div class="output text_html">
@@ -720,6 +712,7 @@
 \sum {\vec F} = m \frac{\Delta {\vec v}}{\Delta t}
 \]</div>
 <p>To update <code class="docutils literal notranslate"><span class="pre">ball.momentum</span></code>, you will need to use the net force on the mass, along with mass of the ball <code class="docutils literal notranslate"><span class="pre">ball.mass</span></code> and the spring’s force constant <code class="docutils literal notranslate"><span class="pre">spring.constant</span></code>. Thus, these need to be set to the proper values, in terms of the definitions of <code class="docutils literal notranslate"><span class="pre">OBJ_MASS</span></code> and <code class="docutils literal notranslate"><span class="pre">SPRING_CONST</span></code> given at the beginning of the program. If you do this correctly, the motion of the mass should be oscillatory, moving back and forth.</p>
+<p id="mass-spring"><a class="reference internal" href="#work-ke"><span class="std std-ref">Back to program list</span></a></p>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
 <div class="output text_html">
@@ -775,6 +768,7 @@
 </div>
 <p>The shaded blue region is what we want – the area under the curve for a force vs. position graph gives the change in work due to the force. From the previous problem, you have an algebraic equation for this area, which you need to convert into vPython code to update the variable <code class="docutils literal notranslate"><span class="pre">work</span></code>. To help you out, remember the following points. In the program below, a line of code has been added to save the position of the ball at the start of each time step as the variable <code class="docutils literal notranslate"><span class="pre">ball.oldpos</span></code>. Thus, <span class="math notranslate nohighlight">\(r_i\)</span> is given by this variable. Similarly, the final position <span class="math notranslate nohighlight">\(r_f\)</span> is calculated when position and velocity are updated, so it is the variable <code class="docutils literal notranslate"><span class="pre">ball.pos</span></code> <em>after</em> this update.</p>
 <p>Use the equation from the last problem, and write it into vPython, using the variables defined in the program. You will also need to write the code to graph <code class="docutils literal notranslate"><span class="pre">work</span></code> as a function of the position <code class="docutils literal notranslate"><span class="pre">ball.pos.x</span></code>. Once you have done this, run the program, and see what kind of graph you get.</p>
+<p id="spring-work-graph"><a class="reference internal" href="#work-ke"><span class="std std-ref">Back to program list</span></a></p>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
 <div class="output text_html">
@@ -977,6 +971,16 @@
   <script src="../_static/js/index.d3f166471bb80abb5163.js"></script>
 
 
+    
+    <!-- Google Analytics -->
+    <script>
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', 'G-SS32LXLKZD', 'auto');
+      ga('set', 'anonymizeIp', true);
+      ga('send', 'pageview');
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+    <!-- End Google Analytics -->
     
   </body>
 </html>

@@ -284,21 +284,6 @@
 
             <!-- Source interaction buttons -->
 
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
-    <div class="dropdown-buttons sourcebuttons">
-        <a class="repository-button"
-            href="https://github.com/dcartin/NAPS-Intermediate-Physics"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Source repository"><i
-                    class="fab fa-github"></i>repository</button></a>
-        
-        <a class="edit-button" href="https://github.com/dcartin/NAPS-Intermediate-Physics/edit/master/notebooks/L14_Inclined_planes.ipynb"><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
-    </div>
-</div>
-
 
             <!-- Full screen (wrap in <a> to have style consistency -->
             <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
@@ -397,6 +382,12 @@
 <span id="ramp"></span><h1><span class="section-number">14. </span>Inclined planes<a class="headerlink" href="#inclined-planes" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="overview">
 <h2><span class="section-number">14.1. </span>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>Links to programs in this lesson:</p>
+<ol class="simple">
+<li><p><a class="reference internal" href="#ramp-init"><span class="std std-ref">Create a ramp</span></a></p></li>
+<li><p><a class="reference internal" href="#ramp-forces"><span class="std std-ref">The forces for a block on a ramp</span></a></p></li>
+<li><p><a class="reference internal" href="#ramp-graph"><span class="std std-ref">Graphing motion on a ramp</span></a></p></li>
+</ol>
 <p>Everyone has heard of the famous experiment where Galileo Galilei dropped two masses off the top of the Leaning Tower of Pisa, in order to show that the force of gravity accelerated all objects equally. Unfortunately, this story is probably not true! What he did instead is more interesting, and leads to actual mathematical relationships dealing with acceleration and gravity. His experiment is a prime example of how the inclined planes we will discuss in this lesson were important to our greater understanding of physics. As described in the video linked below, he rolled a ball down a groove at an angle to the horizontal, and saw how the ball would accelerate.</p>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
@@ -500,6 +491,7 @@
 <div class="section" id="creating-an-inclined-plane-in-vpython">
 <h2><span class="section-number">14.3. </span>Creating an inclined plane in vPython<a class="headerlink" href="#creating-an-inclined-plane-in-vpython" title="Permalink to this headline">¶</a></h2>
 <p>We start below with code that creates a block in the center of a horizontal surface. You will gradually update this code, until it gives you a block on an inclined plane. How to do this is described after the program given below. This program has a function creating a ramp with a block on it. Since this is an “initializiation” function, we call it <code class="docutils literal notranslate"><span class="pre">init()</span></code>. When you run the program below, it uses this function to put the block on the ramp. To start with, the block and ramp are horizontal; you will add the code needed to have both the ramp and block tilt at the desired angle. The function <code class="docutils literal notranslate"><span class="pre">init()</span></code> only returns the object <code class="docutils literal notranslate"><span class="pre">block</span></code>, since the ramp will be stationary for the entire simulation; only the block will (eventually) change position. Verify that it works as you expect.</p>
+<p id="ramp-init"><a class="reference internal" href="#ramp"><span class="std std-ref">Back to program list</span></a></p>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
 <div class="output text_html">
@@ -538,6 +530,7 @@
 <p>You will now built up the proper forces acting on the block sitting on the ramp. I often see students make mistakes with which forces to use, and what magnitude to give them. Thus, I want you to see some examples of bad choices, so it is obvious why the choices are bad.</p>
 <p>Thus, before we get into the proper way of solving for the forces, let’s try to make some guesses about what the size and directions of these forces would be. The program below uses the <code class="docutils literal notranslate"><span class="pre">init()</span></code> function you defined earlier, so make sure that it includes a proper inclined plane. The usual evolution loop has been added at the end, with the accompanying definitions for the time. However, at the moment, the net force is set to zero, which is definitely not true when there is no friction!</p>
 <p>To make sure you know where to put the code, I will say the <em>main procedure</em> when I refer to the part of the program after the definition of <code class="docutils literal notranslate"><span class="pre">init()</span></code>, i.e. after the command <code class="docutils literal notranslate"><span class="pre">return</span> <span class="pre">block</span></code>.</p>
+<p id="ramp-forces"><a class="reference internal" href="#ramp"><span class="std std-ref">Back to program list</span></a></p>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
 <div class="output text_html">
@@ -699,6 +692,7 @@
 <div class="section" id="graphing-the-motion">
 <h2><span class="section-number">14.6. </span>Graphing the motion<a class="headerlink" href="#graphing-the-motion" title="Permalink to this headline">¶</a></h2>
 <p>Now that we have a good physical simulation for the motion of a block down a ramp, we can start graphing the position and velocity of the block. At this point, your code for <code class="docutils literal notranslate"><span class="pre">init()</span></code> and the main procedure should look like that in the program below. I have increased the height of the app window, so you can see the block’s motion and the accompanying graph at the same time, after you complete the code. Remember you can edit the code by clicking on the pencil icon at the upper-left corner of the app.</p>
+<p id="ramp-graph"><a class="reference internal" href="#ramp"><span class="std std-ref">Back to program list</span></a></p>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
 <div class="output text_html">
@@ -1006,6 +1000,16 @@
   <script src="../_static/js/index.d3f166471bb80abb5163.js"></script>
 
 
+    
+    <!-- Google Analytics -->
+    <script>
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', 'G-SS32LXLKZD', 'auto');
+      ga('set', 'anonymizeIp', true);
+      ga('send', 'pageview');
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+    <!-- End Google Analytics -->
     
   </body>
 </html>

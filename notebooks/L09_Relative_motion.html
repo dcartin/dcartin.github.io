@@ -284,21 +284,6 @@
 
             <!-- Source interaction buttons -->
 
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
-    <div class="dropdown-buttons sourcebuttons">
-        <a class="repository-button"
-            href="https://github.com/dcartin/NAPS-Intermediate-Physics"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Source repository"><i
-                    class="fab fa-github"></i>repository</button></a>
-        
-        <a class="edit-button" href="https://github.com/dcartin/NAPS-Intermediate-Physics/edit/master/notebooks/L09_Relative_motion.ipynb"><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
-    </div>
-</div>
-
 
             <!-- Full screen (wrap in <a> to have style consistency -->
             <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
@@ -406,10 +391,16 @@
 <span id="rel-mot"></span><h1><span class="section-number">9. </span>Relative motion<a class="headerlink" href="#relative-motion" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="overview">
 <h2><span class="section-number">9.1. </span>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>Links to programs in this lesson:</p>
+<ol class="simple">
+<li><p><a class="reference internal" href="#d-rel-mot"><span class="std std-ref">1D relative motion</span></a></p></li>
+<li><p><a class="reference internal" href="#river-rel-mot"><span class="std std-ref">Crossing a river</span></a></p></li>
+<li><p><a class="reference internal" href="#id2"><span class="std std-ref">2D relative motion</span></a></p></li>
+</ol>
 <p>You probably have a good sense of what relative motion is already. For example, if you are driving down the road in a car, everything going on inside the car will usually appear to be at rest. This is because everything in the car has the same velocity that you do, so your “relative” velocities are zero. On the other hand, you will see the cars going in the opposite direction at a really high speed. It is not that they are actually moving this fast (at least according to a bystander on the ground!), but the cars’ velocities combine together to produce the high velocity you see. Relative motion deals with how moving objects appear to each other. Vectors will be important here, since the direction of the objects’ velocities can change the resulting relative motion. In fact, such ideas are used in ship navigation, where a maneuvering board (or “moboard”) provides a convenient way of doing relative motion vector calculations. Although they are slower than electronic means, it is always <a class="reference external" href="https://www.usni.org/magazines/proceedings/2019/april/moboards-will-never-be-obsolete">a good idea</a> to know what your equipment is doing, so you can evaluate it properly.</p>
-<div class="figure align-default" id="id2">
+<div class="figure align-default" id="id3">
 <a class="reference internal image-reference" href="../_images/USS_Truxtun_moboard.jpg"><img alt="../_images/USS_Truxtun_moboard.jpg" src="../_images/USS_Truxtun_moboard.jpg" style="height: 250px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 9.1 </span><span class="caption-text">Sailors plot ship positions on a maneuvering board on the bridge of the guided-missile destroyer USS Truxtun (DDG 103) during a divisional tactics exercise. Truxtun is deployed as part of the George H.W. Bush Carrier Strike Group supporting maritime security operations and theater security cooperation efforts in the U.S. 5th and 6th Fleet areas of responsibility. (U.S. Navy photo by Mass Communication Specialist 3rd Class Kevin J. Steinberg/Released) (<a class="reference external" href="https://www.flickr.com/photos/usnavy/5782136258/">source</a>)</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 9.1 </span><span class="caption-text">Sailors plot ship positions on a maneuvering board on the bridge of the guided-missile destroyer USS Truxtun (DDG 103) during a divisional tactics exercise. Truxtun is deployed as part of the George H.W. Bush Carrier Strike Group supporting maritime security operations and theater security cooperation efforts in the U.S. 5th and 6th Fleet areas of responsibility. (U.S. Navy photo by Mass Communication Specialist 3rd Class Kevin J. Steinberg/Released) (<a class="reference external" href="https://www.flickr.com/photos/usnavy/5782136258/">source</a>)</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
 </div>
 <p>Here are the objectives for this lesson:</p>
 <ul class="simple">
@@ -430,9 +421,9 @@
 \[
 	{\vec v}_{AB} = -{\vec v}_{BA}
 \]</div>
-<div class="figure align-default" id="id3">
+<div class="figure align-default" id="id4">
 <a class="reference internal image-reference" href="../_images/INT_AY20_MP1_L28_Fig01-Moving_sidewalk_small.png"><img alt="../_images/INT_AY20_MP1_L28_Fig01-Moving_sidewalk_small.png" src="../_images/INT_AY20_MP1_L28_Fig01-Moving_sidewalk_small.png" style="height: 200px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 9.2 </span><span class="caption-text">Watching someone on a moving sidewalk</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 9.2 </span><span class="caption-text">Watching someone on a moving sidewalk</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
 </div>
 <p>Suppose you are on the ground watching another person walking on a moving sidewalk, with the person (P) on the moving sidewalk (S), and you on the ground (G). The velocity <span class="math notranslate nohighlight">\({\vec v}_{PG}\)</span> of the person as seen by you is the sum of the person’s velocity on the sidewalk added (as a vector!) to the velocity of the sidewalk as seen by the ground, or</p>
 <div class="math notranslate nohighlight">
@@ -498,9 +489,9 @@
 <li><p>What is the velocity (magnitude in m/s) of the person as seen by you? In other words, what is <span class="math notranslate nohighlight">\({\vec v}_{PG}\)</span>?</p></li>
 <li><p>Suppose the person switches directions, and walks to the right, but at the same speed. What is <span class="math notranslate nohighlight">\({\vec v}_{PG}\)</span> now (magnitude in m/s)?</p></li>
 </ol>
-<div class="figure align-default" id="id4">
+<div class="figure align-default" id="id5">
 <a class="reference internal image-reference" href="../_images/INT_AY20_MP1_L28_Fig02-Hobo_on_a_train_small.png"><img alt="../_images/INT_AY20_MP1_L28_Fig02-Hobo_on_a_train_small.png" src="../_images/INT_AY20_MP1_L28_Fig02-Hobo_on_a_train_small.png" style="height: 200px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 9.3 </span><span class="caption-text">Watch a hobo pass by on a moving train</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 9.3 </span><span class="caption-text">Watch a hobo pass by on a moving train</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 <div class="toggle docutils container">
@@ -585,6 +576,7 @@
 <p>What is new about the code are the velocities. It is important to realize that there are <em>two</em> velocities that are important for each object. The first velocities defined are the velocities <code class="docutils literal notranslate"><span class="pre">velRG</span></code>, <code class="docutils literal notranslate"><span class="pre">velBG</span></code> and <code class="docutils literal notranslate"><span class="pre">velGG</span></code>. These are the velocities of the objects as seen by the ground G – in other words, the vectors <span class="math notranslate nohighlight">\({\vec v}_{RG}, {\vec v}_{BG}\)</span> and <span class="math notranslate nohighlight">\({\vec v}_{GG}\)</span>. Since the ground is not moving relative to itself, obviously <span class="math notranslate nohighlight">\({\vec v}_{GG} = 0\)</span>!</p>
 <p>The second set of velocities <code class="docutils literal notranslate"><span class="pre">objR.velocity</span></code>, <code class="docutils literal notranslate"><span class="pre">objB.velocity</span></code> and <code class="docutils literal notranslate"><span class="pre">ground.velocity</span></code> tell the computer what motion to show when the program is run. This is <em>not</em> necessarily the same as the velocities of the objects as seen by the ground, since we can take the perspective of a different object, as we will do later.</p>
 <p>Run the program now, and see how objects R and B move relative to the ground.</p>
+<p id="d-rel-mot"><a class="reference internal" href="#rel-mot"><span class="std std-ref">Back to program list</span></a></p>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
 <div class="output text_html">
@@ -683,6 +675,7 @@
 \]</div>
 <p>Inside the <code class="docutils literal notranslate"><span class="pre">while</span></code> loop, there is an <code class="docutils literal notranslate"><span class="pre">if</span></code> statement to figure out which of the two velocities to use. Since the AAV is moving in the <span class="math notranslate nohighlight">\(+y\)</span> direction, the test is whether <code>vehicle.pos</code> is within the <span class="math notranslate nohighlight">\(y\)</span> boundaries of the river, which are <span class="math notranslate nohighlight">\(y = +2\)</span> and <span class="math notranslate nohighlight">\(y = -2\)</span>.</p>
 <p>Now run the program below, and make sure the motion matches what you would expect. The movement of the AAV on the ground and the water is determined by <code class="docutils literal notranslate"><span class="pre">velV</span></code> and <code class="docutils literal notranslate"><span class="pre">velWG</span></code>.</p>
+<p id="river-rel-mot"><a class="reference internal" href="#rel-mot"><span class="std std-ref">Back to program list</span></a></p>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
 <div class="output text_html">
@@ -696,9 +689,9 @@
 </div></div>
 </div>
 <p>When you run the program above, you will see the white box representing the AAV move towards the top of the window when it is moving on the green ground. However, when the vehicle is on the blue water, it is carried downstream to the left at the same time it is moving upwards – its motion on the water is a combination of the two. The AAV lands on the upper bank downstream from where it entered the water. The relationship between the three velocity vectors is shown in the figure below.</p>
-<div class="figure align-default" id="id5">
+<div class="figure align-default" id="id6">
 <a class="reference internal image-reference" href="../_images/INT_AY20_MP1_L29_Fig01-River-velocity-vectors-downstream.png"><img alt="../_images/INT_AY20_MP1_L29_Fig01-River-velocity-vectors-downstream.png" src="../_images/INT_AY20_MP1_L29_Fig01-River-velocity-vectors-downstream.png" style="height: 200px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 9.4 </span><span class="caption-text">Relative motion vectors for the AAV carried downstream</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 9.4 </span><span class="caption-text">Relative motion vectors for the AAV carried downstream</span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
 </div>
 <p>From the definitions of <code class="docutils literal notranslate"><span class="pre">velV</span></code> and <code class="docutils literal notranslate"><span class="pre">velWG</span></code>, you can see that the speed of the vehicle on the water <span class="math notranslate nohighlight">\(v_{VW} = 2\)</span>, while the speed of the current <span class="math notranslate nohighlight">\(v_{WG} = 1.5\)</span>. From this and the triangle above, you can calculate the speed <span class="math notranslate nohighlight">\(v_{VG}\)</span> of the AAV as it is seen from the ground.</p>
 <div class="hint admonition">
@@ -709,9 +702,9 @@
 <p><em>Answer:</em> Since the two vectors are perpendicular, you can use the Pythagorean theorem to find the magnitude of the AAV’s velocity while on the water. This gives 2.50 m/s.</p>
 </div>
 <p>If we want the AAV to land on the opposite shore directly across from where it went into the water, then the appropriate diagram should be more like the one below. Take some time to see how the triangle given is different than the previous one. Note that the speed of the current <span class="math notranslate nohighlight">\(v_{WG}\)</span> is still the same as above, but the direction the AAV is moving relative to the water must change. This ensures the vehicle lands directly across the river, as seen by the ground. The AAV needs to point upstream, so that the net result is a velocity <span class="math notranslate nohighlight">\({\vec v}_{VG}\)</span> is exactly in the <span class="math notranslate nohighlight">\(+y\)</span> direction.</p>
-<div class="figure align-default" id="id6">
+<div class="figure align-default" id="id7">
 <a class="reference internal image-reference" href="../_images/INT_AY20_MP1_L29_Fig02-River-velocity-vectors-upstream.png"><img alt="../_images/INT_AY20_MP1_L29_Fig02-River-velocity-vectors-upstream.png" src="../_images/INT_AY20_MP1_L29_Fig02-River-velocity-vectors-upstream.png" style="height: 200px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 9.5 </span><span class="caption-text">Relative motion vectors for the AAV aiming upstream</span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 9.5 </span><span class="caption-text">Relative motion vectors for the AAV aiming upstream</span><a class="headerlink" href="#id7" title="Permalink to this image">¶</a></p>
 </div>
 <div class="hint admonition">
 <p class="admonition-title">Problem</p>
@@ -743,6 +736,7 @@
 <div class="section" id="more-general-2d-relative-motion">
 <h3><span class="section-number">9.5.2. </span>More general 2D relative motion<a class="headerlink" href="#more-general-2d-relative-motion" title="Permalink to this headline">¶</a></h3>
 <p>In the first vPython example you looked at, there was a red sphere and a blue sphere moving along a line in opposite directions. Now we go back to these objects, but now the blue sphere is traveling in the <span class="math notranslate nohighlight">\(-y\)</span> direction, while the red sphere is still traveling in the <span class="math notranslate nohighlight">\(+x\)</span> direction. Run the program below to see what the basic scenario looks like.</p>
+<p id="id2"><a class="reference internal" href="#rel-mot"><span class="std std-ref">Back to program list</span></a></p>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
 <div class="output text_html">
@@ -779,9 +773,9 @@
 <div class="hint admonition">
 <p class="admonition-title">Problem</p>
 <p>Pranksters from NAPS have stolen the Coast Guard cutters JUNIPER and WILLOW from Naval Station Newport! They leave Newport harbor at the same time, with the JUNIPER traveling at 10.0 m/s with a bearing of 30<span class="math notranslate nohighlight">\(^\circ\)</span> west of south, and the WILLOW moving at 12.0 m/s at 20<span class="math notranslate nohighlight">\(^\circ\)</span> south of east. What is the velocity of CGC WILLOW (magnitude in m/s, with NSEW direction), as seen by CGC JUNIPER?</p>
-<div class="figure align-default" id="id7">
+<div class="figure align-default" id="id8">
 <a class="reference internal image-reference" href="../_images/INT_AY20_MP1_L28_Fig03-Willow_and_Juniper_velocities_small.png"><img alt="../_images/INT_AY20_MP1_L28_Fig03-Willow_and_Juniper_velocities_small.png" src="../_images/INT_AY20_MP1_L28_Fig03-Willow_and_Juniper_velocities_small.png" style="height: 200px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 9.6 </span><span class="caption-text">Velocities of the JUNIPER and WILLOW, seen by an observer in Newport</span><a class="headerlink" href="#id7" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 9.6 </span><span class="caption-text">Velocities of the JUNIPER and WILLOW, seen by an observer in Newport</span><a class="headerlink" href="#id8" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 <div class="toggle docutils container">
@@ -852,6 +846,16 @@
   <script src="../_static/js/index.d3f166471bb80abb5163.js"></script>
 
 
+    
+    <!-- Google Analytics -->
+    <script>
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', 'G-SS32LXLKZD', 'auto');
+      ga('set', 'anonymizeIp', true);
+      ga('send', 'pageview');
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+    <!-- End Google Analytics -->
     
   </body>
 </html>

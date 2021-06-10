@@ -284,21 +284,6 @@
 
             <!-- Source interaction buttons -->
 
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
-    <div class="dropdown-buttons sourcebuttons">
-        <a class="repository-button"
-            href="https://github.com/dcartin/NAPS-Intermediate-Physics"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Source repository"><i
-                    class="fab fa-github"></i>repository</button></a>
-        
-        <a class="edit-button" href="https://github.com/dcartin/NAPS-Intermediate-Physics/edit/master/notebooks/L26_Magnetic_fields_and_forces.ipynb"><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
-    </div>
-</div>
-
 
             <!-- Full screen (wrap in <a> to have style consistency -->
             <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
@@ -384,6 +369,10 @@
 <span id="mag-field"></span><h1><span class="section-number">26. </span>Magnetic fields and forces<a class="headerlink" href="#magnetic-fields-and-forces" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="overview">
 <h2><span class="section-number">26.1. </span>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>Link to the program in this lesson:</p>
+<ol class="simple">
+<li><p><a class="reference internal" href="#mag-field-ucm"><span class="std std-ref">Motion in a constant magnetic field</span></a></p></li>
+</ol>
 <p>After the gravitational field, magnetic fields are probably the next most common example of a field in everyday life. I am sure you have played around at least once with bar magnets, and seen how the various poles of the magnets attract or repel. You may also have used a compass to navigate around, emulating sailors who have done this for centuries. In fact, the Chinese have been using compasses for that purpose for over a thousand years. Before that, they used the magnetic properties of lodestones for divination; it is not too surprising that a mystical purpose was given to stones that naturally seek to align with the Earth’s magnetic field! In today’s technology, magnets run the gamut from the speakers in your headphones, to the “M” in “MRI” when you go to the doctor’s office.</p>
 <p>In this lesson, we will explore magnetic fields, and the forces they exert on moving charges. Some of this will be similar to what we did with gravitational and electric fields. However, magnetic fields and forces feature interesting behavior unlike those other fields. In particular, magnetism is inherently three-dimensional, so we will lean heavily on the vector ideas we have been using throughout the course.</p>
 <p>Here are the objectives for this lesson:</p>
@@ -569,6 +558,7 @@
 <h2><span class="section-number">26.4. </span>Motion of charged particle in constant magnetic field<a class="headerlink" href="#motion-of-charged-particle-in-constant-magnetic-field" title="Permalink to this headline">¶</a></h2>
 <p>From the above equation for the magnetic force <span class="math notranslate nohighlight">\({\vec F}_m\)</span>, this force is at its maximum size when the velocity of a charged particle is perpendicular to the magnetic field. Let’s explore this situation a little more; we will see that this gives interesting behavior we did not see with the electric field. In particular, since the magnetic force is perpendicular to both the magnetic field and the velocity, this means that the charge will experience an acceleration that is always perpendicular to the velocity. There will never be an acceleration <em>along</em> the magnetic field lines.</p>
 <p>If you remember the ideas of circular motion from <a class="reference internal" href="L16_Circular_motion.html#ucm"><span class="std std-ref">Lesson 18</span></a>, you will see that this means the magnetic force acts like a centripetal force here! The magnetic force will always be pointing perpendicular to the velocity, so the charge curves around in the direction of that force, but keeping the same speed. You can see this yourself by running the program below. The cyan arrows represent a constant magnetic field, and the program simulates the motion of a charged particle in that field, with a velocity perpendicular to the field. The red arrow is the momentum of the charge.</p>
+<p id="mag-field-ucm"><a class="reference internal" href="#mag-field"><span class="std std-ref">Back to program list</span></a></p>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
 <div class="output text_html">
@@ -741,6 +731,16 @@
   <script src="../_static/js/index.d3f166471bb80abb5163.js"></script>
 
 
+    
+    <!-- Google Analytics -->
+    <script>
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', 'G-SS32LXLKZD', 'auto');
+      ga('set', 'anonymizeIp', true);
+      ga('send', 'pageview');
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+    <!-- End Google Analytics -->
     
   </body>
 </html>
