@@ -507,7 +507,7 @@
 </div>
 <div class="section" id="circular-motion-in-vpython">
 <h2><span class="section-number">16.4. </span>Circular motion in vPython<a class="headerlink" href="#circular-motion-in-vpython" title="Permalink to this headline">¶</a></h2>
-<p>One of the most frequent mistakes I see students make with uniform circular motion is getting the direction of the centripetal acceleration wrong. Thus, I am putting some code here to see what goes wrong with the common guesses for this direction. You should go through this code, and see for yourself! The cells below create a simulation of a sphere moving in uniform circular motion. The key part will be to get the direction of the ball’s acceleration correct.</p>
+<p>One of the most frequent mistakes I see students make with uniform circular motion is getting the direction of the centripetal acceleration wrong. Thus, I am putting some code here to see what goes wrong with the common guesses for this direction. You should go through this code, and see for yourself! The program below create a simulation of a sphere moving in uniform circular motion. The key part will be to get the direction of the ball’s acceleration correct.</p>
 <div class="margin sidebar">
 <p class="sidebar-title">A ring for visual reference</p>
 <p>I did something fancy here in the <code class="docutils literal notranslate"><span class="pre">init()</span></code> function, creating a circular ring, so you can easily see whether the ball is staying at a constant radius or not. If you want to create a shape there is no vPython module for, one way to do it is to take a pre-existing shape, and “extrude” it. This means dragging the shape through a path, and the final shape includes all the points the original shape moved through. Here, I created a cylindrical ring by creating a circle, and moving the circle through a path perpendicular to the ring. Then I gave it a texture, just for fun!</p>
@@ -733,7 +733,7 @@
 <div class="toggle docutils container">
 <p><em>Answer:</em> The ball will start accelerating towards the central point, due to the constant attractive force.</p>
 </div>
-<p>The program belows simulates the motion of an object in a constant central force. If you run the program, you will see that the orbit does not immediately close, since the object does not return back to its starting point with the same velocity. Instead, the orbit is a complicated shape around the origin. This motion is explained in depth below the program.</p>
+<p>The program below simulates the motion of an object in a constant central force. If you run the program, you will see that the orbit does not immediately close, since the object does not return back to its starting point with the same velocity. Instead, the orbit is a complicated shape around the origin. This motion is explained in depth below the program.</p>
 <p id="centr-force"><a class="reference internal" href="#ucm"><span class="std std-ref">Back to program list</span></a></p>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
