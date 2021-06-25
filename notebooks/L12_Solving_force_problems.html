@@ -76,6 +76,8 @@
         <div class="navbar-brand-box">
 <a class="navbar-brand text-wrap" href="../index.html">
   
+  <img src="../_static/logo.png" class="logo" alt="logo">
+  
   
   <h1 class="site-logo" id="site-title">NAPS Intermediate Physics</h1>
   
@@ -395,10 +397,10 @@
 <div class="section" id="overview">
 <h2><span class="section-number">12.1. </span>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
 <p>We have started with the basic definitions of momentum, and used it in Newton’s laws of motion to consider the collision of objects. Hopefully, this gives you a sense of some of the important aspects of forces – forces are due to an interaction between two objects, and over a time interval will change the momentum of each of the objects.</p>
-<p>However, there are many more forces that we have not considered. I am sure that, after a moment’s thought, you can make a long list of forces acting on objects. A few forces we will discuss over the coming lessons are friction, buoyancy, and gravity. Because these forces can have different properties, it is important to develop a standard way of combining these forces together to find the motion of the object they act on. This recipe is what is covered in this lesson. In particular, we will look at <em>free body diagrams</em> (FBDs) as a visual way of finding the correct Newton’s 2nd law equation of a particular system.</p>
+<p>However, there are many more forces that we have not considered. I am sure that, after a moment’s thought, you can make a long list of forces acting on objects. A few forces we will discuss over the coming lessons are friction, buoyancy, and gravity. Because these forces can have different properties, it is important to develop a standard way of combining these forces together to find the motion of the object they act on. This recipe is what is covered in this lesson. In particular, we will look at <em>free body diagrams</em> as a visual way of finding the correct Newton’s 2nd law equation of a particular system.</p>
 <div class="warning admonition">
 <p class="admonition-title">Newton’s second law is a method</p>
-<p>There is a standard <em>method</em> for solving force problems, but there is not a standard <em>equation</em>. Every time you have forces involved in a situation, you should start with an FBD and Newton’s 2nd law. But the equation you derive from Newton’s 2nd law will be different in each case! This is because the forces may be different, or the directions they act in may change. You will have to think through what is affecting the system, but always using the force equations to do so. This lesson will help to build that intuition within you.</p>
+<p>There is a standard <em>method</em> for solving force problems, but there is not a standard <em>equation</em>. Every time you have forces involved in a situation, you should start with a free body diagram and Newton’s 2nd law. But the equation you derive from Newton’s 2nd law will be different in each case! This is because the forces may be different, or the directions they act in may change. You will have to think through what is affecting the system, but always using the force equations to do so. This lesson will help to build that intuition within you.</p>
 </div>
 <p>Here are the objectives for this lesson:</p>
 <ul class="simple">
@@ -421,7 +423,7 @@
 <div class="warning admonition">
 <p class="admonition-title">Guidelines for drawing an FBD</p>
 <ol class="simple">
-<li><p>Draw the object as a dot; if desired, draw x and y axes with the object at the origin</p></li>
+<li><p>Draw the object as a dot; if desired, draw <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span> axes with the object at the origin</p></li>
 <li><p>Draw all forces (<em>not</em> their components!) as arrows</p>
 <ul class="simple">
 <li><p>Forces always point <em>away</em> from the object</p></li>
@@ -664,13 +666,13 @@
 <p class="admonition-title">Problem</p>
 <p>As an employee of the City of Newport, your job is to hang up streetlights. However, you are concerned that the ropes used are not strong enough when the streetlights are hung at certain angles.</p>
 <ol class="simple">
-<li><p>Based on your work for the previous problem, write down equations for the tension values <span class="math notranslate nohighlight">\(F_{T1}\)</span> and <span class="math notranslate nohighlight">\(F_{T2}\)</span> in each rope, using the variables <span class="math notranslate nohighlight">\(m\)</span> (streetlight mass), and <span class="math notranslate nohighlight">\(\theta_1, \theta_2\)</span> (the two rope angles). <em>Hint:</em> Your equations will simplify quite a bit if you use a trigonometric identity!</p></li>
+<li><p>Based on your work for the previous problem, write down equations for the tension values <span class="math notranslate nohighlight">\(F_{T1}\)</span> and <span class="math notranslate nohighlight">\(F_{T2}\)</span> in each rope, using the variables <span class="math notranslate nohighlight">\(m\)</span> (streetlight mass), and <span class="math notranslate nohighlight">\(\theta_1, \theta_2\)</span> (the two rope angles). <em>Hint:</em> Your equations will simplify quite a bit if you use the trigonometric identity <span class="math notranslate nohighlight">\(\sin (\theta_1 + \theta_2) = \sin \theta_1 \cos \theta_2 + \cos \theta_1 \sin \theta_2\)</span>.</p></li>
 <li><p>Suppose that <span class="math notranslate nohighlight">\(\theta_1 &gt; \theta_2\)</span>. Which tension value will then be the larger one?</p></li>
 <li><p>Write a vPython procedure <code class="docutils literal notranslate"><span class="pre">checkTension()</span></code> that checks whether the tension values in the ropes exceeds the maximum safety value. The arguments of the procedure should be <code class="docutils literal notranslate"><span class="pre">m</span></code> for the streetlight mass, <code class="docutils literal notranslate"><span class="pre">Q1</span></code> and <code class="docutils literal notranslate"><span class="pre">Q2</span></code> for the angles <span class="math notranslate nohighlight">\(\theta_1\)</span> and <span class="math notranslate nohighlight">\(\theta_2\)</span>, respectively, and <code class="docutils literal notranslate"><span class="pre">F_MAX</span></code> for the maximum safe value of the rope tension magnitude. If the situation is safe, have the procedure print out <code class="docutils literal notranslate"><span class="pre">OK</span></code>; otherwise, the procedure should print out <code class="docutils literal notranslate"><span class="pre">Unsafe</span> <span class="pre">situation</span></code>.</p></li>
 </ol>
 </div>
 <div class="toggle docutils container">
-<p><em>Answers:</em> The equations for the two tension magnitudes are given by <span class="math notranslate nohighlight">\(F_{T1} = \frac{mg \cos \theta_2}{\sin(\theta_1 + \theta_2)}\)</span> and <span class="math notranslate nohighlight">\(F_{T2} = \frac{mg \cos \theta_1}{\sin(\theta_1 + \theta_2)}\)</span>. Since <span class="math notranslate nohighlight">\(\theta_1 &gt; \theta_2\)</span> implies that <span class="math notranslate nohighlight">\(\cos \theta_1 &lt; \cos \theta_2\)</span>, then <span class="math notranslate nohighlight">\(F_{T1}\)</span> would be the larger magnitude. This makes physical sense, because whichever rope has the larger angle will be supporting more of the streetlight’s weight.</p>
+<p><em>Answers:</em> The equations for the two tension magnitudes are given by <span class="math notranslate nohighlight">\(F_{T1} = mg \cos \theta_2 / \sin(\theta_1 + \theta_2)\)</span> and <span class="math notranslate nohighlight">\(F_{T2} = mg \cos \theta_1 / \sin(\theta_1 + \theta_2)\)</span>. Since <span class="math notranslate nohighlight">\(\theta_1 &gt; \theta_2\)</span> implies that <span class="math notranslate nohighlight">\(\cos \theta_1 &lt; \cos \theta_2\)</span>, then <span class="math notranslate nohighlight">\(F_{T1}\)</span> would be the larger magnitude. This makes physical sense, because whichever rope has the larger angle will be supporting more of the streetlight’s weight.</p>
 <p>Here is a possible procedure for checking whether the situation is safe.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">checkTension</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">Q1</span><span class="p">,</span> <span class="n">Q2</span><span class="p">,</span> <span class="n">F_MAX</span><span class="p">):</span>
     
@@ -832,14 +834,14 @@
 <li><p>The magnitude <span class="math notranslate nohighlight">\(F_{fr}\)</span> of the frictional force on an object on a surface is proportional to the normal force due to the surface, acting on the object. The constant of proportionality is known as the coefficient of friction, and given by the symbol <span class="math notranslate nohighlight">\(mu\)</span> (“mu”).</p></li>
 </ol>
 </div>
-<p>Let’s talk about these in more detail, starting with the direction. Think again to the example mentioned earlier of a crate in a flatbed truck. As the truck drives along, if the flatbed’s surface were completely smooth, the crate would have no horizontal force on it, and it would slide backwards. To keep the crate in place, the static frictional force acts opposite to this motion, in the direction the truck is moving. This is what I mean by opposing the potential motion of the object. Thus, it is actually the frictional force moving the crate forward!</p>
+<p>Let’s talk about these in more detail, starting with the direction. Think again to the example mentioned earlier of a crate in a flatbed truck. As the truck drives along, if the flatbed’s surface were completely smooth, the crate would have no horizontal force on it, and it would slide backwards. To keep the crate in place, the static frictional force acts opposite to this motion, in the direction the truck is moving. This is what I mean by opposing the potential motion of the object. Thus, it is actually the frictional force moving the crate forward! Think about that the next time you go for a walk.</p>
 <p>For the magnitude, since the force of friction is always proportional to the normal force, then it makes sense to look at the ratio of the frictional and normal forces; this will be the constant <span class="math notranslate nohighlight">\(\mu\)</span> mentioned above. Thus, the coefficient <span class="math notranslate nohighlight">\(\mu\)</span> is the ratio of the two magnitudes, or</p>
 <div class="math notranslate nohighlight">
 \[
     \mu = \frac{F_{fr}}{F_N}
 \]</div>
 <p>Notice that, since <span class="math notranslate nohighlight">\(\mu\)</span> is the ratio of two forces, it has no units! This constant is roughly the same for a given type of friction (static or kinetic) with any pair of surfaces, e.g. rubber on carpet, for someone walking in their house with shoes on. There will be a <strong>coefficient of static friction</strong> <span class="math notranslate nohighlight">\(\mu_s\)</span> and a <strong>coefficient of kinetic friction</strong> <span class="math notranslate nohighlight">\(\mu_k\)</span> for each such surface pair. These coefficients must be measured experimentally, by going into the lab and moving the two surfaces against each other.</p>
-<p>Let’s now get specific about the relationship between the normal and friction forces. Remember the example we had above, with the couch. Specfically, the static frictional force would change, since you altered your applied force. Thus, the force of static friction will actually have a <em>range</em> of values, up to some maximum static frictional force. To show this, the magnitude of <span class="math notranslate nohighlight">\(F_{fr, s}\)</span> is given by an inequality; the static frictional force is limited by its largest magnitude. Mathematically, this is</p>
+<p>Let’s now get specific about the relationship between the normal and friction forces. Remember the example we had above, with the couch. Specifically, the static frictional force would change, since you altered your applied force. Thus, the force of static friction will actually have a <em>range</em> of values, up to some maximum static frictional force. To show this, the magnitude of <span class="math notranslate nohighlight">\(F_{fr, s}\)</span> is given by an inequality; the static frictional force is limited by its largest magnitude. Mathematically, this is</p>
 <div class="math notranslate nohighlight">
 \[
 			F_{fr, s} \le \mu_s F_N
@@ -942,12 +944,12 @@
 <p>Now that we have a model of the frictional force, let’s see how it interacts with some of the other forces we have dealt with. I will work through the following example. A block with a mass of 5.00 kg is moving because of a 20.0 N applied acting at an angle of 15.0<span class="math notranslate nohighlight">\(^\circ\)</span> below the horizontal.  The coefficient of kinetic friction between the block and the horizontal surface is 0.200. Determine the horizontal acceleration (magnitude in m/s<span class="math notranslate nohighlight">\(^2\)</span>) of the block.</p>
 <div class="figure align-default" id="id15">
 <a class="reference internal image-reference" href="../_images/INT_AY20_MP2_L04_Fig05.png"><img alt="../_images/INT_AY20_MP2_L04_Fig05.png" src="../_images/INT_AY20_MP2_L04_Fig05.png" style="height: 150px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 12.15 </span><span class="caption-text">Sliding a crate</span><a class="headerlink" href="#id15" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 12.15 </span><span class="caption-text">Sliding a block</span><a class="headerlink" href="#id15" title="Permalink to this image">¶</a></p>
 </div>
 <p>As always, the first step should be to draw a FBD for the block. This will include not only the frictional force, but also the gravitational, normal, and applied forces. The FBD of the block is shown below.</p>
 <div class="figure align-default" id="id16">
 <a class="reference internal image-reference" href="../_images/INT_AY21_L15_Fig01_FBD_small.png"><img alt="../_images/INT_AY21_L15_Fig01_FBD_small.png" src="../_images/INT_AY21_L15_Fig01_FBD_small.png" style="height: 250px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 12.16 </span><span class="caption-text">FBD for crate sliding on floor</span><a class="headerlink" href="#id16" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 12.16 </span><span class="caption-text">FBD for block sliding on floor</span><a class="headerlink" href="#id16" title="Permalink to this image">¶</a></p>
 </div>
 <p>You might think we only need to find the horizontal forces on the block, but since the friction force depends on the normal force, we need to solve for the vertical forces as well. In addition, the downward acting applied force will change the normal force, so we need to look out for that. If we write down the net force on the block, we have</p>
 <div class="math notranslate nohighlight">

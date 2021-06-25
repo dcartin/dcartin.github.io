@@ -76,6 +76,8 @@
         <div class="navbar-brand-box">
 <a class="navbar-brand text-wrap" href="../index.html">
   
+  <img src="../_static/logo.png" class="logo" alt="logo">
+  
   
   <h1 class="site-logo" id="site-title">NAPS Intermediate Physics</h1>
   
@@ -386,7 +388,7 @@
 <span id="cm-coll"></span><h1><span class="section-number">11. </span>Center of mass and collisions<a class="headerlink" href="#center-of-mass-and-collisions" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="overview">
 <h2><span class="section-number">11.1. </span>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
-<p>So far, I have been avoiding a key part of physics. Over all of the lessons so far, we have talked about how and why objects move. Specifically, given the acceleration of an object, we can find its position and velocity; with Newton’s laws, we can start to calculate acceleration ourselves! But what is doing the moving? In particular, when I say the position of an object has changed, what point of the object is has shifted? We have glossed over this part, but it is actually important to consider.</p>
+<p>So far, I have been avoiding a key part of physics. Over all of the lessons so far, we have talked about how and why objects move. Specifically, given the acceleration of an object, we can find its position and velocity; with Newton’s laws, we can start to calculate acceleration ourselves! But what is doing the moving? In particular, when I say the position of an object has changed, what point of the object has shifted? We have glossed over this part, but it is actually important to consider.</p>
 <p>It turns out that for motion in a line, instead of thinking of a given object as an extended mass – that is, with some finite shape and size – I can think of its mass as concentrated at a specific point. This point is called the “center of mass”. All of the physics we have done so far is then describing the motion of this point because of interactions with other objects. Hopefully, this is an obvious statement, but it is something that has to be proven. In fact, this need for a proof is one of the reasons Newton developed calculus!</p>
 <p>Note that I was careful to say “motion in a line”. When rotation gets involved, then the shape and size of the object become important again. We will ignore those complications. This lesson will introduce the concept of the center of mass, and how it applies to collisions in one dimension.</p>
 <p>Here are the objectives for this lesson:</p>
@@ -537,7 +539,7 @@
 \[
 	\sum {\vec F}_{sys} = \sum {\vec F}_{sys, out} = {\vec 0} \Rightarrow \frac{\Delta {\vec P}}{\Delta t} = {\vec 0}
 \]</div>
-<p>This is known as the <strong>conservation of linear momentum</strong>, and is one of the bedrock ideas of physics! Whenever we can say that some quantity stays the same in a physical interaction, this allows us to describe the motion in much better detail.</p>
+<p>This is known as the <strong>conservation of linear momentum</strong>, and is one of the bedrock ideas of physics! Whenever we can say that some quantity stays the same (or is “conserved”) in a physical interaction, this allows us to describe the motion in much better detail.</p>
 <div class="warning admonition">
 <p class="admonition-title">Conservation of linear momentum</p>
 <p>The total linear momentum of an isolated system stays constant.</p>
@@ -605,14 +607,14 @@
 <ul class="simple">
 <li><p><strong>SI units:</strong> unitless</p></li>
 </ul>
-<p>Notice that this is a ratio of <em>magnitudes</em>, indicated by the absolute value signs.</p>
+<p>Notice that this is a ratio of vector <em>magnitudes</em>, indicated by the absolute value signs.</p>
 <p>The collision can be classified by the value of <span class="math notranslate nohighlight">\(\epsilon\)</span>.</p>
 <ol class="simple">
 <li><p>If <span class="math notranslate nohighlight">\(\epsilon = 1\)</span>, the two objects leave the collision with the same relative speed as they entered. This is known as an <strong>elastic</strong> collsion.</p></li>
 <li><p>If <span class="math notranslate nohighlight">\(\epsilon = 0\)</span>, the two objects stick together; their final relative speed is zero. This is called a <strong>completely inelastic</strong> collsion.</p></li>
 <li><p>If the coefficient is between the two, i.e. <span class="math notranslate nohighlight">\(0 &lt; \epsilon &lt; 1\)</span>, then the two objects move away from each other, but with a lower relative speed than before. This is known as an <strong>inelastic</strong> collision.</p></li>
 </ol>
-<p>We will revisit this idea of elasticity in <a class="reference internal" href="L19_Work_and_energy.html#work-ke-coll"><span class="std std-ref">Lesson 20 (work and energy)</span></a>, when we define <span class="math notranslate nohighlight">\(\epsilon\)</span> in terms of kinetic energy.</p>
+<p>We will revisit this idea of elasticity in <a class="reference internal" href="L19_Work_and_energy.html#work-ke-coll"><span class="std std-ref">Lesson 20 (work and energy)</span></a>, when we reexamine collisions in terms of kinetic energy.</p>
 <div class="hint admonition">
 <p class="admonition-title">Problem</p>
 <p>Below are given the initial and final velocities from the two problems at the end of the last section. For both situations, <span class="math notranslate nohighlight">\(v_{R, ix} = +3.00\)</span> m/s and <span class="math notranslate nohighlight">\(v_{G, ix} = 0\)</span>. Calculate the relative speeds of the two bowling balls, and use this to find the coefficient of restitution <span class="math notranslate nohighlight">\(\epsilon\)</span> for each collision. Categorize each collision as elastic, inelastic or completely inelastic based on your calculated coefficients.</p>
@@ -792,10 +794,6 @@
     \epsilon = \frac{|{\vec v}_{A, f} - {\vec v}_{B, f}|}{|{\vec v}_{A, i} - {\vec v}_{B, i}|} = \frac{4.182 \textrm{ m/s}}{5.50 \textrm{ m/s}} = 0.760
 \]</div>
 <p>The collision is inelastic, but <em>not</em> completely inelastic.</p>
-<div class="hint admonition">
-<p class="admonition-title">Problem</p>
-<p>Use the vPython function <code class="docutils literal notranslate"><span class="pre">calcCoeffRest()</span></code> you wrote in a previous problem, and verify that this is the correct coefficient of restitution <span class="math notranslate nohighlight">\(\epsilon\)</span>.</p>
-</div>
 </div>
 <div class="section" id="example-smashing-particles">
 <h3><span class="section-number">11.4.2. </span>Example: Smashing particles<a class="headerlink" href="#example-smashing-particles" title="Permalink to this headline">¶</a></h3>
@@ -837,7 +835,7 @@
 <p>We have started using the ideas of center of mass and momentum in physical situations. For now, we have only covered what happens in a collision in a specific point of view, the center of mass frame of reference. Over the next few lessons, we will gradually look at more complicated situations.</p>
 <p>After this lesson you should be able to:</p>
 <ul class="simple">
-<li><p>calculate the center of mass position and velocity of a group of masses.</p></li>
+<li><p>Calculate the center of mass position and velocity of a group of masses.</p></li>
 <li><p>Given a system in the CM frame of reference, calculate the unknown velocity before or after a collision, and the force on one of the objects due to the collision.</p></li>
 </ul>
 </div>

@@ -76,6 +76,8 @@
         <div class="navbar-brand-box">
 <a class="navbar-brand text-wrap" href="../index.html">
   
+  <img src="../_static/logo.png" class="logo" alt="logo">
+  
   
   <h1 class="site-logo" id="site-title">NAPS Intermediate Physics</h1>
   
@@ -490,7 +492,7 @@
 </div>
 <div class="section" id="creating-an-inclined-plane-in-vpython">
 <h2><span class="section-number">14.3. </span>Creating an inclined plane in vPython<a class="headerlink" href="#creating-an-inclined-plane-in-vpython" title="Permalink to this headline">¶</a></h2>
-<p>We start below with code that creates a block in the center of a horizontal surface. You will gradually update this code, until it gives you a block on an inclined plane. How to do this is described after the program given below. This program has a function creating a ramp with a block on it. Since this is an “initializiation” function, we call it <code class="docutils literal notranslate"><span class="pre">init()</span></code>. When you run the program below, it uses this function to put the block on the ramp. To start with, the block and ramp are horizontal; you will add the code needed to have both the ramp and block tilt at the desired angle. The function <code class="docutils literal notranslate"><span class="pre">init()</span></code> only returns the object <code class="docutils literal notranslate"><span class="pre">block</span></code>, since the ramp will be stationary for the entire simulation; only the block will (eventually) change position. Verify that it works as you expect.</p>
+<p>We start below with code that creates a block in the center of a horizontal surface. You will gradually update this code, until it gives you a block on an inclined plane. How to do this is described after the program given below. This program has a function creating a ramp with a block on it. Since this is an “initialization” function, we call it <code class="docutils literal notranslate"><span class="pre">init()</span></code>. When you run the program below, it uses this function to put the block on the ramp. To start with, the block and ramp are horizontal; you will add the code needed to have both the ramp and block tilt at the desired angle. The function <code class="docutils literal notranslate"><span class="pre">init()</span></code> only returns the object <code class="docutils literal notranslate"><span class="pre">block</span></code>, since the ramp will be stationary for the entire simulation; only the block will (eventually) change position. Verify that it works as you expect.</p>
 <p id="ramp-init"><a class="reference internal" href="#ramp"><span class="std std-ref">Back to program list</span></a></p>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
@@ -786,7 +788,7 @@
 \[
     \frac{L_{new}}{L} = \frac{\sin \theta}{\sin (2 \theta)}
 \]</div>
-<p>You can show using differential calculus that this function is increasing from <span class="math notranslate nohighlight">\(\theta = 0.00^\circ\)</span> to <span class="math notranslate nohighlight">\(\theta = 45.0^\circ\)</span>. Evaluated at the boundary angles, the ratio runs from 0.500 to 0.707, so the new distance is more than half the original distance, but less than the original.</p>
+<p>Evaluated at the boundary angles, the ratio runs from 0.500 to 0.707, so the new distance is more than half the original distance, but less than the original.</p>
 </div>
 </div>
 <div class="section" id="adding-side-to-side-motion">
@@ -870,7 +872,7 @@
 </ol>
 </div>
 <div class="toggle docutils container">
-<p><em>Answer:</em> The coefficient of static friction only depends on the two surface moved relative to each other, so this does not change. As the angle increases, the component <span class="math notranslate nohighlight">\(F_{g, ||}\)</span> of the gravitational force along the ramp will increase in size, while the normal force will decrease in size. It might help to think of the extreme case, when the board is straight up. Then, all of gravity points along the board, while the normal force is essentially zero.</p>
+<p><em>Answer:</em> The coefficient of static friction only depends on the two surface moved relative to each other, so this does not change. As the angle increases, the component <span class="math notranslate nohighlight">\(F_{g, ||}\)</span> of the gravitational force along the ramp will increase in size, while the normal force will decrease in size. It might help to think of the extreme case, when the board is straight up. Then, all of the force of gravity points along the board, while the normal force is essentially zero.</p>
 </div>
 <div class="hint admonition">
 <p class="admonition-title">Problem</p>

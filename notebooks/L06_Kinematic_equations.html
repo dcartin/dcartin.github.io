@@ -76,6 +76,8 @@
         <div class="navbar-brand-box">
 <a class="navbar-brand text-wrap" href="../index.html">
   
+  <img src="../_static/logo.png" class="logo" alt="logo">
+  
   
   <h1 class="site-logo" id="site-title">NAPS Intermediate Physics</h1>
   
@@ -368,12 +370,11 @@
 </div>
 <div class="section" id="vector-kinematic-equations">
 <h2><span class="section-number">6.2. </span>Vector kinematic equations<a class="headerlink" href="#vector-kinematic-equations" title="Permalink to this headline">¶</a></h2>
-<p>For now, we assume the acceleration of the object is <em>constant</em>. This will allow us to derive a set of equations to use to solve for an unknown quantity. Later we will explore non-constant accelerations, using vPython programming and numerically calculating velocity and position. I emphasize the later point because, as a general rule, it is important to know when a particular equation “breaks”. In other words, just like an engineer must find the safety margins for a particular structure or piece of equipment, you should know when an equation is valid or not. So, our key assumption here, to repeat, is that</p>
+<p>For now, we assume the acceleration of the object is <em>constant</em>. This will allow us to derive a set of equations to use to solve for an unknown quantity. Later we will explore non-constant accelerations, using vPython programming and numerically calculating velocity and position. I emphasize the latter point because, as a general rule, it is important to know when a particular equation “breaks”. In other words, just like an engineer must find the safety margins for a particular structure or piece of equipment, you should know when an equation is valid or not. So, our key assumption here, to repeat, is that</p>
 <div class="math notranslate nohighlight">
 \[
     {\vec a} = {\vec a}_{avg} = \textrm{constant}
 \]</div>
-<p>Later, in <a class="reference internal" href="L08_Projectile_motion.html#proj-mot"><span class="std std-ref">Lesson 07 (projectile motion)</span></a>, we will explore what happens when this assumption is <em>not</em> true, specifically when air resistance is present.</p>
 <p>We can build up all the kinematic equations from this one assumption, and the definitions of average velocity and acceleration. Starting from the definition of acceleration, we get our first equation; we will also use the symbol <span class="math notranslate nohighlight">\(t\)</span> to represent <span class="math notranslate nohighlight">\(\Delta t\)</span>.</p>
 <div class="math notranslate nohighlight">
 \[
@@ -492,7 +493,11 @@ v_{f, z} = v_{i, z} + a_z t
 <p class="caption"><span class="caption-number">Fig. 6.3 </span><span class="caption-text"><span class="math notranslate nohighlight">\(x\)</span> velocity vs. time graph for an object with <em>changing</em> <span class="math notranslate nohighlight">\(a_x\)</span></span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
 </div>
 <ol class="simple">
-<li><p>If you use the above equation to find the average velocity during time interval <span class="math notranslate nohighlight">\(t_1\)</span> (i.e. with initial and final velocities <span class="math notranslate nohighlight">\(v_{1, x}\)</span> and <span class="math notranslate nohighlight">\(v_{2, x}\)</span>), would your answer be too big, too small, or exactly right?</p></li>
+<li><p>If you use the above equation
+$<span class="math notranslate nohighlight">\(
+ \Delta {\vec r} = \frac{1}{2} ({\vec v}_i + {\vec v}_f) t
+\)</span><span class="math notranslate nohighlight">\(
+to find the average velocity during time interval \)</span>t_1<span class="math notranslate nohighlight">\( (i.e. with initial and final velocities \)</span>v_{1, x}<span class="math notranslate nohighlight">\( and \)</span>v_{2, x}$), would your answer be too big, too small, or exactly right?</p></li>
 <li><p>What if you tried the same calculation for the average velocity during time interval <span class="math notranslate nohighlight">\(t_2\)</span>, with initial and final velocities <span class="math notranslate nohighlight">\(v_{3, x}\)</span> and <span class="math notranslate nohighlight">\(v_{4, x}\)</span>?</p></li>
 </ol>
 </div>
@@ -526,7 +531,7 @@ v_{f, z} = v_{i, z} + a_z t
 <p>Write a vPython function <code class="docutils literal notranslate"><span class="pre">calcDisp()</span></code> that calculates the displacement of an object undergoing a constant acceleration over a given time. The arguments of this function are vPython vectors <code class="docutils literal notranslate"><span class="pre">v_i</span></code> and <code class="docutils literal notranslate"><span class="pre">a</span></code>, representing the initial velocity (in m/s) and acceleration (in m/s<span class="math notranslate nohighlight">\(^2)\)</span>, respectively, and a scalar <code class="docutils literal notranslate"><span class="pre">t</span></code> giving the time interval (in s). The function should then return the displacement (in m) as a vPython vector.</p>
 </div>
 <div class="toggle docutils container">
-<p><em>Answer:</em> Here is one solution to the problem; make sure you see what parts of the vector kinematic equation above match the vpython code below.</p>
+<p><em>Answer:</em> Here is one solution to the problem; make sure you see what parts of the vector kinematic equation above match the vPython code below.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">calcDisp</span><span class="p">(</span><span class="n">v_i</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">t</span><span class="p">):</span>
     <span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">    Calculate the displacement of an object</span>
@@ -647,7 +652,7 @@ v_{f, z} = v_{i, z} + a_z t
 \[
 		t = \frac{-v_{i, y} \pm \sqrt{v_{i, y} ^2 + 2 a_y (r_{f, y} - r_{i, y})}}{a_y}
 \]</div>
-<p>Notice this means <span class="math notranslate nohighlight">\(\Delta r_y &lt; 0\)</span>! If you used the height of 39.4 m when substituting in, you would get a different answer. It is important to watch your signs! When you put everything in correctly, you should get <span class="math notranslate nohighlight">\(t_f = 7.00\)</span> s.</p>
+<p>Notice this means <span class="math notranslate nohighlight">\(\Delta r_y &lt; 0\)</span>! If you used the height of 39.4 m when substituting in for <span class="math notranslate nohighlight">\(\Delta r_y\)</span>, you would get a different answer. It is important to watch your signs! When you put everything in correctly, you should get <span class="math notranslate nohighlight">\(t_f = 7.00\)</span> s.</p>
 <div class="warning admonition">
 <p class="admonition-title">Work in one step</p>
 <p>Notice that we don’t have to “break up” the motion into pieces! We can find the total time of flight, without worry about how long it takes to get to the highest point, for example. It is much simpler to do it this way, and the physics equations “know” what the one, true trajectory is for the ball.</p>
@@ -713,7 +718,7 @@ v_{f, z} = v_{i, z} + a_z t
     v_{f, y} ^2 = v_{i, y} ^2 + 2 a_y \Delta r_y \qquad
     v_{f, z} ^2 = v_{i, z} ^2 + 2 a_z \Delta r_z
 \]</div>
-<p>These are exact when the acceleration of an object is constant. Even when the acceleration is <em>not</em> constant, these kinematic equations are the basis for everything we will be doing in computational physics. You have already seen how the first two allow us to update the position and velocity of a moving object. Later in the course, in Lesson 20, you will see how the last three provide a helpful window into the idea of work and energy. Understanding how to use these in various applications will be very important for you!</p>
+<p>These are exact when the acceleration of an object is constant. Even when the acceleration is <em>not</em> constant, these kinematic equations are the basis for everything we will be doing in computational physics. You have already seen how the first two allow us to update the position and velocity of a moving object. Later in the course, in <a class="reference internal" href="L20_Conservation_of_energy.html#energy"><span class="std std-ref">Lesson 20</span></a>, you will see how the last three provide a helpful window into the idea of work and energy. Understanding how to use these in various applications will be very important for you!</p>
 <p>After this lesson, you should be able to:</p>
 <ul class="simple">
 <li><p>Explain when to use a particular vector or scalar kinematic equation</p></li>
