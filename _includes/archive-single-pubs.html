@@ -1,0 +1,15 @@
+<div class="{{ include.type | default: "list" }}__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+    <h3 class="archive__item-title" itemprop="headline">
+      <a href="{{ base_path }}{{ post.url }}" rel="permalink">{{ post.title }}</a>
+    </h3>
+    
+    {% if post.citation %}
+      <p class="archive__item-excerpt" itemprop="description">
+        {{ post.citation | markdownify }}
+      </p>
+    {% endif %}
+
+  </article>
+</div>

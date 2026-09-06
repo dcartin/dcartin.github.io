@@ -1,0 +1,14 @@
+---
+title: "Exploration of the local solar neighbourhood I: Fixed number of probes"
+collection: publications
+category: manuscripts
+permalink: /publication/2013-10-01-exploration-of-the-local-solar-neighbour-6
+date: 2013-10-01
+venue: "International Journal of Astrobiology"
+volume: "12"
+issue: "4"
+pages: "271-281"
+citation: "Daniel Cartin (2013). \"Exploration of the local solar neighbourhood I: Fixed number of probes.\" <i>International Journal of Astrobiology</i> <b>12</b>(4), 271-281."
+---
+
+"Previous work in studying interstellar exploration by one or several probes has focused primarily either on engineering models for a spacecraft targeting a single star system, or large-scale simulations to ascertain the time required for a civilization to completely explore the Milky Way Galaxy. In this paper, a simulated annealing algorithm is used to numerically model the exploration of the local interstellar neighbourhood (i.e. of the order of ten parsecs of the Solar System) by a fixed number of probes launched from the Solar System; these simulations use the observed masses, positions and spectral classes of targeted stars. Each probe visits a pre-determined list of target systems, maintains a constant cruise speed, and only changes the direction from gravitational deflection at each target. From these simulations, it is examined how varying design choices - differing the maximum cruise speed, number of probes launched, number of target stars to be explored, and probability of avoiding catastrophic system failure per parsec - change the completion time of the exploration programme and the expected number of stars successfully visited. In addition, it is shown that improving this success probability per parsec has diminishing returns beyond a certain point. Future improvements to the model and possible implications are discussed."

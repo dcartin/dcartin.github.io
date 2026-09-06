@@ -19,5 +19,15 @@ package-lock.json
 # Ignore folders related to IDEs
 .vscode/
 
+# Jekyll build output and cache
+_site/
+.jekyll-cache/
+.jekyll-metadata
+
+# Python cache
+__pycache__/
+*.pyc
+
 # Ignore files created by MacOS
 .DS_Store
+Thumbs.db
