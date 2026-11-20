@@ -18,6 +18,5 @@ automorphism groups, face structures, and Pachner moves.
 It also supports edge decorations, including orientations
 and parity assignments, represented using bitmasks.
 
-- [Project overview and installation](https://github.com/dcartin/trivalent#readme)
-- [Documentation and examples](https://molab.marimo.io/github/dcartin/trivalent/blob/master/docs/trivalent-guide.py)
+- [Documentation](https://dcartin.github.io/trivalent)
 - [GitHub repository](https://github.com/dcartin/trivalent)
